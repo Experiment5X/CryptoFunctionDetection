@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def find_function_names(assembly_code):
-    matches = re.findall('([\w\d_\.]+):\s*', assembly_code)
+    matches = re.findall('^([\w\d_\.]+):\s*$', assembly_code, flags=re.MULTILINE)
     func_names = [m for m in matches if not m.lower().startswith('l') and '.' not in m]
 
     return func_names
@@ -30,7 +30,8 @@ def compile_code(file_path, optimization_level, include_function_names=False):
         assembly_code = asm_file.read()
         comments_removed = re.sub('##.*', '', assembly_code)
         sets_removed = re.sub('\.set.*', '', comments_removed)
-        empty_label_removed = sets_removed.replace('.subsections_via_symbols\n', '')
+        zerofill_removed = re.sub('\.zerofill.*', '', sets_removed)
+        empty_label_removed = zerofill_removed.replace('.subsections_via_symbols\n', '')
 
         asm_file.seek(0)
         asm_file.write(empty_label_removed)
