@@ -19,7 +19,7 @@ def compile_code(file_path, optimization_level, include_function_names=False):
     extra_args = ' '.join(sys.argv[2:])
 
     out_file_name = os.path.join(c_file_dir, f'{c_file_name}-o{optimization_level}.s')
-    command = f'gcc {extra_args} -S -masm=intel -fno-asynchronous-unwind-tables -fno-exceptions -fno-rtti -O{optimization_level} -c {file_path} -o {out_file_name}'
+    command = f'g++ {extra_args} -S -masm=intel -fno-asynchronous-unwind-tables -O{optimization_level} -c {file_path} -o {out_file_name}'
 
     print(command)
 
