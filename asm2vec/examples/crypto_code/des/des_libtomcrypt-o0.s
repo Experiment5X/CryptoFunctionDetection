@@ -7,53 +7,66 @@ _des_setup:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	rbx
-	push	rax
-	test	rdi, rdi
-	je	LBB0_6
+	sub	rsp, 32
+	mov	qword ptr [rbp - 16], rdi
+	mov	dword ptr [rbp - 20], esi
+	mov	dword ptr [rbp - 24], edx
+	mov	qword ptr [rbp - 32], rcx
 
-	mov	r15, rcx
-	test	rcx, rcx
-	je	LBB0_7
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB0_3
 
-	mov	ebx, 4
-	test	edx, -17
-	jne	LBB0_5
-
-	mov	ebx, 3
-	cmp	esi, 8
-	jne	LBB0_5
-
-	mov	r14, rdi
-	xor	ebx, ebx
-	xor	esi, esi
-	mov	rdx, r15
-	call	_deskey
-	sub	r15, -128
-	mov	rdi, r14
-	mov	esi, 1
-	mov	rdx, r15
-	call	_deskey
-LBB0_5:
-	mov	eax, ebx
-	add	rsp, 8
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
-LBB0_6:
 	lea	rdi, [rip + L_.str.2]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1523
 	call	_crypt_argchk
-LBB0_7:
+LBB0_3:
+	jmp	LBB0_4
+LBB0_4:
+	jmp	LBB0_5
+LBB0_5:
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB0_7
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1524
 	call	_crypt_argchk
+LBB0_7:
+	jmp	LBB0_8
+LBB0_8:
+	cmp	dword ptr [rbp - 24], 0
+	je	LBB0_11
+
+	cmp	dword ptr [rbp - 24], 16
+	je	LBB0_11
+
+	mov	dword ptr [rbp - 4], 4
+	jmp	LBB0_14
+LBB0_11:
+	cmp	dword ptr [rbp - 20], 8
+	je	LBB0_13
+
+	mov	dword ptr [rbp - 4], 3
+	jmp	LBB0_14
+LBB0_13:
+	xor	esi, esi
+	mov	rdi, qword ptr [rbp - 16]
+	mov	rax, qword ptr [rbp - 32]
+	mov	rdx, rax
+	call	_deskey
+	mov	rdi, qword ptr [rbp - 16]
+	mov	rax, qword ptr [rbp - 32]
+	add	rax, 128
+	mov	esi, 1
+	mov	rdx, rax
+	call	_deskey
+	mov	dword ptr [rbp - 4], 0
+LBB0_14:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 32
+	pop	rbp
+	ret
                                         
 	.globl	_des_ecb_encrypt        
 	.p2align	4, 0x90
@@ -61,63 +74,108 @@ _des_ecb_encrypt:
 
 	push	rbp
 	mov	rbp, rsp
-	push	rbx
-	sub	rsp, 24
+	sub	rsp, 48
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 16], rax
-	test	rdi, rdi
-	je	LBB1_5
+	mov	qword ptr [rbp - 8], rax
+	mov	qword ptr [rbp - 24], rdi
+	mov	qword ptr [rbp - 32], rsi
+	mov	qword ptr [rbp - 40], rdx
 
-	mov	rbx, rsi
-	test	rsi, rsi
-	je	LBB1_6
+	cmp	qword ptr [rbp - 24], 0
+	jne	LBB1_3
 
-	test	rdx, rdx
-	je	LBB1_7
-
-	mov	eax, dword ptr [rdi]
-	bswap	eax
-	mov	dword ptr [rbp - 24], eax
-	mov	eax, dword ptr [rdi + 4]
-	bswap	eax
-	mov	dword ptr [rbp - 20], eax
-	lea	rdi, [rbp - 24]
-	mov	rsi, rdx
-	call	_desfunc
-	mov	eax, dword ptr [rbp - 24]
-	bswap	eax
-	mov	dword ptr [rbx], eax
-	mov	eax, dword ptr [rbp - 20]
-	bswap	eax
-	mov	dword ptr [rbx + 4], eax
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 16]
-	jne	LBB1_8
-
-	xor	eax, eax
-	add	rsp, 24
-	pop	rbx
-	pop	rbp
-	ret
-LBB1_8:
-	call	___stack_chk_fail
-LBB1_5:
 	lea	rdi, [rip + L_.str.5]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1592
 	call	_crypt_argchk
-LBB1_6:
+LBB1_3:
+	jmp	LBB1_4
+LBB1_4:
+	jmp	LBB1_5
+LBB1_5:
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB1_7
+
 	lea	rdi, [rip + L_.str.6]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1593
 	call	_crypt_argchk
 LBB1_7:
+	jmp	LBB1_8
+LBB1_8:
+	jmp	LBB1_9
+LBB1_9:
+	cmp	qword ptr [rbp - 40], 0
+	jne	LBB1_11
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1594
 	call	_crypt_argchk
+LBB1_11:
+	jmp	LBB1_12
+LBB1_12:
+	jmp	LBB1_13
+LBB1_13:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 16], ecx
+	mov	ecx, dword ptr [rbp - 16]
+	bswap	ecx
+	mov	dword ptr [rbp - 16], ecx
+
+	jmp	LBB1_15
+LBB1_15:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 12], ecx
+	mov	ecx, dword ptr [rbp - 12]
+	bswap	ecx
+	mov	dword ptr [rbp - 12], ecx
+
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	mov	rsi, rax
+	call	_desfunc
+
+	mov	eax, dword ptr [rbp - 16]
+	bswap	eax
+	mov	dword ptr [rbp - 44], eax
+	mov	rdi, qword ptr [rbp - 32]
+	lea	rcx, [rbp - 44]
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	jmp	LBB1_19
+LBB1_19:
+	mov	eax, dword ptr [rbp - 12]
+	bswap	eax
+	mov	dword ptr [rbp - 48], eax
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 4
+	lea	rdx, [rbp - 48]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rax, qword ptr [rax]
+	mov	rcx, qword ptr [rbp - 8]
+	cmp	rax, rcx
+	jne	LBB1_22
+
+	xor	eax, eax
+	add	rsp, 48
+	pop	rbp
+	ret
+LBB1_22:
+	call	___stack_chk_fail
+	ud2
                                         
 	.globl	_des_ecb_decrypt        
 	.p2align	4, 0x90
@@ -125,64 +183,109 @@ _des_ecb_decrypt:
 
 	push	rbp
 	mov	rbp, rsp
-	push	rbx
-	sub	rsp, 24
+	sub	rsp, 48
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 16], rax
-	test	rsi, rsi
-	je	LBB2_5
+	mov	qword ptr [rbp - 8], rax
+	mov	qword ptr [rbp - 24], rdi
+	mov	qword ptr [rbp - 32], rsi
+	mov	qword ptr [rbp - 40], rdx
 
-	test	rdi, rdi
-	je	LBB2_6
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB2_3
 
-	test	rdx, rdx
-	je	LBB2_7
-
-	mov	rbx, rsi
-	mov	eax, dword ptr [rdi]
-	bswap	eax
-	mov	dword ptr [rbp - 24], eax
-	mov	eax, dword ptr [rdi + 4]
-	bswap	eax
-	mov	dword ptr [rbp - 20], eax
-	sub	rdx, -128
-	lea	rdi, [rbp - 24]
-	mov	rsi, rdx
-	call	_desfunc
-	mov	eax, dword ptr [rbp - 24]
-	bswap	eax
-	mov	dword ptr [rbx], eax
-	mov	eax, dword ptr [rbp - 20]
-	bswap	eax
-	mov	dword ptr [rbx + 4], eax
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 16]
-	jne	LBB2_8
-
-	xor	eax, eax
-	add	rsp, 24
-	pop	rbx
-	pop	rbp
-	ret
-LBB2_8:
-	call	___stack_chk_fail
-LBB2_5:
 	lea	rdi, [rip + L_.str.5]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1613
 	call	_crypt_argchk
-LBB2_6:
+LBB2_3:
+	jmp	LBB2_4
+LBB2_4:
+	jmp	LBB2_5
+LBB2_5:
+	cmp	qword ptr [rbp - 24], 0
+	jne	LBB2_7
+
 	lea	rdi, [rip + L_.str.6]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1614
 	call	_crypt_argchk
 LBB2_7:
+	jmp	LBB2_8
+LBB2_8:
+	jmp	LBB2_9
+LBB2_9:
+	cmp	qword ptr [rbp - 40], 0
+	jne	LBB2_11
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1615
 	call	_crypt_argchk
+LBB2_11:
+	jmp	LBB2_12
+LBB2_12:
+	jmp	LBB2_13
+LBB2_13:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 16], ecx
+	mov	ecx, dword ptr [rbp - 16]
+	bswap	ecx
+	mov	dword ptr [rbp - 16], ecx
+
+	jmp	LBB2_15
+LBB2_15:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 12], ecx
+	mov	ecx, dword ptr [rbp - 12]
+	bswap	ecx
+	mov	dword ptr [rbp - 12], ecx
+
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	add	rax, 128
+	mov	rsi, rax
+	call	_desfunc
+
+	mov	eax, dword ptr [rbp - 16]
+	bswap	eax
+	mov	dword ptr [rbp - 44], eax
+	mov	rdi, qword ptr [rbp - 32]
+	lea	rcx, [rbp - 44]
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	jmp	LBB2_19
+LBB2_19:
+	mov	eax, dword ptr [rbp - 12]
+	bswap	eax
+	mov	dword ptr [rbp - 48], eax
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 4
+	lea	rdx, [rbp - 48]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rax, qword ptr [rax]
+	mov	rcx, qword ptr [rbp - 8]
+	cmp	rax, rcx
+	jne	LBB2_22
+
+	xor	eax, eax
+	add	rsp, 48
+	pop	rbp
+	ret
+LBB2_22:
+	call	___stack_chk_fail
+	ud2
                                         
 	.globl	_des_test               
 	.p2align	4, 0x90
@@ -190,148 +293,196 @@ _des_test:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	push	rax
-	mov	eax, 4312
+	mov	eax, 4320
 	call	____chkstk_darwin
 	sub	rsp, rax
-	pop	rax
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 48], rax
-	lea	r12, [rip + _des_test.cases]
-	xor	r15d, r15d
-	lea	r14, [rbp - 4320]
-	lea	rbx, [rbp - 64]
-	.p2align	4, 0x90
+	mov	qword ptr [rbp - 8], rax
+	mov	dword ptr [rbp - 4304], 0
 LBB3_1:                                 
-	mov	rdi, r12
-	mov	esi, 8
-	xor	edx, edx
-	mov	rcx, r14
-	call	_des_setup
-	test	eax, eax
-	jne	LBB3_2
+	cmp	dword ptr [rbp - 4304], 66
+	jge	LBB3_10
 
-	mov	r13, r12
-	add	r12, 8
-	mov	rdi, r12
-	mov	rsi, rbx
-	mov	rdx, r14
-	call	_des_ecb_encrypt
-	mov	qword ptr [rbp - 4344], r13 
-	lea	rdx, [r13 + 16]
+	xor	edx, edx
+	movsxd	rax, dword ptr [rbp - 4304]
+	imul	rax, rax, 24
+	lea	rcx, [rip + _des_test.cases]
+	add	rcx, rax
+	mov	rdi, rcx
 	mov	esi, 8
+	lea	rcx, [rbp - 4296]
+	call	_des_setup
+	mov	dword ptr [rbp - 4308], eax
+	cmp	eax, 0
+	je	LBB3_4
+
+	mov	eax, dword ptr [rbp - 4308]
+	mov	dword ptr [rbp - 4300], eax
+	jmp	LBB3_31
+LBB3_4:                                 
+	lea	rsi, [rbp - 32]
+	movsxd	rax, dword ptr [rbp - 4304]
+	imul	rax, rax, 24
+	lea	rcx, [rip + _des_test.cases]
+	add	rcx, rax
+	add	rcx, 8
+	mov	rdi, rcx
+	lea	rdx, [rbp - 4296]
+	call	_des_ecb_encrypt
+	lea	rdi, [rbp - 32]
+	movsxd	rcx, dword ptr [rbp - 4304]
+	imul	rcx, rcx, 24
+	lea	rdx, [rip + _des_test.cases]
+	add	rdx, rcx
+	add	rdx, 16
+	mov	r9d, dword ptr [rbp - 4304]
 	mov	ecx, 8
-	mov	rdi, rbx
+	mov	rsi, rcx
 	lea	r8, [rip + L_.str.7]
-	mov	r9d, r15d
+	mov	dword ptr [rbp - 4312], eax 
 	call	_compare_testvector
-	mov	r13d, 5
-	test	eax, eax
-	jne	LBB3_14
+	cmp	eax, 0
+	je	LBB3_6
 
-	mov	rdi, rbx
-	lea	rbx, [rbp - 4336]
-	mov	rsi, rbx
-	mov	rdx, r14
+	mov	dword ptr [rbp - 4300], 5
+	jmp	LBB3_31
+LBB3_6:                                 
+	lea	rsi, [rbp - 24]
+	lea	rdi, [rbp - 32]
+	lea	rdx, [rbp - 4296]
 	call	_des_ecb_decrypt
-	mov	esi, 8
+	lea	rdi, [rbp - 24]
+	movsxd	rcx, dword ptr [rbp - 4304]
+	imul	rcx, rcx, 24
+	lea	rdx, [rip + _des_test.cases]
+	add	rdx, rcx
+	add	rdx, 8
+	mov	r9d, dword ptr [rbp - 4304]
 	mov	ecx, 8
-	mov	rdi, rbx
-	mov	rdx, r12
+	mov	rsi, rcx
 	lea	r8, [rip + L_.str.8]
-	mov	r9d, r15d
+	mov	dword ptr [rbp - 4316], eax 
 	call	_compare_testvector
-	test	eax, eax
-	jne	LBB3_14
+	cmp	eax, 0
+	je	LBB3_8
 
-	inc	r15
-	mov	r12, qword ptr [rbp - 4344] 
-	add	r12, 24
-	cmp	r15, 66
-	lea	rbx, [rbp - 64]
-	lea	r14, [rbp - 4320]
-	jne	LBB3_1
-
-	xor	eax, eax
-	.p2align	4, 0x90
-LBB3_5:                                 
-	mov	byte ptr [rbp + rax - 56], al
-	inc	rax
-	cmp	rax, 8
-	jne	LBB3_5
-
-	lea	rdi, [rbp - 56]
-	lea	rcx, [rbp - 4320]
-	mov	esi, 8
-	xor	edx, edx
-	call	_des_setup
-	mov	r13d, eax
-	test	eax, eax
-	jne	LBB3_14
-
-	mov	qword ptr [rbp - 4328], 0
-	mov	qword ptr [rbp - 4336], 0
-	mov	ebx, 1000
-	lea	r15, [rbp - 4328]
-	lea	r14, [rbp - 4320]
-	.p2align	4, 0x90
+	mov	dword ptr [rbp - 4300], 5
+	jmp	LBB3_31
 LBB3_8:                                 
-	mov	rdi, r15
-	mov	rsi, r15
-	mov	rdx, r14
-	call	_des_ecb_encrypt
-	dec	ebx
-	jne	LBB3_8
+	jmp	LBB3_9
+LBB3_9:                                 
+	mov	eax, dword ptr [rbp - 4304]
+	add	eax, 1
+	mov	dword ptr [rbp - 4304], eax
+	jmp	LBB3_1
+LBB3_10:
+	mov	dword ptr [rbp - 4304], 0
+LBB3_11:                                
+	cmp	dword ptr [rbp - 4304], 8
+	jge	LBB3_14
 
-	mov	ebx, 1000
-	lea	r15, [rbp - 4328]
-	lea	r14, [rbp - 4320]
-	.p2align	4, 0x90
-LBB3_10:                                
-	mov	rdi, r15
-	mov	rsi, r15
-	mov	rdx, r14
-	call	_des_ecb_decrypt
-	dec	ebx
-	jne	LBB3_10
+	mov	eax, dword ptr [rbp - 4304]
+                                        
+	movsxd	rcx, dword ptr [rbp - 4304]
+	mov	byte ptr [rbp + rcx - 16], al
 
-	lea	r8, [rip + L_.str.9]
-	lea	rdi, [rbp - 4328]
-	lea	rdx, [rbp - 4336]
-	mov	esi, 8
-	mov	ecx, 8
-	xor	r9d, r9d
-	call	_compare_testvector
-	xor	ecx, ecx
-	test	eax, eax
-	setne	cl
-	lea	r13d, [rcx + 4*rcx]
-	jmp	LBB3_14
-LBB3_2:
-	mov	r13d, eax
+	mov	eax, dword ptr [rbp - 4304]
+	add	eax, 1
+	mov	dword ptr [rbp - 4304], eax
+	jmp	LBB3_11
 LBB3_14:
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 48]
-	jne	LBB3_16
+	xor	edx, edx
+	lea	rdi, [rbp - 16]
+	mov	esi, 8
+	lea	rcx, [rbp - 4296]
+	call	_des_setup
+	mov	dword ptr [rbp - 4308], eax
+	cmp	eax, 0
+	je	LBB3_16
 
-	mov	eax, r13d
-	add	rsp, 4312
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
+	mov	eax, dword ptr [rbp - 4308]
+	mov	dword ptr [rbp - 4300], eax
+	jmp	LBB3_31
+LBB3_16:
+	mov	dword ptr [rbp - 4304], 0
+LBB3_17:                                
+	cmp	dword ptr [rbp - 4304], 8
+	jge	LBB3_20
+
+	movsxd	rax, dword ptr [rbp - 4304]
+	mov	byte ptr [rbp + rax - 40], 0
+	movsxd	rax, dword ptr [rbp - 4304]
+	mov	byte ptr [rbp + rax - 24], 0
+
+	mov	eax, dword ptr [rbp - 4304]
+	add	eax, 1
+	mov	dword ptr [rbp - 4304], eax
+	jmp	LBB3_17
+LBB3_20:
+	mov	dword ptr [rbp - 4304], 0
+LBB3_21:                                
+	cmp	dword ptr [rbp - 4304], 1000
+	jge	LBB3_24
+
+	lea	rax, [rbp - 40]
+	mov	rdi, rax
+	mov	rsi, rax
+	lea	rdx, [rbp - 4296]
+	call	_des_ecb_encrypt
+
+	mov	eax, dword ptr [rbp - 4304]
+	add	eax, 1
+	mov	dword ptr [rbp - 4304], eax
+	jmp	LBB3_21
+LBB3_24:
+	mov	dword ptr [rbp - 4304], 0
+LBB3_25:                                
+	cmp	dword ptr [rbp - 4304], 1000
+	jge	LBB3_28
+
+	lea	rax, [rbp - 40]
+	mov	rdi, rax
+	mov	rsi, rax
+	lea	rdx, [rbp - 4296]
+	call	_des_ecb_decrypt
+
+	mov	eax, dword ptr [rbp - 4304]
+	add	eax, 1
+	mov	dword ptr [rbp - 4304], eax
+	jmp	LBB3_25
+LBB3_28:
+	xor	r9d, r9d
+	lea	rdx, [rbp - 24]
+	lea	rdi, [rbp - 40]
+	mov	eax, 8
+	mov	rsi, rax
+	mov	rcx, rax
+	lea	r8, [rip + L_.str.9]
+	call	_compare_testvector
+	cmp	eax, 0
+	je	LBB3_30
+
+	mov	dword ptr [rbp - 4300], 5
+	jmp	LBB3_31
+LBB3_30:
+	mov	dword ptr [rbp - 4300], 0
+LBB3_31:
+	mov	eax, dword ptr [rbp - 4300]
+	mov	rcx, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rcx, qword ptr [rcx]
+	mov	rdx, qword ptr [rbp - 8]
+	cmp	rcx, rdx
+	mov	dword ptr [rbp - 4320], eax 
+	jne	LBB3_33
+
+	mov	eax, dword ptr [rbp - 4320] 
+	add	rsp, 4320
 	pop	rbp
 	ret
-LBB3_16:
+LBB3_33:
 	call	___stack_chk_fail
+	ud2
                                         
 	.globl	_des_done               
 	.p2align	4, 0x90
@@ -339,6 +490,7 @@ _des_done:
 
 	push	rbp
 	mov	rbp, rsp
+	mov	qword ptr [rbp - 8], rdi
 	pop	rbp
 	ret
                                         
@@ -348,23 +500,34 @@ _des_keysize:
 
 	push	rbp
 	mov	rbp, rsp
-	test	rdi, rdi
-	je	LBB5_4
+	sub	rsp, 16
+	mov	qword ptr [rbp - 16], rdi
 
-	mov	eax, 3
-	cmp	dword ptr [rdi], 8
-	jl	LBB5_3
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB5_3
 
-	mov	dword ptr [rdi], 8
-	xor	eax, eax
-LBB5_3:
-	pop	rbp
-	ret
-LBB5_4:
 	lea	rdi, [rip + L_.str.13]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 2065
 	call	_crypt_argchk
+LBB5_3:
+	jmp	LBB5_4
+LBB5_4:
+	mov	rax, qword ptr [rbp - 16]
+	cmp	dword ptr [rax], 8
+	jge	LBB5_6
+
+	mov	dword ptr [rbp - 4], 3
+	jmp	LBB5_7
+LBB5_6:
+	mov	rax, qword ptr [rbp - 16]
+	mov	dword ptr [rax], 8
+	mov	dword ptr [rbp - 4], 0
+LBB5_7:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 16
+	pop	rbp
+	ret
                                         
 	.globl	_des3_setup             
 	.p2align	4, 0x90
@@ -372,90 +535,127 @@ _des3_setup:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 24
-	test	rdi, rdi
-	je	LBB6_9
+	sub	rsp, 32
+	mov	qword ptr [rbp - 16], rdi
+	mov	dword ptr [rbp - 20], esi
+	mov	dword ptr [rbp - 24], edx
+	mov	qword ptr [rbp - 32], rcx
 
-	mov	rbx, rcx
-	test	rcx, rcx
-	je	LBB6_10
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB6_3
 
-	mov	r14d, 4
-	test	edx, -17
-	jne	LBB6_8
-
-	mov	r15d, esi
-	mov	eax, esi
-	or	eax, 8
-	mov	r14d, 3
-	cmp	eax, 24
-	jne	LBB6_8
-
-	mov	r12, rdi
-	xor	r14d, r14d
-	xor	esi, esi
-	mov	rdx, rbx
-	call	_deskey
-	lea	r13, [r12 + 8]
-	lea	rdx, [rbx + 128]
-	mov	rdi, r13
-	mov	esi, 1
-	call	_deskey
-	lea	rax, [r12 + 16]
-	cmp	r15d, 24
-	mov	rdi, r12
-	mov	qword ptr [rbp - 56], rax 
-	cmove	rdi, rax
-	lea	rdx, [rbx + 256]
-	xor	esi, esi
-	call	_deskey
-	lea	rdx, [rbx + 640]
-	mov	rdi, r12
-	mov	esi, 1
-	call	_deskey
-	lea	rax, [rbx + 384]
-	mov	qword ptr [rbp - 48], rax 
-	add	rbx, 512
-	mov	rdi, r13
-	xor	esi, esi
-	mov	rdx, rbx
-	call	_deskey
-	cmp	r15d, 24
-	jne	LBB6_6
-
-	mov	rdi, qword ptr [rbp - 56] 
-	jmp	LBB6_7
-LBB6_6:
-	mov	rdi, r12
-LBB6_7:
-	mov	esi, 1
-	mov	rdx, qword ptr [rbp - 48] 
-	call	_deskey
-LBB6_8:
-	mov	eax, r14d
-	add	rsp, 24
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
-LBB6_9:
 	lea	rdi, [rip + L_.str.2]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1550
 	call	_crypt_argchk
-LBB6_10:
+LBB6_3:
+	jmp	LBB6_4
+LBB6_4:
+	jmp	LBB6_5
+LBB6_5:
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB6_7
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1551
 	call	_crypt_argchk
+LBB6_7:
+	jmp	LBB6_8
+LBB6_8:
+	cmp	dword ptr [rbp - 24], 0
+	je	LBB6_11
+
+	cmp	dword ptr [rbp - 24], 16
+	je	LBB6_11
+
+	mov	dword ptr [rbp - 4], 4
+	jmp	LBB6_21
+LBB6_11:
+	cmp	dword ptr [rbp - 20], 24
+	je	LBB6_14
+
+	cmp	dword ptr [rbp - 20], 16
+	je	LBB6_14
+
+	mov	dword ptr [rbp - 4], 3
+	jmp	LBB6_21
+LBB6_14:
+	xor	esi, esi
+	mov	rdi, qword ptr [rbp - 16]
+	mov	rax, qword ptr [rbp - 32]
+	mov	rdx, rax
+	call	_deskey
+	mov	rax, qword ptr [rbp - 16]
+	add	rax, 8
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 128
+	mov	rdi, rax
+	mov	esi, 1
+	mov	rdx, rcx
+	call	_deskey
+	cmp	dword ptr [rbp - 20], 24
+	jne	LBB6_16
+
+	xor	esi, esi
+	mov	rax, qword ptr [rbp - 16]
+	add	rax, 16
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 256
+	mov	rdi, rax
+	mov	rdx, rcx
+	call	_deskey
+	jmp	LBB6_17
+LBB6_16:
+	xor	esi, esi
+	mov	rdi, qword ptr [rbp - 16]
+	mov	rax, qword ptr [rbp - 32]
+	add	rax, 256
+	mov	rdx, rax
+	call	_deskey
+LBB6_17:
+	mov	rdi, qword ptr [rbp - 16]
+	mov	rax, qword ptr [rbp - 32]
+	add	rax, 384
+	add	rax, 256
+	mov	esi, 1
+	mov	rdx, rax
+	call	_deskey
+	xor	esi, esi
+	mov	rax, qword ptr [rbp - 16]
+	add	rax, 8
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 384
+	add	rcx, 128
+	mov	rdi, rax
+	mov	rdx, rcx
+	call	_deskey
+	cmp	dword ptr [rbp - 20], 24
+	jne	LBB6_19
+
+	mov	rax, qword ptr [rbp - 16]
+	add	rax, 16
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 384
+	mov	rdi, rax
+	mov	esi, 1
+	mov	rdx, rcx
+	call	_deskey
+	jmp	LBB6_20
+LBB6_19:
+	mov	rdi, qword ptr [rbp - 16]
+	mov	rax, qword ptr [rbp - 32]
+	add	rax, 384
+	mov	esi, 1
+	mov	rdx, rax
+	call	_deskey
+LBB6_20:
+	mov	dword ptr [rbp - 4], 0
+LBB6_21:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 32
+	pop	rbp
+	ret
                                         
 	.globl	_des3_ecb_encrypt       
 	.p2align	4, 0x90
@@ -463,76 +663,118 @@ _des3_ecb_encrypt:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	rbx
-	sub	rsp, 24
+	sub	rsp, 48
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 32], rax
-	test	rdi, rdi
-	je	LBB7_5
+	mov	qword ptr [rbp - 8], rax
+	mov	qword ptr [rbp - 24], rdi
+	mov	qword ptr [rbp - 32], rsi
+	mov	qword ptr [rbp - 40], rdx
 
-	mov	r14, rsi
-	test	rsi, rsi
-	je	LBB7_6
+	cmp	qword ptr [rbp - 24], 0
+	jne	LBB7_3
 
-	mov	rbx, rdx
-	test	rdx, rdx
-	je	LBB7_7
-
-	mov	eax, dword ptr [rdi]
-	bswap	eax
-	mov	dword ptr [rbp - 40], eax
-	mov	eax, dword ptr [rdi + 4]
-	bswap	eax
-	mov	dword ptr [rbp - 36], eax
-	lea	r15, [rbp - 40]
-	mov	rdi, r15
-	mov	rsi, rbx
-	call	_desfunc
-	lea	rsi, [rbx + 128]
-	mov	rdi, r15
-	call	_desfunc
-	add	rbx, 256
-	mov	rdi, r15
-	mov	rsi, rbx
-	call	_desfunc
-	mov	eax, dword ptr [rbp - 40]
-	bswap	eax
-	mov	dword ptr [r14], eax
-	mov	eax, dword ptr [rbp - 36]
-	bswap	eax
-	mov	dword ptr [r14 + 4], eax
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 32]
-	jne	LBB7_8
-
-	xor	eax, eax
-	add	rsp, 24
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
-LBB7_8:
-	call	___stack_chk_fail
-LBB7_5:
 	lea	rdi, [rip + L_.str.5]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1635
 	call	_crypt_argchk
-LBB7_6:
+LBB7_3:
+	jmp	LBB7_4
+LBB7_4:
+	jmp	LBB7_5
+LBB7_5:
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB7_7
+
 	lea	rdi, [rip + L_.str.6]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1636
 	call	_crypt_argchk
 LBB7_7:
+	jmp	LBB7_8
+LBB7_8:
+	jmp	LBB7_9
+LBB7_9:
+	cmp	qword ptr [rbp - 40], 0
+	jne	LBB7_11
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1637
 	call	_crypt_argchk
+LBB7_11:
+	jmp	LBB7_12
+LBB7_12:
+	jmp	LBB7_13
+LBB7_13:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 16], ecx
+	mov	ecx, dword ptr [rbp - 16]
+	bswap	ecx
+	mov	dword ptr [rbp - 16], ecx
+
+	jmp	LBB7_15
+LBB7_15:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 12], ecx
+	mov	ecx, dword ptr [rbp - 12]
+	bswap	ecx
+	mov	dword ptr [rbp - 12], ecx
+
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	mov	rsi, rax
+	call	_desfunc
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	add	rax, 128
+	mov	rsi, rax
+	call	_desfunc
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	add	rax, 256
+	mov	rsi, rax
+	call	_desfunc
+
+	mov	eax, dword ptr [rbp - 16]
+	bswap	eax
+	mov	dword ptr [rbp - 44], eax
+	mov	rdi, qword ptr [rbp - 32]
+	lea	rcx, [rbp - 44]
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	jmp	LBB7_19
+LBB7_19:
+	mov	eax, dword ptr [rbp - 12]
+	bswap	eax
+	mov	dword ptr [rbp - 48], eax
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 4
+	lea	rdx, [rbp - 48]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rax, qword ptr [rax]
+	mov	rcx, qword ptr [rbp - 8]
+	cmp	rax, rcx
+	jne	LBB7_22
+
+	xor	eax, eax
+	add	rsp, 48
+	pop	rbp
+	ret
+LBB7_22:
+	call	___stack_chk_fail
+	ud2
                                         
 	.globl	_des3_ecb_decrypt       
 	.p2align	4, 0x90
@@ -540,76 +782,121 @@ _des3_ecb_decrypt:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	rbx
-	sub	rsp, 24
+	sub	rsp, 48
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 32], rax
-	test	rsi, rsi
-	je	LBB8_5
+	mov	qword ptr [rbp - 8], rax
+	mov	qword ptr [rbp - 24], rdi
+	mov	qword ptr [rbp - 32], rsi
+	mov	qword ptr [rbp - 40], rdx
 
-	test	rdi, rdi
-	je	LBB8_6
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB8_3
 
-	mov	rbx, rdx
-	test	rdx, rdx
-	je	LBB8_7
-
-	mov	r14, rsi
-	mov	eax, dword ptr [rdi]
-	bswap	eax
-	mov	dword ptr [rbp - 40], eax
-	mov	eax, dword ptr [rdi + 4]
-	bswap	eax
-	mov	dword ptr [rbp - 36], eax
-	lea	rsi, [rbx + 384]
-	lea	r15, [rbp - 40]
-	mov	rdi, r15
-	call	_desfunc
-	lea	rsi, [rbx + 512]
-	mov	rdi, r15
-	call	_desfunc
-	add	rbx, 640
-	mov	rdi, r15
-	mov	rsi, rbx
-	call	_desfunc
-	mov	eax, dword ptr [rbp - 40]
-	bswap	eax
-	mov	dword ptr [r14], eax
-	mov	eax, dword ptr [rbp - 36]
-	bswap	eax
-	mov	dword ptr [r14 + 4], eax
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 32]
-	jne	LBB8_8
-
-	xor	eax, eax
-	add	rsp, 24
-	pop	rbx
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
-LBB8_8:
-	call	___stack_chk_fail
-LBB8_5:
 	lea	rdi, [rip + L_.str.5]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1658
 	call	_crypt_argchk
-LBB8_6:
+LBB8_3:
+	jmp	LBB8_4
+LBB8_4:
+	jmp	LBB8_5
+LBB8_5:
+	cmp	qword ptr [rbp - 24], 0
+	jne	LBB8_7
+
 	lea	rdi, [rip + L_.str.6]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1659
 	call	_crypt_argchk
 LBB8_7:
+	jmp	LBB8_8
+LBB8_8:
+	jmp	LBB8_9
+LBB8_9:
+	cmp	qword ptr [rbp - 40], 0
+	jne	LBB8_11
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 1660
 	call	_crypt_argchk
+LBB8_11:
+	jmp	LBB8_12
+LBB8_12:
+	jmp	LBB8_13
+LBB8_13:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 16], ecx
+	mov	ecx, dword ptr [rbp - 16]
+	bswap	ecx
+	mov	dword ptr [rbp - 16], ecx
+
+	jmp	LBB8_15
+LBB8_15:
+	mov	rax, qword ptr [rbp - 24]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 12], ecx
+	mov	ecx, dword ptr [rbp - 12]
+	bswap	ecx
+	mov	dword ptr [rbp - 12], ecx
+
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	add	rax, 384
+	mov	rsi, rax
+	call	_desfunc
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	add	rax, 384
+	add	rax, 128
+	mov	rsi, rax
+	call	_desfunc
+	lea	rdi, [rbp - 16]
+	mov	rax, qword ptr [rbp - 40]
+	add	rax, 384
+	add	rax, 256
+	mov	rsi, rax
+	call	_desfunc
+
+	mov	eax, dword ptr [rbp - 16]
+	bswap	eax
+	mov	dword ptr [rbp - 44], eax
+	mov	rdi, qword ptr [rbp - 32]
+	lea	rcx, [rbp - 44]
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	jmp	LBB8_19
+LBB8_19:
+	mov	eax, dword ptr [rbp - 12]
+	bswap	eax
+	mov	dword ptr [rbp - 48], eax
+	mov	rcx, qword ptr [rbp - 32]
+	add	rcx, 4
+	lea	rdx, [rbp - 48]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rax, qword ptr [rax]
+	mov	rcx, qword ptr [rbp - 8]
+	cmp	rax, rcx
+	jne	LBB8_22
+
+	xor	eax, eax
+	add	rsp, 48
+	pop	rbp
+	ret
+LBB8_22:
+	call	___stack_chk_fail
+	ud2
                                         
 	.globl	_des3_test              
 	.p2align	4, 0x90
@@ -617,154 +904,211 @@ _des3_test:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	push	rax
-	mov	eax, 4328
+	mov	eax, 4368
 	call	____chkstk_darwin
 	sub	rsp, rax
-	pop	rax
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 48], rax
+	mov	qword ptr [rbp - 8], rax
 	call	_des_test
-	mov	r13d, eax
-	test	eax, eax
-	je	LBB9_1
-LBB9_15:
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 48]
-	jne	LBB9_17
+	mov	dword ptr [rbp - 4324], eax
+	cmp	eax, 0
+	je	LBB9_2
 
-	mov	eax, r13d
-	add	rsp, 4328
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
+	mov	eax, dword ptr [rbp - 4324]
+	mov	dword ptr [rbp - 4316], eax
+	jmp	LBB9_33
+LBB9_2:
+	mov	dword ptr [rbp - 4320], 0
+LBB9_3:                                 
+	cmp	dword ptr [rbp - 4320], 5
+	jge	LBB9_12
+
+	xor	edx, edx
+	lea	rax, [rip + _des3_test.cases]
+	movsxd	rcx, dword ptr [rbp - 4320]
+	shl	rcx, 5
+	add	rax, rcx
+	mov	rdi, rax
+	mov	esi, 16
+	lea	rcx, [rbp - 4312]
+	call	_des3_setup
+	mov	dword ptr [rbp - 4324], eax
+	cmp	eax, 0
+	je	LBB9_6
+
+	mov	eax, dword ptr [rbp - 4324]
+	mov	dword ptr [rbp - 4316], eax
+	jmp	LBB9_33
+LBB9_6:                                 
+	lea	rsi, [rbp - 48]
+	lea	rax, [rip + _des3_test.cases]
+	movsxd	rcx, dword ptr [rbp - 4320]
+	shl	rcx, 5
+	add	rax, rcx
+	add	rax, 16
+	mov	rdi, rax
+	lea	rdx, [rbp - 4312]
+	call	_des3_ecb_encrypt
+	lea	rcx, [rip + _des3_test.cases]
+	lea	rdi, [rbp - 48]
+	movsxd	rdx, dword ptr [rbp - 4320]
+	shl	rdx, 5
+	add	rcx, rdx
+	add	rcx, 24
+	mov	r9d, dword ptr [rbp - 4320]
+	mov	edx, 8
+	mov	rsi, rdx
+	mov	qword ptr [rbp - 4336], rdx 
+	mov	rdx, rcx
+	mov	rcx, qword ptr [rbp - 4336] 
+	lea	r8, [rip + L_.str.10]
+	mov	dword ptr [rbp - 4340], eax 
+	call	_compare_testvector
+	cmp	eax, 0
+	je	LBB9_8
+
+	mov	dword ptr [rbp - 4316], 5
+	jmp	LBB9_33
+LBB9_8:                                 
+	lea	rsi, [rbp - 40]
+	lea	rdi, [rbp - 48]
+	lea	rdx, [rbp - 4312]
+	call	_des3_ecb_decrypt
+	lea	rcx, [rip + _des3_test.cases]
+	lea	rdi, [rbp - 40]
+	movsxd	rdx, dword ptr [rbp - 4320]
+	shl	rdx, 5
+	add	rcx, rdx
+	add	rcx, 16
+	mov	r9d, dword ptr [rbp - 4320]
+	mov	edx, 8
+	mov	rsi, rdx
+	mov	qword ptr [rbp - 4352], rdx 
+	mov	rdx, rcx
+	mov	rcx, qword ptr [rbp - 4352] 
+	lea	r8, [rip + L_.str.11]
+	mov	dword ptr [rbp - 4356], eax 
+	call	_compare_testvector
+	cmp	eax, 0
+	je	LBB9_10
+
+	mov	dword ptr [rbp - 4316], 5
+	jmp	LBB9_33
+LBB9_10:                                
+	jmp	LBB9_11
+LBB9_11:                                
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB9_3
+LBB9_12:
+	mov	dword ptr [rbp - 4320], 0
+LBB9_13:                                
+	cmp	dword ptr [rbp - 4320], 24
+	jge	LBB9_16
+
+	mov	eax, dword ptr [rbp - 4320]
+                                        
+	movsxd	rcx, dword ptr [rbp - 4320]
+	mov	byte ptr [rbp + rcx - 32], al
+
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB9_13
+LBB9_16:
+	xor	edx, edx
+	lea	rdi, [rbp - 32]
+	mov	esi, 24
+	lea	rcx, [rbp - 4312]
+	call	_des3_setup
+	mov	dword ptr [rbp - 4324], eax
+	cmp	eax, 0
+	je	LBB9_18
+
+	mov	eax, dword ptr [rbp - 4324]
+	mov	dword ptr [rbp - 4316], eax
+	jmp	LBB9_33
+LBB9_18:
+	mov	dword ptr [rbp - 4320], 0
+LBB9_19:                                
+	cmp	dword ptr [rbp - 4320], 8
+	jge	LBB9_22
+
+	movsxd	rax, dword ptr [rbp - 4320]
+	mov	byte ptr [rbp + rax - 56], 0
+	movsxd	rax, dword ptr [rbp - 4320]
+	mov	byte ptr [rbp + rax - 40], 0
+
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB9_19
+LBB9_22:
+	mov	dword ptr [rbp - 4320], 0
+LBB9_23:                                
+	cmp	dword ptr [rbp - 4320], 1000
+	jge	LBB9_26
+
+	lea	rax, [rbp - 56]
+	mov	rdi, rax
+	mov	rsi, rax
+	lea	rdx, [rbp - 4312]
+	call	_des3_ecb_encrypt
+
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB9_23
+LBB9_26:
+	mov	dword ptr [rbp - 4320], 0
+LBB9_27:                                
+	cmp	dword ptr [rbp - 4320], 1000
+	jge	LBB9_30
+
+	lea	rax, [rbp - 56]
+	mov	rdi, rax
+	mov	rsi, rax
+	lea	rdx, [rbp - 4312]
+	call	_des3_ecb_decrypt
+
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB9_27
+LBB9_30:
+	xor	r9d, r9d
+	lea	rdx, [rbp - 40]
+	lea	rdi, [rbp - 56]
+	mov	eax, 8
+	mov	rsi, rax
+	mov	rcx, rax
+	lea	r8, [rip + L_.str.12]
+	call	_compare_testvector
+	cmp	eax, 0
+	je	LBB9_32
+
+	mov	dword ptr [rbp - 4316], 5
+	jmp	LBB9_33
+LBB9_32:
+	mov	dword ptr [rbp - 4316], 0
+LBB9_33:
+	mov	eax, dword ptr [rbp - 4316]
+	mov	rcx, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rcx, qword ptr [rcx]
+	mov	rdx, qword ptr [rbp - 8]
+	cmp	rcx, rdx
+	mov	dword ptr [rbp - 4360], eax 
+	jne	LBB9_35
+
+	mov	eax, dword ptr [rbp - 4360] 
+	add	rsp, 4368
 	pop	rbp
 	ret
-LBB9_1:
-	lea	r12, [rip + _des3_test.cases]
-	xor	r15d, r15d
-	lea	r14, [rbp - 4344]
-	lea	rbx, [rbp - 88]
-	.p2align	4, 0x90
-LBB9_2:                                 
-	mov	rdi, r12
-	mov	esi, 16
-	xor	edx, edx
-	mov	rcx, r14
-	call	_des3_setup
-	test	eax, eax
-	jne	LBB9_3
-
-	mov	r13, r12
-	add	r12, 16
-	mov	rdi, r12
-	mov	rsi, rbx
-	mov	rdx, r14
-	call	_des3_ecb_encrypt
-	mov	qword ptr [rbp - 4368], r13 
-	lea	rdx, [r13 + 24]
-	mov	esi, 8
-	mov	ecx, 8
-	mov	rdi, rbx
-	lea	r8, [rip + L_.str.10]
-	mov	r9d, r15d
-	call	_compare_testvector
-	mov	r13d, 5
-	test	eax, eax
-	jne	LBB9_15
-
-	mov	rdi, rbx
-	lea	rbx, [rbp - 4360]
-	mov	rsi, rbx
-	mov	rdx, r14
-	call	_des3_ecb_decrypt
-	mov	esi, 8
-	mov	ecx, 8
-	mov	rdi, rbx
-	mov	rdx, r12
-	lea	r8, [rip + L_.str.11]
-	mov	r9d, r15d
-	call	_compare_testvector
-	test	eax, eax
-	jne	LBB9_15
-
-	inc	r15
-	mov	r12, qword ptr [rbp - 4368] 
-	add	r12, 32
-	cmp	r15, 5
-	lea	rbx, [rbp - 88]
-	lea	r14, [rbp - 4344]
-	jne	LBB9_2
-
-	xor	eax, eax
-	.p2align	4, 0x90
-LBB9_6:                                 
-	mov	byte ptr [rbp + rax - 80], al
-	inc	rax
-	cmp	rax, 24
-	jne	LBB9_6
-
-	lea	rdi, [rbp - 80]
-	lea	rcx, [rbp - 4344]
-	mov	esi, 24
-	xor	edx, edx
-	call	_des3_setup
-	mov	r13d, eax
-	test	eax, eax
-	jne	LBB9_15
-
-	mov	qword ptr [rbp - 4352], 0
-	mov	qword ptr [rbp - 4360], 0
-	mov	ebx, 1000
-	lea	r15, [rbp - 4352]
-	lea	r14, [rbp - 4344]
-	.p2align	4, 0x90
-LBB9_9:                                 
-	mov	rdi, r15
-	mov	rsi, r15
-	mov	rdx, r14
-	call	_des3_ecb_encrypt
-	dec	ebx
-	jne	LBB9_9
-
-	mov	ebx, 1000
-	lea	r15, [rbp - 4352]
-	lea	r14, [rbp - 4344]
-	.p2align	4, 0x90
-LBB9_11:                                
-	mov	rdi, r15
-	mov	rsi, r15
-	mov	rdx, r14
-	call	_des3_ecb_decrypt
-	dec	ebx
-	jne	LBB9_11
-
-	lea	r8, [rip + L_.str.12]
-	lea	rdi, [rbp - 4352]
-	lea	rdx, [rbp - 4360]
-	mov	esi, 8
-	mov	ecx, 8
-	xor	r9d, r9d
-	call	_compare_testvector
-	xor	ecx, ecx
-	test	eax, eax
-	setne	cl
-	lea	r13d, [rcx + 4*rcx]
-	jmp	LBB9_15
-LBB9_3:
-	mov	r13d, eax
-	jmp	LBB9_15
-LBB9_17:
+LBB9_35:
 	call	___stack_chk_fail
+	ud2
                                         
 	.globl	_des3_done              
 	.p2align	4, 0x90
@@ -772,6 +1116,7 @@ _des3_done:
 
 	push	rbp
 	mov	rbp, rsp
+	mov	qword ptr [rbp - 8], rdi
 	pop	rbp
 	ret
                                         
@@ -781,160 +1126,281 @@ _des3_keysize:
 
 	push	rbp
 	mov	rbp, rsp
-	test	rdi, rdi
-	je	LBB11_4
+	sub	rsp, 16
+	mov	qword ptr [rbp - 16], rdi
 
-	mov	ecx, dword ptr [rdi]
-	mov	eax, 3
-	cmp	ecx, 16
-	jl	LBB11_3
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB11_3
 
-	xor	eax, eax
-	cmp	ecx, 23
-	setg	al
-	lea	eax, [8*rax + 16]
-	mov	dword ptr [rdi], eax
-	xor	eax, eax
-LBB11_3:
-	pop	rbp
-	ret
-LBB11_4:
 	lea	rdi, [rip + L_.str.13]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 2080
 	call	_crypt_argchk
+LBB11_3:
+	jmp	LBB11_4
+LBB11_4:
+	mov	rax, qword ptr [rbp - 16]
+	cmp	dword ptr [rax], 16
+	jge	LBB11_6
+
+	mov	dword ptr [rbp - 4], 3
+	jmp	LBB11_9
+LBB11_6:
+	mov	rax, qword ptr [rbp - 16]
+	cmp	dword ptr [rax], 24
+	jge	LBB11_8
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	dword ptr [rax], 16
+	mov	dword ptr [rbp - 4], 0
+	jmp	LBB11_9
+LBB11_8:
+	mov	rax, qword ptr [rbp - 16]
+	mov	dword ptr [rax], 24
+	mov	dword ptr [rbp - 4], 0
+LBB11_9:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 16
+	pop	rbp
+	ret
                                         
 	.p2align	4, 0x90         
 _deskey:                                
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 264
+	sub	rsp, 320
+                                        
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 48], rax
-	xor	eax, eax
-	lea	r8, [rip + _pc1]
-	lea	r9, [rip + _bytebit]
-	.p2align	4, 0x90
+	mov	qword ptr [rbp - 8], rax
+	mov	qword ptr [rbp - 280], rdi
+	mov	word ptr [rbp - 282], si
+	mov	qword ptr [rbp - 296], rdx
+	mov	dword ptr [rbp - 304], 0
 LBB12_1:                                
-	movzx	ecx, byte ptr [rax + r8]
-	mov	ebx, ecx
-	and	ebx, 7
-	shr	rcx, 3
-	movzx	ecx, byte ptr [rdi + rcx]
-	mov	ebx, dword ptr [r9 + 4*rbx]
-	and	ecx, ebx
-	cmp	ecx, ebx
-	sete	byte ptr [rbp + rax - 240]
-	inc	rax
-	cmp	rax, 56
-	jne	LBB12_1
+	cmp	dword ptr [rbp - 304], 56
+	jae	LBB12_4
 
-	xor	r11d, r11d
-	lea	r8, [rip + _totrot]
-	mov	r9d, 4294967268
-	lea	r10, [rip + _pc2]
-	lea	r14, [rip + _bigbyte]
-	jmp	LBB12_3
-	.p2align	4, 0x90
-LBB12_13:                               
-	inc	r11
-	cmp	r11, 16
-	je	LBB12_14
-LBB12_3:                                
+	xor	eax, eax
+	mov	ecx, dword ptr [rbp - 304]
+	mov	edx, ecx
+	lea	rsi, [rip + _pc1]
+	movzx	ecx, byte ptr [rsi + rdx]
+	mov	dword ptr [rbp - 308], ecx
+	mov	ecx, dword ptr [rbp - 308]
+	and	ecx, 7
+	mov	dword ptr [rbp - 312], ecx
+	mov	rdx, qword ptr [rbp - 280]
+	mov	ecx, dword ptr [rbp - 308]
+	shr	ecx, 3
+	mov	ecx, ecx
+	mov	esi, ecx
+	movzx	ecx, byte ptr [rdx + rsi]
+	mov	edi, dword ptr [rbp - 312]
+	mov	edx, edi
+	lea	rsi, [rip + _bytebit]
+	and	ecx, dword ptr [rsi + 4*rdx]
+	mov	edi, dword ptr [rbp - 312]
+	mov	edx, edi
+	mov	edi, dword ptr [rsi + 4*rdx]
+	cmp	ecx, edi
+	mov	ecx, 1
+	cmove	eax, ecx
+                                        
+	mov	ecx, dword ptr [rbp - 304]
+	mov	edx, ecx
+	mov	byte ptr [rbp + rdx - 208], al
+
+	mov	eax, dword ptr [rbp - 304]
+	add	eax, 1
+	mov	dword ptr [rbp - 304], eax
+	jmp	LBB12_1
+LBB12_4:
+	mov	dword ptr [rbp - 300], 0
+LBB12_5:                                
                                         
                                         
                                         
+	cmp	dword ptr [rbp - 300], 16
+	jae	LBB12_33
+
+	movsx	eax, word ptr [rbp - 282]
+	cmp	eax, 1
+	jne	LBB12_8
+
 	mov	eax, 15
-	sub	eax, r11d
-	cmp	si, 1
-	cmovne	eax, r11d
-	lea	r15d, [rax + rax + 1]
-                                        
-	add	eax, eax
-	mov	dword ptr [rbp + 4*r15 - 176], 0
-	mov	dword ptr [rbp + 4*rax - 176], 0
-	movzx	r13d, byte ptr [r11 + r8]
-	lea	r12, [r13 + r9]
-	xor	ecx, ecx
-	.p2align	4, 0x90
-LBB12_4:                                
-                                        
-	lea	rdi, [r13 + rcx]
-	lea	ebx, [r12 + rcx]
-	cmp	rdi, 28
-	cmovb	rbx, rdi
-	movzx	ebx, byte ptr [rbp + rbx - 240]
-	mov	byte ptr [rbp + rcx - 304], bl
-	inc	rcx
-	cmp	rcx, 28
-	jne	LBB12_4
-
-	lea	r12, [r13 + 28]
-	xor	edi, edi
-	.p2align	4, 0x90
-LBB12_6:                                
-                                        
-	lea	rbx, [r12 + rdi]
-	lea	rcx, [r13 + rdi]
-	cmp	rbx, 56
-	cmovb	rcx, rbx
-	movzx	ecx, byte ptr [rbp + rcx - 240]
-	mov	byte ptr [rbp + rdi - 276], cl
-	inc	rdi
-	cmp	rdi, 28
-	jne	LBB12_6
-
-	xor	ebx, ebx
-	mov	rdi, r10
-	jmp	LBB12_8
-	.p2align	4, 0x90
-LBB12_12:                               
-	inc	rdi
-	add	rbx, 4
-	cmp	rbx, 96
-	je	LBB12_13
+	sub	eax, dword ptr [rbp - 300]
+	shl	eax, 1
+	mov	dword ptr [rbp - 312], eax
+	jmp	LBB12_9
 LBB12_8:                                
-                                        
-	movzx	ecx, byte ptr [rdi]
-	cmp	byte ptr [rbp + rcx - 304], 0
-	je	LBB12_10
-
-	mov	ecx, dword ptr [rbx + r14]
-	or	dword ptr [rbp + 4*rax - 176], ecx
+	mov	eax, dword ptr [rbp - 300]
+	shl	eax, 1
+	mov	dword ptr [rbp - 312], eax
+LBB12_9:                                
+	mov	eax, dword ptr [rbp - 312]
+	add	eax, 1
+	mov	dword ptr [rbp - 316], eax
+	mov	eax, dword ptr [rbp - 316]
+	mov	ecx, eax
+	mov	dword ptr [rbp + 4*rcx - 144], 0
+	mov	eax, dword ptr [rbp - 312]
+	mov	ecx, eax
+	mov	dword ptr [rbp + 4*rcx - 144], 0
+	mov	dword ptr [rbp - 304], 0
 LBB12_10:                               
-	movzx	ecx, byte ptr [rdi + 24]
-	cmp	byte ptr [rbp + rcx - 304], 0
-	je	LBB12_12
+                                        
+	cmp	dword ptr [rbp - 304], 28
+	jae	LBB12_16
 
-	mov	ecx, dword ptr [rbx + r14]
-	or	dword ptr [rbp + 4*r15 - 176], ecx
-	jmp	LBB12_12
-LBB12_14:
-	lea	rdi, [rbp - 176]
-	mov	rsi, rdx
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, dword ptr [rbp - 300]
+	mov	edx, ecx
+	lea	rsi, [rip + _totrot]
+	movzx	ecx, byte ptr [rsi + rdx]
+	add	eax, ecx
+	mov	dword ptr [rbp - 308], eax
+	cmp	dword ptr [rbp - 308], 28
+	jae	LBB12_13
+
+	mov	eax, dword ptr [rbp - 308]
+	mov	ecx, eax
+	mov	dl, byte ptr [rbp + rcx - 208]
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, eax
+	mov	byte ptr [rbp + rcx - 272], dl
+	jmp	LBB12_14
+LBB12_13:                               
+	mov	eax, dword ptr [rbp - 308]
+	sub	eax, 28
+	mov	eax, eax
+	mov	ecx, eax
+	mov	dl, byte ptr [rbp + rcx - 208]
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, eax
+	mov	byte ptr [rbp + rcx - 272], dl
+LBB12_14:                               
+	jmp	LBB12_15
+LBB12_15:                               
+	mov	eax, dword ptr [rbp - 304]
+	add	eax, 1
+	mov	dword ptr [rbp - 304], eax
+	jmp	LBB12_10
+LBB12_16:                               
+	jmp	LBB12_17
+LBB12_17:                               
+                                        
+	cmp	dword ptr [rbp - 304], 56
+	jae	LBB12_23
+
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, dword ptr [rbp - 300]
+	mov	edx, ecx
+	lea	rsi, [rip + _totrot]
+	movzx	ecx, byte ptr [rsi + rdx]
+	add	eax, ecx
+	mov	dword ptr [rbp - 308], eax
+	cmp	dword ptr [rbp - 308], 56
+	jae	LBB12_20
+
+	mov	eax, dword ptr [rbp - 308]
+	mov	ecx, eax
+	mov	dl, byte ptr [rbp + rcx - 208]
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, eax
+	mov	byte ptr [rbp + rcx - 272], dl
+	jmp	LBB12_21
+LBB12_20:                               
+	mov	eax, dword ptr [rbp - 308]
+	sub	eax, 28
+	mov	eax, eax
+	mov	ecx, eax
+	mov	dl, byte ptr [rbp + rcx - 208]
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, eax
+	mov	byte ptr [rbp + rcx - 272], dl
+LBB12_21:                               
+	jmp	LBB12_22
+LBB12_22:                               
+	mov	eax, dword ptr [rbp - 304]
+	add	eax, 1
+	mov	dword ptr [rbp - 304], eax
+	jmp	LBB12_17
+LBB12_23:                               
+	mov	dword ptr [rbp - 304], 0
+LBB12_24:                               
+                                        
+	cmp	dword ptr [rbp - 304], 24
+	jae	LBB12_31
+
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, eax
+	lea	rdx, [rip + _pc2]
+	movzx	eax, byte ptr [rdx + rcx]
+	movsxd	rcx, eax
+	movzx	eax, byte ptr [rbp + rcx - 272]
+	cmp	eax, 0
+	je	LBB12_27
+
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, eax
+	lea	rdx, [rip + _bigbyte]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 312]
+	mov	ecx, esi
+	or	eax, dword ptr [rbp + 4*rcx - 144]
+	mov	dword ptr [rbp + 4*rcx - 144], eax
+LBB12_27:                               
+	mov	eax, dword ptr [rbp - 304]
+	add	eax, 24
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _pc2]
+	movzx	eax, byte ptr [rdx + rcx]
+	movsxd	rcx, eax
+	movzx	eax, byte ptr [rbp + rcx - 272]
+	cmp	eax, 0
+	je	LBB12_29
+
+	mov	eax, dword ptr [rbp - 304]
+	mov	ecx, eax
+	lea	rdx, [rip + _bigbyte]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 316]
+	mov	ecx, esi
+	or	eax, dword ptr [rbp + 4*rcx - 144]
+	mov	dword ptr [rbp + 4*rcx - 144], eax
+LBB12_29:                               
+	jmp	LBB12_30
+LBB12_30:                               
+	mov	eax, dword ptr [rbp - 304]
+	add	eax, 1
+	mov	dword ptr [rbp - 304], eax
+	jmp	LBB12_24
+LBB12_31:                               
+	jmp	LBB12_32
+LBB12_32:                               
+	mov	eax, dword ptr [rbp - 300]
+	add	eax, 1
+	mov	dword ptr [rbp - 300], eax
+	jmp	LBB12_5
+LBB12_33:
+	lea	rdi, [rbp - 144]
+	mov	rsi, qword ptr [rbp - 296]
 	call	_cookey
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 48]
-	jne	LBB12_16
+	mov	rcx, qword ptr [rbp - 8]
+	cmp	rax, rcx
+	jne	LBB12_35
 
-	add	rsp, 264
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
+	add	rsp, 320
 	pop	rbp
 	ret
-LBB12_16:
+LBB12_35:
 	call	___stack_chk_fail
+	ud2
                                         
 	.p2align	4, 0x90         
 _desfunc:                               
@@ -943,145 +1409,283 @@ _desfunc:
 	mov	rbp, rsp
 	push	r15
 	push	r14
-	push	r13
-	push	r12
 	push	rbx
-	mov	ebx, dword ptr [rdi]
-	movzx	edx, bl
-	lea	rcx, [rip + _des_ip]
-	movzx	eax, bh
-	mov	rax, qword ptr [rcx + 8*rax + 2048]
-	xor	rax, qword ptr [rcx + 8*rdx]
-	mov	rdx, rbx
-	shr	rdx, 13
-	and	edx, 2040
-	xor	rax, qword ptr [rdx + rcx + 4096]
-	shr	rbx, 24
-	xor	rax, qword ptr [rcx + 8*rbx + 6144]
-	mov	qword ptr [rbp - 48], rdi 
-	mov	edx, dword ptr [rdi + 4]
-	movzx	edi, dl
-	xor	rax, qword ptr [rcx + 8*rdi + 8192]
-	movzx	edi, dh
-	xor	rax, qword ptr [rcx + 8*rdi + 10240]
-	mov	rdi, rdx
-	shr	rdi, 13
-	and	edi, 2040
-	xor	rax, qword ptr [rdi + rcx + 12288]
-	shr	rdx, 24
-	xor	rax, qword ptr [rcx + 8*rdx + 14336]
-	mov	rcx, rax
-	shr	rcx, 32
-	xor	r9d, r9d
-	lea	r11, [rip + _SP5]
-	lea	r14, [rip + _SP3]
-	lea	r15, [rip + _SP1]
-	lea	r12, [rip + _SP6]
-	lea	r13, [rip + _SP4]
-	.p2align	4, 0x90
-LBB13_1:                                
-	mov	r8d, eax
-	rol	r8d, 28
-	xor	r8d, dword ptr [rsi + r9]
-	mov	ebx, r8d
-	and	ebx, 63
-	lea	r10, [rip + _SP7]
-	xor	ecx, dword ptr [r10 + 4*rbx]
-	mov	edi, r8d
-	shr	edi, 8
-	and	edi, 63
-	xor	ecx, dword ptr [r11 + 4*rdi]
-	mov	edi, r8d
-	shr	edi, 16
-	and	edi, 63
-	shr	r8d, 24
-	xor	ecx, dword ptr [r14 + 4*rdi]
-	and	r8d, 63
-	mov	ebx, dword ptr [rsi + r9 + 4]
-	xor	ecx, dword ptr [r15 + 4*r8]
-	xor	ebx, eax
-	mov	edi, ebx
-	and	edi, 63
-	lea	r8, [rip + _SP8]
-	xor	ecx, dword ptr [r8 + 4*rdi]
-	mov	edi, ebx
-	shr	edi, 8
-	and	edi, 63
-	xor	ecx, dword ptr [r12 + 4*rdi]
-	mov	edi, ebx
-	shr	edi, 16
-	and	edi, 63
-	shr	ebx, 24
-	and	ebx, 63
-	xor	ecx, dword ptr [r13 + 4*rdi]
-	lea	r10, [rip + _SP2]
-	xor	ecx, dword ptr [r10 + 4*rbx]
-	mov	edx, ecx
-	rol	edx, 28
-	xor	edx, dword ptr [rsi + r9 + 8]
-	mov	ebx, edx
-	and	ebx, 63
-	lea	rdi, [rip + _SP7]
-	xor	eax, dword ptr [rdi + 4*rbx]
-	mov	edi, edx
-	shr	edi, 8
-	and	edi, 63
-	xor	eax, dword ptr [r11 + 4*rdi]
-	mov	edi, edx
-	shr	edi, 16
-	and	edi, 63
-	shr	edx, 24
-	and	edx, 63
-	xor	eax, dword ptr [r14 + 4*rdi]
-	mov	edi, dword ptr [rsi + r9 + 12]
-	xor	edi, ecx
-	xor	eax, dword ptr [r15 + 4*rdx]
-	mov	edx, edi
-	and	edx, 63
-	xor	eax, dword ptr [r8 + 4*rdx]
-	mov	edx, edi
-	shr	edx, 8
-	and	edx, 63
-	xor	eax, dword ptr [r12 + 4*rdx]
-	mov	edx, edi
-	shr	edx, 16
-	and	edx, 63
-	xor	eax, dword ptr [r13 + 4*rdx]
-	shr	edi, 24
-	and	edi, 63
-	xor	eax, dword ptr [r10 + 4*rdi]
-	add	r9, 16
-	cmp	r9d, 128
-	jne	LBB13_1
-
-	movzx	edi, cl
-	lea	rsi, [rip + _des_fp]
-	movzx	edx, ch
-	mov	rdx, qword ptr [rsi + 8*rdx + 2048]
-	xor	rdx, qword ptr [rsi + 8*rdi]
-	mov	edi, ecx
-	shr	edi, 16
-	movzx	edi, dil
-	xor	rdx, qword ptr [rsi + 8*rdi + 4096]
-	shr	ecx, 24
-	xor	rdx, qword ptr [rsi + 8*rcx + 6144]
-	movzx	ecx, al
-	xor	rdx, qword ptr [rsi + 8*rcx + 8192]
-	movzx	ecx, ah
-	xor	rdx, qword ptr [rsi + 8*rcx + 10240]
-	mov	ecx, eax
+	mov	qword ptr [rbp - 32], rdi
+	mov	qword ptr [rbp - 40], rsi
+	mov	rax, qword ptr [rbp - 32]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 52], ecx
+	mov	rax, qword ptr [rbp - 32]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 48], ecx
+	mov	ecx, dword ptr [rbp - 52]
+	shr	ecx, 0
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	eax, ecx
+	lea	rdx, [rip + _des_ip]
+	mov	rax, qword ptr [rdx + 8*rax]
+	mov	ecx, dword ptr [rbp - 52]
+	shr	ecx, 8
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	esi, ecx
+	xor	rax, qword ptr [rdx + 8*rsi + 2048]
+	mov	ecx, dword ptr [rbp - 52]
 	shr	ecx, 16
-	movzx	ecx, cl
-	xor	rdx, qword ptr [rsi + 8*rcx + 12288]
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	esi, ecx
+	xor	rax, qword ptr [rdx + 8*rsi + 4096]
+	mov	ecx, dword ptr [rbp - 52]
+	shr	ecx, 24
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	esi, ecx
+	xor	rax, qword ptr [rdx + 8*rsi + 6144]
+	mov	ecx, dword ptr [rbp - 48]
+	shr	ecx, 0
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	esi, ecx
+	xor	rax, qword ptr [rdx + 8*rsi + 8192]
+	mov	ecx, dword ptr [rbp - 48]
+	shr	ecx, 8
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	esi, ecx
+	xor	rax, qword ptr [rdx + 8*rsi + 10240]
+	mov	ecx, dword ptr [rbp - 48]
+	shr	ecx, 16
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	esi, ecx
+	xor	rax, qword ptr [rdx + 8*rsi + 12288]
+	mov	ecx, dword ptr [rbp - 48]
+	shr	ecx, 24
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	esi, ecx
+	xor	rax, qword ptr [rdx + 8*rsi + 14336]
+	mov	qword ptr [rbp - 64], rax
+	mov	rax, qword ptr [rbp - 64]
+	shr	rax, 32
+                                        
+	mov	dword ptr [rbp - 52], eax
+	mov	edx, 4294967295
+	and	rdx, qword ptr [rbp - 64]
+                                        
+	mov	dword ptr [rbp - 48], edx
+	mov	dword ptr [rbp - 56], 0
+LBB13_1:                                
+	cmp	dword ptr [rbp - 56], 8
+	jge	LBB13_4
+
+	mov	eax, dword ptr [rbp - 48]
+	ror	eax, 4
+	mov	rcx, qword ptr [rbp - 40]
+	mov	rdx, rcx
+	add	rdx, 4
+	mov	qword ptr [rbp - 40], rdx
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 44], eax
+	mov	eax, dword ptr [rbp - 44]
+	mov	ecx, eax
+	and	rcx, 63
+	lea	rdx, [rip + _SP7]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 8
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	lea	rdi, [rip + _SP5]
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 16
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	lea	r8, [rip + _SP3]
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 24
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	lea	r9, [rip + _SP1]
+	xor	eax, dword ptr [r9 + 4*rcx]
+	xor	eax, dword ptr [rbp - 52]
+	mov	dword ptr [rbp - 52], eax
+	mov	eax, dword ptr [rbp - 48]
+	mov	rcx, qword ptr [rbp - 40]
+	mov	r10, rcx
+	add	r10, 4
+	mov	qword ptr [rbp - 40], r10
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 44], eax
+	mov	eax, dword ptr [rbp - 44]
+	mov	ecx, eax
+	and	rcx, 63
+	lea	r10, [rip + _SP8]
+	mov	eax, dword ptr [r10 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 8
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	lea	r11, [rip + _SP6]
+	xor	eax, dword ptr [r11 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 16
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	lea	rbx, [rip + _SP4]
+	xor	eax, dword ptr [rbx + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 24
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	lea	r14, [rip + _SP2]
+	xor	eax, dword ptr [r14 + 4*rcx]
+	xor	eax, dword ptr [rbp - 52]
+	mov	dword ptr [rbp - 52], eax
+	mov	eax, dword ptr [rbp - 52]
+	ror	eax, 4
+	mov	rcx, qword ptr [rbp - 40]
+	mov	r15, rcx
+	add	r15, 4
+	mov	qword ptr [rbp - 40], r15
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 44], eax
+	mov	eax, dword ptr [rbp - 44]
+	mov	ecx, eax
+	and	rcx, 63
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 8
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 16
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 24
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	xor	eax, dword ptr [r9 + 4*rcx]
+	xor	eax, dword ptr [rbp - 48]
+	mov	dword ptr [rbp - 48], eax
+	mov	eax, dword ptr [rbp - 52]
+	mov	rcx, qword ptr [rbp - 40]
+	mov	rdx, rcx
+	add	rdx, 4
+	mov	qword ptr [rbp - 40], rdx
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 44], eax
+	mov	eax, dword ptr [rbp - 44]
+	mov	ecx, eax
+	and	rcx, 63
+	mov	eax, dword ptr [r10 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 8
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	xor	eax, dword ptr [r11 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 16
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	xor	eax, dword ptr [rbx + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 24
+	mov	esi, esi
+	mov	ecx, esi
+	and	rcx, 63
+	xor	eax, dword ptr [r14 + 4*rcx]
+	xor	eax, dword ptr [rbp - 48]
+	mov	dword ptr [rbp - 48], eax
+
+	mov	eax, dword ptr [rbp - 56]
+	add	eax, 1
+	mov	dword ptr [rbp - 56], eax
+	jmp	LBB13_1
+LBB13_4:
+	mov	eax, dword ptr [rbp - 52]
+	shr	eax, 0
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _des_fp]
+	mov	rcx, qword ptr [rdx + 8*rcx]
+	mov	eax, dword ptr [rbp - 52]
+	shr	eax, 8
+	and	eax, 255
+	mov	eax, eax
+	mov	esi, eax
+	xor	rcx, qword ptr [rdx + 8*rsi + 2048]
+	mov	eax, dword ptr [rbp - 52]
+	shr	eax, 16
+	and	eax, 255
+	mov	eax, eax
+	mov	esi, eax
+	xor	rcx, qword ptr [rdx + 8*rsi + 4096]
+	mov	eax, dword ptr [rbp - 52]
 	shr	eax, 24
-	xor	rdx, qword ptr [rsi + 8*rax + 14336]
-	mov	rax, qword ptr [rbp - 48] 
-	mov	dword ptr [rax], edx
-	shr	rdx, 32
-	mov	dword ptr [rax + 4], edx
+	and	eax, 255
+	mov	eax, eax
+	mov	esi, eax
+	xor	rcx, qword ptr [rdx + 8*rsi + 6144]
+	mov	eax, dword ptr [rbp - 48]
+	shr	eax, 0
+	and	eax, 255
+	mov	eax, eax
+	mov	esi, eax
+	xor	rcx, qword ptr [rdx + 8*rsi + 8192]
+	mov	eax, dword ptr [rbp - 48]
+	shr	eax, 8
+	and	eax, 255
+	mov	eax, eax
+	mov	esi, eax
+	xor	rcx, qword ptr [rdx + 8*rsi + 10240]
+	mov	eax, dword ptr [rbp - 48]
+	shr	eax, 16
+	and	eax, 255
+	mov	eax, eax
+	mov	esi, eax
+	xor	rcx, qword ptr [rdx + 8*rsi + 12288]
+	mov	eax, dword ptr [rbp - 48]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	esi, eax
+	xor	rcx, qword ptr [rdx + 8*rsi + 14336]
+	mov	qword ptr [rbp - 72], rcx
+	mov	rcx, qword ptr [rbp - 72]
+	shr	rcx, 32
+                                        
+	mov	dword ptr [rbp - 52], ecx
+	mov	edx, 4294967295
+	and	rdx, qword ptr [rbp - 72]
+                                        
+	mov	dword ptr [rbp - 48], edx
+	mov	eax, dword ptr [rbp - 48]
+	mov	rsi, qword ptr [rbp - 32]
+	mov	dword ptr [rsi], eax
+	mov	eax, dword ptr [rbp - 52]
+	mov	rsi, qword ptr [rbp - 32]
+	mov	dword ptr [rsi + 4], eax
 	pop	rbx
-	pop	r12
-	pop	r13
 	pop	r14
 	pop	r15
 	pop	rbp
@@ -1092,64 +1696,143 @@ _cookey:
 
 	push	rbp
 	mov	rbp, rsp
-	sub	rsp, 144
-	mov	r8, rsi
+	push	r14
+	push	rbx
+	sub	rsp, 192
+	lea	rax, [rbp - 160]
 	mov	rcx, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rcx, qword ptr [rcx]
-	mov	qword ptr [rbp - 8], rcx
-	xor	r9d, r9d
-	.p2align	4, 0x90
+	mov	qword ptr [rbp - 24], rcx
+	mov	qword ptr [rbp - 168], rdi
+	mov	qword ptr [rbp - 176], rsi
+	mov	qword ptr [rbp - 184], rax
+	mov	dword ptr [rbp - 196], 0
 LBB14_1:                                
-	mov	eax, dword ptr [rdi + 8*r9]
+	cmp	dword ptr [rbp - 196], 16
+	jge	LBB14_4
+
+	mov	rax, qword ptr [rbp - 168]
+	mov	rcx, rax
+	add	rcx, 4
+	mov	qword ptr [rbp - 168], rcx
+	mov	qword ptr [rbp - 192], rax
+	mov	rax, qword ptr [rbp - 192]
+	mov	edx, dword ptr [rax]
+	mov	eax, edx
+	and	rax, 16515072
+	shl	rax, 6
+                                        
+	mov	rcx, qword ptr [rbp - 184]
+	mov	dword ptr [rcx], eax
+	mov	rcx, qword ptr [rbp - 192]
+	mov	eax, dword ptr [rcx]
+	mov	ecx, eax
+	and	rcx, 4032
+	shl	rcx, 10
+	mov	rsi, qword ptr [rbp - 184]
+	mov	eax, dword ptr [rsi]
+	mov	edi, eax
+	or	rdi, rcx
+                                        
+	mov	dword ptr [rsi], edi
+	mov	rcx, qword ptr [rbp - 168]
+	mov	eax, dword ptr [rcx]
+	mov	ecx, eax
+	and	rcx, 16515072
+	sar	rcx, 10
+	mov	rsi, qword ptr [rbp - 184]
+	mov	eax, dword ptr [rsi]
+	mov	r8d, eax
+	or	r8, rcx
+                                        
+	mov	dword ptr [rsi], r8d
+	mov	rcx, qword ptr [rbp - 168]
+	mov	eax, dword ptr [rcx]
+	mov	ecx, eax
+	and	rcx, 4032
+	sar	rcx, 6
+	mov	rsi, qword ptr [rbp - 184]
+	mov	r9, rsi
+	add	r9, 4
+	mov	qword ptr [rbp - 184], r9
+	mov	eax, dword ptr [rsi]
+	mov	r9d, eax
+	or	r9, rcx
+                                        
+	mov	dword ptr [rsi], r9d
+	mov	rcx, qword ptr [rbp - 192]
+	mov	eax, dword ptr [rcx]
+	mov	ecx, eax
+	and	rcx, 258048
+	shl	rcx, 12
+                                        
+	mov	rsi, qword ptr [rbp - 184]
+	mov	dword ptr [rsi], ecx
+	mov	rsi, qword ptr [rbp - 192]
+	mov	eax, dword ptr [rsi]
 	mov	esi, eax
-	shl	esi, 6
-	and	esi, 1056964608
-	mov	edx, eax
-	shl	edx, 10
-	and	edx, 4128768
-	or	edx, esi
-	mov	dword ptr [rbp + 8*r9 - 144], edx
-	mov	ecx, dword ptr [rdi + 8*r9 + 4]
-	mov	esi, ecx
-	shr	esi, 10
-	and	esi, 16128
-	or	esi, edx
-	mov	edx, ecx
-	shr	edx, 6
-	and	edx, 63
-	or	edx, esi
-	mov	dword ptr [rbp + 8*r9 - 144], edx
-	mov	edx, eax
-	shl	edx, 12
-	and	edx, 1056964608
-	and	eax, 63
-	shl	eax, 16
-	or	eax, edx
-	mov	edx, ecx
-	shr	edx, 4
-	and	edx, 16128
-	and	ecx, 63
-	or	ecx, eax
-	or	ecx, edx
-	mov	dword ptr [rbp + 8*r9 - 140], ecx
-	inc	r9
-	cmp	r9d, 16
-	jne	LBB14_1
+	and	rsi, 63
+	shl	rsi, 16
+	mov	r10, qword ptr [rbp - 184]
+	mov	eax, dword ptr [r10]
+	mov	r11d, eax
+	or	r11, rsi
+                                        
+	mov	dword ptr [r10], r11d
+	mov	rsi, qword ptr [rbp - 168]
+	mov	eax, dword ptr [rsi]
+	mov	esi, eax
+	and	rsi, 258048
+	sar	rsi, 4
+	mov	r10, qword ptr [rbp - 184]
+	mov	eax, dword ptr [r10]
+	mov	ebx, eax
+	or	rbx, rsi
+                                        
+	mov	dword ptr [r10], ebx
+	mov	rsi, qword ptr [rbp - 168]
+	mov	eax, dword ptr [rsi]
+	mov	esi, eax
+	and	rsi, 63
+	mov	r10, qword ptr [rbp - 184]
+	mov	r14, r10
+	add	r14, 4
+	mov	qword ptr [rbp - 184], r14
+	mov	eax, dword ptr [r10]
+	mov	r14d, eax
+	or	r14, rsi
+                                        
+	mov	dword ptr [r10], r14d
 
-	lea	rsi, [rbp - 144]
+	mov	eax, dword ptr [rbp - 196]
+	add	eax, 1
+	mov	dword ptr [rbp - 196], eax
+	mov	rcx, qword ptr [rbp - 168]
+	add	rcx, 4
+	mov	qword ptr [rbp - 168], rcx
+	jmp	LBB14_1
+LBB14_4:
+	lea	rax, [rbp - 160]
+	mov	rcx, qword ptr [rbp - 176]
+	mov	rdi, rcx
+	mov	rsi, rax
 	mov	edx, 128
-	mov	rdi, r8
-	call	_memcpy
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 8]
-	jne	LBB14_4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rcx, qword ptr [rcx]
+	mov	rdx, qword ptr [rbp - 24]
+	cmp	rcx, rdx
+	jne	LBB14_6
 
-	add	rsp, 144
+	add	rsp, 192
+	pop	rbx
+	pop	r14
 	pop	rbp
 	ret
-LBB14_4:
+LBB14_6:
 	call	___stack_chk_fail
+	ud2
                                         
 	.section	__TEXT,__cstring,cstring_literals
 L_.str:                                 
@@ -1230,7 +1913,7 @@ L_.str.2:
 	.asciz	"key != NULL"
 
 L_.str.3:                               
-	.asciz	"/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/libtomcrypt/src/ciphers/des.c"
+	.asciz	"./crypto_implementations/libtomcrypt/src/ciphers/des.c"
 
 L_.str.4:                               
 	.asciz	"skey != NULL"

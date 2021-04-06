@@ -7,298 +7,690 @@ _rijndael_setup:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	push	rax
-                                        
-	test	rdi, rdi
-	je	LBB0_24
+	sub	rsp, 80
+	mov	qword ptr [rbp - 16], rdi
+	mov	dword ptr [rbp - 20], esi
+	mov	dword ptr [rbp - 24], edx
+	mov	qword ptr [rbp - 32], rcx
 
-	mov	r12, rcx
-	test	rcx, rcx
-	je	LBB0_25
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB0_3
 
-	mov	eax, 3
-	cmp	esi, 32
-	ja	LBB0_23
-
-	mov	ecx, esi
-	movabs	rbx, 4311810048
-	bt	rbx, rcx
-	jae	LBB0_23
-
-	test	edx, edx
-	je	LBB0_6
-
-	lea	eax, [rsi + 7]
-	test	esi, esi
-	cmovns	eax, esi
-	sar	eax, 3
-	lea	ecx, [rax + rax + 6]
-	mov	eax, 4
-	cmp	ecx, edx
-	jne	LBB0_23
-LBB0_6:
-	lea	eax, [rsi + 7]
-	test	esi, esi
-	cmovns	eax, esi
-	sar	eax, 3
-	lea	eax, [rax + rax + 6]
-	mov	dword ptr [r12 + 480], eax
-	mov	eax, dword ptr [rdi]
-	bswap	eax
-	mov	dword ptr [r12], eax
-	mov	eax, dword ptr [rdi + 4]
-	bswap	eax
-	mov	dword ptr [r12 + 4], eax
-	mov	eax, dword ptr [rdi + 8]
-	bswap	eax
-	mov	dword ptr [r12 + 8], eax
-	mov	eax, dword ptr [rdi + 12]
-	bswap	eax
-	mov	dword ptr [r12 + 12], eax
-	cmp	esi, 32
-	je	LBB0_16
-
-	cmp	esi, 24
-	je	LBB0_13
-
-	mov	eax, 1
-	cmp	esi, 16
-	jne	LBB0_23
-
-	mov	qword ptr [rbp - 48], rsi 
-	xor	ebx, ebx
-	lea	r15, [rip + _rcon]
-	.p2align	4, 0x90
-LBB0_10:                                
-	mov	r13d, dword ptr [r12 + 4*rbx]
-	mov	r14d, dword ptr [r12 + 4*rbx + 12]
-	mov	edi, r14d
-	call	_setup_mix
-	xor	eax, r13d
-	xor	eax, dword ptr [rbx + r15]
-	mov	dword ptr [r12 + 4*rbx + 16], eax
-	xor	eax, dword ptr [r12 + 4*rbx + 4]
-	mov	dword ptr [r12 + 4*rbx + 20], eax
-	xor	eax, dword ptr [r12 + 4*rbx + 8]
-	mov	dword ptr [r12 + 4*rbx + 24], eax
-	xor	eax, r14d
-	mov	dword ptr [r12 + 4*rbx + 28], eax
-	add	rbx, 4
-	cmp	rbx, 40
-	jne	LBB0_10
-LBB0_11:
-	movsxd	rax, dword ptr [rbp - 48] 
-	mov	ecx, dword ptr [r12 + 4*rax + 96]
-	mov	dword ptr [r12 + 240], ecx
-	mov	ecx, dword ptr [r12 + 4*rax + 100]
-	mov	dword ptr [r12 + 244], ecx
-	mov	ecx, dword ptr [r12 + 4*rax + 104]
-	mov	dword ptr [r12 + 248], ecx
-	mov	ecx, dword ptr [r12 + 4*rax + 108]
-	mov	dword ptr [r12 + 252], ecx
-	cmp	dword ptr [r12 + 480], 2
-	jl	LBB0_12
-
-	add	rax, 28
-	lea	rcx, [4*rax]
-	mov	r14d, 16
-	sub	r14, rcx
-	lea	rax, [4*rax - 32]
-	mov	r13d, 1
-	mov	r15, -240
-	mov	ecx, 256
-	lea	r8, [rip + _Tks0]
-	lea	r9, [rip + _Tks1]
-	lea	r10, [rip + _Tks2]
-	lea	r11, [rip + _Tks3]
-	.p2align	4, 0x90
-LBB0_20:                                
-	mov	ebx, dword ptr [r12 + rax]
-	mov	rdx, rbx
-	movzx	esi, bh
-	movzx	edi, bl
-	shr	rbx, 24
-	shr	rdx, 14
-	and	edx, 1020
-	mov	edx, dword ptr [rdx + r9]
-	xor	edx, dword ptr [r8 + 4*rbx]
-	xor	edx, dword ptr [r10 + 4*rsi]
-	xor	edx, dword ptr [r11 + 4*rdi]
-	mov	dword ptr [r12 + rcx], edx
-	mov	ebx, dword ptr [r12 + rax + 4]
-	mov	rdx, rbx
-	movzx	esi, bh
-	movzx	edi, bl
-	shr	rbx, 24
-	shr	rdx, 14
-	and	edx, 1020
-	mov	edx, dword ptr [rdx + r9]
-	xor	edx, dword ptr [r8 + 4*rbx]
-	xor	edx, dword ptr [r10 + 4*rsi]
-	xor	edx, dword ptr [r11 + 4*rdi]
-	mov	dword ptr [r12 + rcx + 4], edx
-	mov	ebx, dword ptr [r12 + rax + 8]
-	mov	rdx, rbx
-	movzx	esi, bh
-	movzx	edi, bl
-	shr	rbx, 24
-	shr	rdx, 14
-	and	edx, 1020
-	mov	edx, dword ptr [rdx + r9]
-	xor	edx, dword ptr [r8 + 4*rbx]
-	xor	edx, dword ptr [r10 + 4*rsi]
-	xor	edx, dword ptr [r11 + 4*rdi]
-	mov	dword ptr [r12 + rcx + 8], edx
-	mov	ebx, dword ptr [r12 + rax + 12]
-	mov	rdx, rbx
-	movzx	esi, bh
-	movzx	edi, bl
-	shr	rbx, 24
-	shr	rdx, 14
-	and	edx, 1020
-	mov	edx, dword ptr [rdx + r9]
-	xor	edx, dword ptr [r8 + 4*rbx]
-	xor	edx, dword ptr [r10 + 4*rsi]
-	xor	edx, dword ptr [r11 + 4*rdi]
-	mov	dword ptr [r12 + rcx + 12], edx
-	inc	r13d
-	add	r15, -16
-	add	rcx, 16
-	add	r14, 16
-	add	rax, -16
-	cmp	r13d, dword ptr [r12 + 480]
-	jl	LBB0_20
-
-	mov	rdi, r12
-	sub	rdi, r15
-	add	rcx, r12
-	mov	rsi, r12
-	sub	rsi, r14
-	add	rax, r12
-	jmp	LBB0_22
-LBB0_12:
-	lea	rsi, [r12 + 4*rax + 96]
-	lea	rcx, [r12 + 256]
-	lea	rax, [r12 + 4*rax + 80]
-	lea	rdi, [r12 + 240]
-LBB0_22:
-	mov	eax, dword ptr [rax]
-	mov	dword ptr [rcx], eax
-	mov	eax, dword ptr [rsi - 12]
-	mov	dword ptr [rdi + 20], eax
-	mov	eax, dword ptr [rsi - 8]
-	mov	dword ptr [rdi + 24], eax
-	mov	eax, dword ptr [rsi - 4]
-	mov	dword ptr [rdi + 28], eax
-	xor	eax, eax
-LBB0_23:
-	add	rsp, 8
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
-LBB0_13:
-	mov	qword ptr [rbp - 48], rsi 
-	mov	eax, dword ptr [rdi + 16]
-	bswap	eax
-	mov	dword ptr [r12 + 16], eax
-	mov	eax, dword ptr [rdi + 20]
-	bswap	eax
-	mov	dword ptr [r12 + 20], eax
-	lea	rbx, [r12 + 44]
-	xor	r13d, r13d
-	.p2align	4, 0x90
-LBB0_14:                                
-	mov	r14d, dword ptr [rbx - 44]
-	mov	r15d, dword ptr [rbx - 24]
-	mov	edi, r15d
-	call	_setup_mix
-	xor	eax, r14d
-	lea	rcx, [rip + _rcon]
-	xor	eax, dword ptr [r13 + rcx]
-	mov	dword ptr [rbx - 20], eax
-	xor	eax, dword ptr [rbx - 40]
-	mov	dword ptr [rbx - 16], eax
-	xor	eax, dword ptr [rbx - 36]
-	mov	dword ptr [rbx - 12], eax
-	xor	eax, dword ptr [rbx - 32]
-	mov	dword ptr [rbx - 8], eax
-	cmp	r13, 28
-	je	LBB0_11
-
-	xor	eax, dword ptr [rbx - 28]
-	mov	dword ptr [rbx - 4], eax
-	xor	eax, r15d
-	mov	dword ptr [rbx], eax
-	add	r13, 4
-	add	rbx, 24
-	jmp	LBB0_14
-LBB0_16:
-	mov	qword ptr [rbp - 48], rsi 
-	mov	eax, dword ptr [rdi + 16]
-	bswap	eax
-	mov	dword ptr [r12 + 16], eax
-	mov	eax, dword ptr [rdi + 20]
-	bswap	eax
-	mov	dword ptr [r12 + 20], eax
-	mov	eax, dword ptr [rdi + 24]
-	bswap	eax
-	mov	dword ptr [r12 + 24], eax
-	mov	eax, dword ptr [rdi + 28]
-	bswap	eax
-	mov	dword ptr [r12 + 28], eax
-	xor	ebx, ebx
-	lea	r13, [rip + _rcon]
-	.p2align	4, 0x90
-LBB0_17:                                
-	mov	r14d, dword ptr [r12 + 8*rbx]
-	mov	r15d, dword ptr [r12 + 8*rbx + 28]
-	mov	edi, r15d
-	call	_setup_mix
-	xor	eax, r14d
-	xor	eax, dword ptr [rbx + r13]
-	mov	dword ptr [r12 + 8*rbx + 32], eax
-	xor	eax, dword ptr [r12 + 8*rbx + 4]
-	mov	dword ptr [r12 + 8*rbx + 36], eax
-	xor	eax, dword ptr [r12 + 8*rbx + 8]
-	mov	dword ptr [r12 + 8*rbx + 40], eax
-	xor	eax, dword ptr [r12 + 8*rbx + 12]
-	mov	dword ptr [r12 + 8*rbx + 44], eax
-	cmp	rbx, 24
-	je	LBB0_11
-
-	mov	r14d, dword ptr [r12 + 8*rbx + 16]
-	rol	eax, 24
-	mov	edi, eax
-	call	_setup_mix
-	xor	eax, r14d
-	mov	dword ptr [r12 + 8*rbx + 48], eax
-	xor	eax, dword ptr [r12 + 8*rbx + 20]
-	mov	dword ptr [r12 + 8*rbx + 52], eax
-	xor	eax, dword ptr [r12 + 8*rbx + 24]
-	mov	dword ptr [r12 + 8*rbx + 56], eax
-	xor	eax, r15d
-	mov	dword ptr [r12 + 8*rbx + 60], eax
-	add	rbx, 4
-	jmp	LBB0_17
-LBB0_24:
 	lea	rdi, [rip + L_.str.2]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 121
 	call	_crypt_argchk
-LBB0_25:
+LBB0_3:
+	jmp	LBB0_4
+LBB0_4:
+	jmp	LBB0_5
+LBB0_5:
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB0_7
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 122
 	call	_crypt_argchk
+LBB0_7:
+	jmp	LBB0_8
+LBB0_8:
+	cmp	dword ptr [rbp - 20], 16
+	je	LBB0_12
+
+	cmp	dword ptr [rbp - 20], 24
+	je	LBB0_12
+
+	cmp	dword ptr [rbp - 20], 32
+	je	LBB0_12
+
+	mov	dword ptr [rbp - 4], 3
+	jmp	LBB0_61
+LBB0_12:
+	cmp	dword ptr [rbp - 24], 0
+	je	LBB0_15
+
+	mov	eax, dword ptr [rbp - 24]
+	mov	ecx, dword ptr [rbp - 20]
+	mov	dword ptr [rbp - 60], eax 
+	mov	eax, ecx
+	cdq
+	mov	ecx, 8
+	idiv	ecx
+	sub	eax, 2
+	shl	eax, 1
+	add	eax, 10
+	mov	ecx, dword ptr [rbp - 60] 
+	cmp	ecx, eax
+	je	LBB0_15
+
+	mov	dword ptr [rbp - 4], 4
+	jmp	LBB0_61
+LBB0_15:
+	mov	eax, dword ptr [rbp - 20]
+	cdq
+	mov	ecx, 8
+	idiv	ecx
+	sub	eax, 2
+	shl	eax, 1
+	add	eax, 10
+	mov	rsi, qword ptr [rbp - 32]
+	mov	dword ptr [rsi + 480], eax
+	mov	dword ptr [rbp - 36], 0
+	mov	rsi, qword ptr [rbp - 32]
+	mov	qword ptr [rbp - 48], rsi
+
+	mov	rax, qword ptr [rbp - 48]
+	mov	rsi, qword ptr [rbp - 16]
+	mov	rdi, rax
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx], r8d
+
+	jmp	LBB0_18
+LBB0_18:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 4
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 4
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 4]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 4], r8d
+
+	jmp	LBB0_20
+LBB0_20:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 8
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 8
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 8]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 8], r8d
+
+	jmp	LBB0_22
+LBB0_22:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 12
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 12
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 12]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 12], r8d
+
+	cmp	dword ptr [rbp - 20], 16
+	jne	LBB0_29
+
+	jmp	LBB0_25
+LBB0_25:                                
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax + 12]
+	mov	dword ptr [rbp - 40], ecx
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax]
+	mov	edi, dword ptr [rbp - 40]
+	mov	dword ptr [rbp - 64], ecx 
+	call	_setup_mix
+	mov	ecx, dword ptr [rbp - 64] 
+	xor	ecx, eax
+	movsxd	rdx, dword ptr [rbp - 36]
+	lea	rsi, [rip + _rcon]
+	xor	ecx, dword ptr [rsi + 4*rdx]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 16], ecx
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 4]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 16]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 20], eax
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 8]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 20]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 24], eax
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 12]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 24]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 28], eax
+	mov	eax, dword ptr [rbp - 36]
+	add	eax, 1
+	mov	dword ptr [rbp - 36], eax
+	cmp	eax, 10
+	jne	LBB0_27
+
+	jmp	LBB0_28
+LBB0_27:                                
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 16
+	mov	qword ptr [rbp - 48], rax
+	jmp	LBB0_25
+LBB0_28:
+	jmp	LBB0_56
+LBB0_29:
+	cmp	dword ptr [rbp - 20], 24
+	jne	LBB0_39
+
+	jmp	LBB0_31
+LBB0_31:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 16
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 16
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 16]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 16], r8d
+
+	jmp	LBB0_33
+LBB0_33:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 20
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 20
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 20]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 20], r8d
+
+	jmp	LBB0_35
+LBB0_35:                                
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax + 20]
+	mov	dword ptr [rbp - 40], ecx
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax]
+	mov	edi, dword ptr [rbp - 40]
+	mov	dword ptr [rbp - 68], ecx 
+	call	_setup_mix
+	mov	ecx, dword ptr [rbp - 68] 
+	xor	ecx, eax
+	movsxd	rdx, dword ptr [rbp - 36]
+	lea	rsi, [rip + _rcon]
+	xor	ecx, dword ptr [rsi + 4*rdx]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 24], ecx
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 4]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 24]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 28], eax
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 8]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 28]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 32], eax
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 12]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 32]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 36], eax
+	mov	eax, dword ptr [rbp - 36]
+	add	eax, 1
+	mov	dword ptr [rbp - 36], eax
+	cmp	eax, 8
+	jne	LBB0_37
+
+	jmp	LBB0_38
+LBB0_37:                                
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax + 16]
+	mov	rax, qword ptr [rbp - 48]
+	xor	ecx, dword ptr [rax + 36]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax + 40], ecx
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax + 20]
+	mov	rax, qword ptr [rbp - 48]
+	xor	ecx, dword ptr [rax + 40]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax + 44], ecx
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 24
+	mov	qword ptr [rbp - 48], rax
+	jmp	LBB0_35
+LBB0_38:
+	jmp	LBB0_55
+LBB0_39:
+	cmp	dword ptr [rbp - 20], 32
+	jne	LBB0_53
+
+	jmp	LBB0_41
+LBB0_41:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 16
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 16
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 16]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 16], r8d
+
+	jmp	LBB0_43
+LBB0_43:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 20
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 20
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 20]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 20], r8d
+
+	jmp	LBB0_45
+LBB0_45:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 24
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 24
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 24]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 24], r8d
+
+	jmp	LBB0_47
+LBB0_47:
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 28
+	mov	rcx, qword ptr [rbp - 16]
+	add	rcx, 28
+	mov	rdi, rax
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+	mov	rcx, qword ptr [rbp - 48]
+	mov	r8d, dword ptr [rcx + 28]
+	bswap	r8d
+	mov	rcx, qword ptr [rbp - 48]
+	mov	dword ptr [rcx + 28], r8d
+
+	jmp	LBB0_49
+LBB0_49:                                
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax + 28]
+	mov	dword ptr [rbp - 40], ecx
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax]
+	mov	edi, dword ptr [rbp - 40]
+	mov	dword ptr [rbp - 72], ecx 
+	call	_setup_mix
+	mov	ecx, dword ptr [rbp - 72] 
+	xor	ecx, eax
+	movsxd	rdx, dword ptr [rbp - 36]
+	lea	rsi, [rip + _rcon]
+	xor	ecx, dword ptr [rsi + 4*rdx]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 32], ecx
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 4]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 32]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 36], eax
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 8]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 36]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 40], eax
+	mov	rdx, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rdx + 12]
+	mov	rdx, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rdx + 40]
+	mov	rdx, qword ptr [rbp - 48]
+	mov	dword ptr [rdx + 44], eax
+	mov	eax, dword ptr [rbp - 36]
+	add	eax, 1
+	mov	dword ptr [rbp - 36], eax
+	cmp	eax, 7
+	jne	LBB0_51
+
+	jmp	LBB0_52
+LBB0_51:                                
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax + 44]
+	mov	dword ptr [rbp - 40], ecx
+	mov	rax, qword ptr [rbp - 48]
+	mov	ecx, dword ptr [rax + 16]
+	mov	edx, dword ptr [rbp - 40]
+	ror	edx, 8
+	mov	edi, edx
+	mov	dword ptr [rbp - 76], ecx 
+	call	_setup_mix
+	mov	ecx, dword ptr [rbp - 76] 
+	xor	ecx, eax
+	mov	rsi, qword ptr [rbp - 48]
+	mov	dword ptr [rsi + 48], ecx
+	mov	rsi, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rsi + 20]
+	mov	rsi, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rsi + 48]
+	mov	rsi, qword ptr [rbp - 48]
+	mov	dword ptr [rsi + 52], eax
+	mov	rsi, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rsi + 24]
+	mov	rsi, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rsi + 52]
+	mov	rsi, qword ptr [rbp - 48]
+	mov	dword ptr [rsi + 56], eax
+	mov	rsi, qword ptr [rbp - 48]
+	mov	eax, dword ptr [rsi + 28]
+	mov	rsi, qword ptr [rbp - 48]
+	xor	eax, dword ptr [rsi + 56]
+	mov	rsi, qword ptr [rbp - 48]
+	mov	dword ptr [rsi + 60], eax
+	mov	rsi, qword ptr [rbp - 48]
+	add	rsi, 32
+	mov	qword ptr [rbp - 48], rsi
+	jmp	LBB0_49
+LBB0_52:
+	jmp	LBB0_54
+LBB0_53:
+	mov	dword ptr [rbp - 4], 1
+	jmp	LBB0_61
+LBB0_54:
+	jmp	LBB0_55
+LBB0_55:
+	jmp	LBB0_56
+LBB0_56:
+	mov	rax, qword ptr [rbp - 32]
+	add	rax, 240
+	mov	qword ptr [rbp - 48], rax
+	mov	rax, qword ptr [rbp - 32]
+	mov	ecx, dword ptr [rbp - 20]
+	add	ecx, 28
+	movsxd	rdx, ecx
+	shl	rdx, 2
+	add	rax, rdx
+	add	rax, -16
+	mov	qword ptr [rbp - 56], rax
+	mov	rax, qword ptr [rbp - 56]
+	mov	rdx, rax
+	add	rdx, 4
+	mov	qword ptr [rbp - 56], rdx
+	mov	ecx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	rdx, rax
+	add	rdx, 4
+	mov	qword ptr [rbp - 48], rdx
+	mov	dword ptr [rax], ecx
+	mov	rax, qword ptr [rbp - 56]
+	mov	rdx, rax
+	add	rdx, 4
+	mov	qword ptr [rbp - 56], rdx
+	mov	ecx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	rdx, rax
+	add	rdx, 4
+	mov	qword ptr [rbp - 48], rdx
+	mov	dword ptr [rax], ecx
+	mov	rax, qword ptr [rbp - 56]
+	mov	rdx, rax
+	add	rdx, 4
+	mov	qword ptr [rbp - 56], rdx
+	mov	ecx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	rdx, rax
+	add	rdx, 4
+	mov	qword ptr [rbp - 48], rdx
+	mov	dword ptr [rax], ecx
+	mov	rax, qword ptr [rbp - 56]
+	mov	ecx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax], ecx
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, -12
+	mov	qword ptr [rbp - 48], rax
+	mov	rax, qword ptr [rbp - 56]
+	add	rax, -12
+	mov	qword ptr [rbp - 56], rax
+	mov	dword ptr [rbp - 36], 1
+LBB0_57:                                
+	mov	eax, dword ptr [rbp - 36]
+	mov	rcx, qword ptr [rbp - 32]
+	cmp	eax, dword ptr [rcx + 480]
+	jge	LBB0_60
+
+	mov	rax, qword ptr [rbp - 56]
+	add	rax, -16
+	mov	qword ptr [rbp - 56], rax
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 16
+	mov	qword ptr [rbp - 48], rax
+	mov	rax, qword ptr [rbp - 56]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 40], ecx
+	mov	ecx, dword ptr [rbp - 40]
+	shr	ecx, 24
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	eax, ecx
+	lea	rdx, [rip + _Tks0]
+	mov	ecx, dword ptr [rdx + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	lea	rdi, [rip + _Tks1]
+	xor	ecx, dword ptr [rdi + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	lea	r8, [rip + _Tks2]
+	xor	ecx, dword ptr [r8 + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	lea	r9, [rip + _Tks3]
+	xor	ecx, dword ptr [r9 + 4*rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax], ecx
+	mov	rax, qword ptr [rbp - 56]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 40], ecx
+	mov	ecx, dword ptr [rbp - 40]
+	shr	ecx, 24
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	eax, ecx
+	mov	ecx, dword ptr [rdx + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [rdi + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [r8 + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [r9 + 4*rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax + 4], ecx
+	mov	rax, qword ptr [rbp - 56]
+	mov	ecx, dword ptr [rax + 8]
+	mov	dword ptr [rbp - 40], ecx
+	mov	ecx, dword ptr [rbp - 40]
+	shr	ecx, 24
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	eax, ecx
+	mov	ecx, dword ptr [rdx + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [rdi + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [r8 + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [r9 + 4*rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax + 8], ecx
+	mov	rax, qword ptr [rbp - 56]
+	mov	ecx, dword ptr [rax + 12]
+	mov	dword ptr [rbp - 40], ecx
+	mov	ecx, dword ptr [rbp - 40]
+	shr	ecx, 24
+	and	ecx, 255
+	mov	ecx, ecx
+	mov	eax, ecx
+	mov	ecx, dword ptr [rdx + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [rdi + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [r8 + 4*rax]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	eax, esi
+	xor	ecx, dword ptr [r9 + 4*rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax + 12], ecx
+
+	mov	eax, dword ptr [rbp - 36]
+	add	eax, 1
+	mov	dword ptr [rbp - 36], eax
+	jmp	LBB0_57
+LBB0_60:
+	mov	rax, qword ptr [rbp - 56]
+	add	rax, -16
+	mov	qword ptr [rbp - 56], rax
+	mov	rax, qword ptr [rbp - 48]
+	add	rax, 16
+	mov	qword ptr [rbp - 48], rax
+	mov	rax, qword ptr [rbp - 56]
+	mov	rcx, rax
+	add	rcx, 4
+	mov	qword ptr [rbp - 56], rcx
+	mov	edx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	rcx, rax
+	add	rcx, 4
+	mov	qword ptr [rbp - 48], rcx
+	mov	dword ptr [rax], edx
+	mov	rax, qword ptr [rbp - 56]
+	mov	rcx, rax
+	add	rcx, 4
+	mov	qword ptr [rbp - 56], rcx
+	mov	edx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	rcx, rax
+	add	rcx, 4
+	mov	qword ptr [rbp - 48], rcx
+	mov	dword ptr [rax], edx
+	mov	rax, qword ptr [rbp - 56]
+	mov	rcx, rax
+	add	rcx, 4
+	mov	qword ptr [rbp - 56], rcx
+	mov	edx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	rcx, rax
+	add	rcx, 4
+	mov	qword ptr [rbp - 48], rcx
+	mov	dword ptr [rax], edx
+	mov	rax, qword ptr [rbp - 56]
+	mov	edx, dword ptr [rax]
+	mov	rax, qword ptr [rbp - 48]
+	mov	dword ptr [rax], edx
+	mov	dword ptr [rbp - 4], 0
+LBB0_61:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 80
+	pop	rbp
+	ret
                                         
 	.globl	_rijndael_ecb_encrypt   
 	.p2align	4, 0x90
@@ -306,286 +698,528 @@ _rijndael_ecb_encrypt:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 88
-	test	rdi, rdi
-	je	LBB1_9
+	sub	rsp, 96
+	mov	qword ptr [rbp - 16], rdi
+	mov	qword ptr [rbp - 24], rsi
+	mov	qword ptr [rbp - 32], rdx
 
-	test	rsi, rsi
-	je	LBB1_10
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB1_3
 
-	test	rdx, rdx
-	je	LBB1_11
-
-	mov	ebx, dword ptr [rdx + 480]
-	lea	ecx, [rbx - 2]
-	mov	eax, 4
-	cmp	ecx, 14
-	ja	LBB1_8
-
-	mov	qword ptr [rbp - 112], rsi 
-	mov	ecx, dword ptr [rdi]
-	mov	r11d, dword ptr [rdi + 4]
-	bswap	ecx
-	xor	ecx, dword ptr [rdx]
-	bswap	r11d
-	xor	r11d, dword ptr [rdx + 4]
-	mov	eax, dword ptr [rdi + 8]
-	bswap	eax
-	xor	eax, dword ptr [rdx + 8]
-	mov	dword ptr [rbp - 56], eax 
-	mov	eax, dword ptr [rdi + 12]
-	bswap	eax
-	xor	eax, dword ptr [rdx + 12]
-	sar	ebx
-	dec	ebx
-	mov	rsi, rbx
-	shl	rsi, 5
-	mov	qword ptr [rbp - 80], rbx 
-	lea	rdi, [rbx + rbx]
-	mov	rbx, rax
-	mov	qword ptr [rbp - 96], rdi 
-	lea	rsi, [rsi + rdx + 32]
-	mov	qword ptr [rbp - 88], rsi 
-	mov	qword ptr [rbp - 104], rdx 
-	add	rdx, 44
-	mov	qword ptr [rbp - 48], rdx 
-	.p2align	4, 0x90
-LBB1_5:                                 
-	mov	r8d, ecx
-	movzx	eax, cl
-	mov	qword ptr [rbp - 72], rax 
-	movzx	eax, ch
-	mov	qword ptr [rbp - 64], rax 
-	shr	ecx, 16
-	movzx	eax, cl
-	movzx	r13d, bl
-	movzx	esi, bh
-	mov	r10d, ebx
-	shr	ebx, 24
-	lea	r15, [rip + _TE1]
-	mov	r9d, dword ptr [r15 + 4*rax]
-	lea	r12, [rip + _TE0]
-	xor	r9d, dword ptr [r12 + 4*rbx]
-	shr	r8d, 24
-	mov	ecx, r11d
-	mov	eax, r11d
-	shr	eax, 16
-	movzx	eax, al
-	movzx	r14d, cl
-	movzx	edi, ch
-	mov	ebx, dword ptr [r15 + 4*rax]
-	xor	ebx, dword ptr [r12 + 4*r8]
-	mov	edx, dword ptr [rbp - 56] 
-	movzx	eax, dh
-	lea	r8, [rip + _TE2]
-	xor	ebx, dword ptr [r8 + 4*rax]
-	shr	r11d, 24
-	mov	eax, edx
-	shr	eax, 16
-	movzx	eax, al
-	mov	ecx, dword ptr [r15 + 4*rax]
-	xor	ecx, dword ptr [r12 + 4*r11]
-	xor	ecx, dword ptr [r8 + 4*rsi]
-	mov	esi, edx
-	mov	r11d, edx
-	shr	esi, 24
-	shr	r10d, 16
-	movzx	edx, r10b
-	mov	edx, dword ptr [r15 + 4*rdx]
-	xor	edx, dword ptr [r12 + 4*rsi]
-	mov	rax, qword ptr [rbp - 64] 
-	xor	edx, dword ptr [r8 + 4*rax]
-	xor	r9d, dword ptr [r8 + 4*rdi]
-	lea	rdi, [rip + _TE3]
-	xor	ebx, dword ptr [rdi + 4*r13]
-	mov	rax, qword ptr [rbp - 72] 
-	xor	ecx, dword ptr [rdi + 4*rax]
-	xor	edx, dword ptr [rdi + 4*r14]
-	mov	rax, qword ptr [rbp - 48] 
-	xor	ebx, dword ptr [rax - 28]
-	xor	ecx, dword ptr [rax - 24]
-	mov	r14d, ecx
-	xor	edx, dword ptr [rax - 20]
-	movzx	esi, r11b
-	xor	r9d, dword ptr [rdi + 4*rsi]
-	mov	edi, ebx
-	mov	ecx, ebx
-	shr	ecx, 24
-	mov	r8d, ecx
-	xor	r9d, dword ptr [rax - 16]
-	mov	rbx, r9
-	mov	r10, qword ptr [rbp - 80] 
-	mov	eax, edi
-	movzx	ecx, al
-	test	r10d, r10d
-	je	LBB1_7
-
-	mov	qword ptr [rbp - 56], rcx 
-	movzx	ecx, ah
-	mov	qword ptr [rbp - 72], rcx 
-	shr	eax, 16
-	movzx	edi, al
-	mov	rcx, rbx
-	movzx	eax, cl
-	mov	qword ptr [rbp - 64], rax 
-	movzx	eax, ch
-	mov	qword ptr [rbp - 128], rax 
-	shr	ecx, 24
-	lea	r13, [rip + _TE1]
-	mov	r12d, dword ptr [r13 + 4*rdi]
-	lea	r9, [rip + _TE0]
-	xor	r12d, dword ptr [r9 + 4*rcx]
-	mov	ecx, r14d
-	mov	eax, r14d
-	shr	eax, 16
-	movzx	eax, al
-	mov	edi, r14d
-	movzx	r11d, cl
-	movzx	ecx, ch
-	mov	qword ptr [rbp - 120], rcx 
-	mov	r15d, dword ptr [r13 + 4*rax]
-	xor	r15d, dword ptr [r9 + 4*r8]
-	movzx	esi, dh
-	mov	eax, edx
-	lea	rdx, [rip + _TE2]
-	xor	r15d, dword ptr [rdx + 4*rsi]
-	shr	edi, 24
-	mov	esi, eax
-	shr	esi, 16
-	movzx	r8d, sil
-	mov	esi, eax
-	movzx	r14d, al
-	mov	ecx, dword ptr [r13 + 4*r8]
-	xor	ecx, dword ptr [r9 + 4*rdi]
-	mov	rax, qword ptr [rbp - 128] 
-	xor	ecx, dword ptr [rdx + 4*rax]
-	shr	esi, 24
-	shr	ebx, 16
-	movzx	edi, bl
-	mov	rbx, r12
-	mov	eax, dword ptr [r13 + 4*rdi]
-	xor	eax, dword ptr [r9 + 4*rsi]
-	mov	rsi, qword ptr [rbp - 72] 
-	xor	eax, dword ptr [rdx + 4*rsi]
-	mov	rsi, qword ptr [rbp - 120] 
-	xor	ebx, dword ptr [rdx + 4*rsi]
-	lea	rdx, [rip + _TE3]
-	mov	rsi, qword ptr [rbp - 64] 
-	xor	r15d, dword ptr [rdx + 4*rsi]
-	mov	rsi, qword ptr [rbp - 56] 
-	xor	ecx, dword ptr [rdx + 4*rsi]
-	xor	eax, dword ptr [rdx + 4*r11]
-	xor	ebx, dword ptr [rdx + 4*r14]
-	mov	rdx, qword ptr [rbp - 48] 
-	xor	r15d, dword ptr [rdx - 12]
-	xor	ecx, dword ptr [rdx - 8]
-	mov	r11d, ecx
-	mov	ecx, r15d
-	xor	eax, dword ptr [rdx - 4]
-	mov	dword ptr [rbp - 56], eax 
-	xor	ebx, dword ptr [rdx]
-	add	rdx, 32
-	mov	qword ptr [rbp - 48], rdx 
-	dec	r10d
-	mov	qword ptr [rbp - 80], r10 
-	jmp	LBB1_5
-LBB1_7:
-	mov	qword ptr [rbp - 48], rcx 
-	movzx	ecx, ah
-	mov	r13, rcx
-	shr	eax, 16
-	movzx	eax, al
-	movzx	r10d, bl
-	movzx	ecx, bh
-	mov	r9, rcx
-	mov	r12d, ebx
-	shr	ebx, 24
-	lea	r11, [rip + _Te4_2]
-	mov	eax, dword ptr [r11 + 4*rax]
-	lea	r15, [rip + _Te4_3]
-	xor	eax, dword ptr [r15 + 4*rbx]
-	mov	edi, r14d
-	shr	edi, 16
-	movzx	edi, dil
-	mov	edi, dword ptr [r11 + 4*rdi]
-	xor	edi, dword ptr [r15 + 4*r8]
-	mov	esi, r14d
-	shr	esi, 24
-	mov	ecx, edx
-	shr	edx, 16
-	movzx	edx, dl
-	mov	edx, dword ptr [r11 + 4*rdx]
-	xor	edx, dword ptr [r15 + 4*rsi]
-	shr	r12d, 16
-	movzx	esi, r12b
-	mov	esi, dword ptr [r11 + 4*rsi]
-	mov	ebx, ecx
-	shr	ebx, 24
-	xor	esi, dword ptr [r15 + 4*rbx]
-	movzx	ebx, ch
-	mov	r11d, ecx
-	lea	r8, [rip + _Te4_1]
-	xor	edi, dword ptr [r8 + 4*rbx]
-	xor	edx, dword ptr [r8 + 4*r9]
-	xor	esi, dword ptr [r8 + 4*r13]
-	mov	ebx, r14d
-	movzx	ecx, bh
-	xor	eax, dword ptr [r8 + 4*rcx]
-	movzx	r9d, bl
-	movzx	r8d, r11b
-	lea	rbx, [rip + _Te4_0]
-	xor	edi, dword ptr [rbx + 4*r10]
-	mov	rcx, qword ptr [rbp - 48] 
-	xor	edx, dword ptr [rbx + 4*rcx]
-	xor	esi, dword ptr [rbx + 4*r9]
-	xor	eax, dword ptr [rbx + 4*r8]
-	mov	rcx, qword ptr [rbp - 88] 
-	xor	edi, dword ptr [rcx]
-	bswap	edi
-	mov	rcx, qword ptr [rbp - 112] 
-	mov	dword ptr [rcx], edi
-	mov	rbx, qword ptr [rbp - 96] 
-	shl	rbx, 4
-	mov	rdi, qword ptr [rbp - 104] 
-	xor	edx, dword ptr [rdi + rbx + 36]
-	bswap	edx
-	mov	dword ptr [rcx + 4], edx
-	xor	esi, dword ptr [rdi + rbx + 40]
-	bswap	esi
-	mov	dword ptr [rcx + 8], esi
-	xor	eax, dword ptr [rdi + rbx + 44]
-	bswap	eax
-	mov	dword ptr [rcx + 12], eax
-	xor	eax, eax
-LBB1_8:
-	add	rsp, 88
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
-LBB1_9:
 	lea	rdi, [rip + L_.str.5]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 287
 	call	_crypt_argchk
-LBB1_10:
+LBB1_3:
+	jmp	LBB1_4
+LBB1_4:
+	jmp	LBB1_5
+LBB1_5:
+	cmp	qword ptr [rbp - 24], 0
+	jne	LBB1_7
+
 	lea	rdi, [rip + L_.str.6]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 288
 	call	_crypt_argchk
-LBB1_11:
+LBB1_7:
+	jmp	LBB1_8
+LBB1_8:
+	jmp	LBB1_9
+LBB1_9:
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB1_11
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 289
 	call	_crypt_argchk
+LBB1_11:
+	jmp	LBB1_12
+LBB1_12:
+	mov	rax, qword ptr [rbp - 32]
+	mov	ecx, dword ptr [rax + 480]
+	mov	dword ptr [rbp - 76], ecx
+	cmp	dword ptr [rbp - 76], 2
+	jl	LBB1_14
+
+	cmp	dword ptr [rbp - 76], 16
+	jle	LBB1_15
+LBB1_14:
+	mov	dword ptr [rbp - 4], 4
+	jmp	LBB1_36
+LBB1_15:
+	mov	rax, qword ptr [rbp - 32]
+	mov	qword ptr [rbp - 72], rax
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 36], ecx
+	mov	ecx, dword ptr [rbp - 36]
+	bswap	ecx
+	mov	dword ptr [rbp - 36], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax]
+	xor	ecx, dword ptr [rbp - 36]
+	mov	dword ptr [rbp - 36], ecx
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 40], ecx
+	mov	ecx, dword ptr [rbp - 40]
+	bswap	ecx
+	mov	dword ptr [rbp - 40], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax + 4]
+	xor	ecx, dword ptr [rbp - 40]
+	mov	dword ptr [rbp - 40], ecx
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax + 8]
+	mov	dword ptr [rbp - 44], ecx
+	mov	ecx, dword ptr [rbp - 44]
+	bswap	ecx
+	mov	dword ptr [rbp - 44], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax + 8]
+	xor	ecx, dword ptr [rbp - 44]
+	mov	dword ptr [rbp - 44], ecx
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax + 12]
+	mov	dword ptr [rbp - 48], ecx
+	mov	ecx, dword ptr [rbp - 48]
+	bswap	ecx
+	mov	dword ptr [rbp - 48], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax + 12]
+	xor	ecx, dword ptr [rbp - 48]
+	mov	dword ptr [rbp - 48], ecx
+	mov	ecx, dword ptr [rbp - 76]
+	sar	ecx, 1
+	mov	dword ptr [rbp - 80], ecx
+LBB1_24:                                
+	mov	eax, dword ptr [rbp - 36]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _TE0]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdi, [rip + _TE1]
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r8, [rip + _TE2]
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 48]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r9, [rip + _TE3]
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 16]
+	mov	dword ptr [rbp - 52], eax
+	mov	eax, dword ptr [rbp - 40]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 48]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 36]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 20]
+	mov	dword ptr [rbp - 56], eax
+	mov	eax, dword ptr [rbp - 44]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 48]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 36]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 24]
+	mov	dword ptr [rbp - 60], eax
+	mov	eax, dword ptr [rbp - 48]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 36]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 28]
+	mov	dword ptr [rbp - 64], eax
+	mov	rcx, qword ptr [rbp - 72]
+	add	rcx, 32
+	mov	qword ptr [rbp - 72], rcx
+	mov	eax, dword ptr [rbp - 80]
+	add	eax, -1
+	mov	dword ptr [rbp - 80], eax
+	cmp	eax, 0
+	jne	LBB1_26
+
+	jmp	LBB1_27
+LBB1_26:                                
+	mov	eax, dword ptr [rbp - 52]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _TE0]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdi, [rip + _TE1]
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r8, [rip + _TE2]
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r9, [rip + _TE3]
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 36], eax
+	mov	eax, dword ptr [rbp - 56]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 4]
+	mov	dword ptr [rbp - 40], eax
+	mov	eax, dword ptr [rbp - 60]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 8]
+	mov	dword ptr [rbp - 44], eax
+	mov	eax, dword ptr [rbp - 64]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 12]
+	mov	dword ptr [rbp - 48], eax
+	jmp	LBB1_24
+LBB1_27:
+	mov	eax, dword ptr [rbp - 52]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Te4_3]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_2]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_1]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_0]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 36], eax
+
+	mov	eax, dword ptr [rbp - 36]
+	bswap	eax
+	mov	dword ptr [rbp - 84], eax
+	mov	rdi, qword ptr [rbp - 24]
+	lea	rcx, [rbp - 84]
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	eax, dword ptr [rbp - 56]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Te4_3]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_2]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_1]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_0]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 4]
+	mov	dword ptr [rbp - 40], eax
+
+	mov	eax, dword ptr [rbp - 40]
+	bswap	eax
+	mov	dword ptr [rbp - 88], eax
+	mov	rcx, qword ptr [rbp - 24]
+	add	rcx, 4
+	lea	rdx, [rbp - 88]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	eax, dword ptr [rbp - 60]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Te4_3]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_2]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_1]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_0]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 8]
+	mov	dword ptr [rbp - 44], eax
+
+	mov	eax, dword ptr [rbp - 44]
+	bswap	eax
+	mov	dword ptr [rbp - 92], eax
+	mov	rcx, qword ptr [rbp - 24]
+	add	rcx, 8
+	lea	rdx, [rbp - 92]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	eax, dword ptr [rbp - 64]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Te4_3]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_2]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_1]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_0]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 12]
+	mov	dword ptr [rbp - 48], eax
+
+	mov	eax, dword ptr [rbp - 48]
+	bswap	eax
+	mov	dword ptr [rbp - 96], eax
+	mov	rcx, qword ptr [rbp - 24]
+	add	rcx, 12
+	lea	rdx, [rbp - 96]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	dword ptr [rbp - 4], 0
+LBB1_36:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 96
+	pop	rbp
+	ret
                                         
 	.globl	_rijndael_ecb_decrypt   
 	.p2align	4, 0x90
@@ -593,431 +1227,742 @@ _rijndael_ecb_decrypt:
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	sub	rsp, 88
-	test	rsi, rsi
-	je	LBB2_9
+	sub	rsp, 96
+	mov	qword ptr [rbp - 16], rdi
+	mov	qword ptr [rbp - 24], rsi
+	mov	qword ptr [rbp - 32], rdx
 
-	test	rdi, rdi
-	je	LBB2_10
+	cmp	qword ptr [rbp - 24], 0
+	jne	LBB2_3
 
-	test	rdx, rdx
-	je	LBB2_11
-
-	mov	eax, dword ptr [rdx + 480]
-	mov	r8, rax
-	lea	ecx, [rax - 2]
-	mov	eax, 4
-	cmp	ecx, 14
-	ja	LBB2_8
-
-	mov	qword ptr [rbp - 96], rsi 
-	mov	r10d, dword ptr [rdi]
-	mov	r11d, dword ptr [rdi + 4]
-	bswap	r10d
-	xor	r10d, dword ptr [rdx + 240]
-	bswap	r11d
-	xor	r11d, dword ptr [rdx + 244]
-	mov	eax, dword ptr [rdi + 8]
-	bswap	eax
-	xor	eax, dword ptr [rdx + 248]
-	mov	ebx, dword ptr [rdi + 12]
-	bswap	ebx
-	xor	ebx, dword ptr [rdx + 252]
-	mov	rdi, r8
-	sar	edi
-	dec	edi
-	lea	rsi, [rdi + rdi + 15]
-	mov	qword ptr [rbp - 80], rsi 
-	mov	qword ptr [rbp - 64], rdi 
-	mov	rsi, rdi
-	shl	rsi, 5
-	lea	rsi, [rsi + rdx + 272]
-	mov	qword ptr [rbp - 72], rsi 
-	mov	qword ptr [rbp - 88], rdx 
-	lea	rcx, [rdx + 284]
-	mov	qword ptr [rbp - 56], rcx 
-	.p2align	4, 0x90
-LBB2_5:                                 
-	movzx	edi, ah
-	movzx	r8d, al
-	mov	r13d, eax
-	shr	eax, 16
-	movzx	eax, al
-	mov	edx, ebx
-	movzx	esi, bh
-	movzx	r9d, bl
-	shr	ebx, 24
-	lea	r14, [rip + _TD1]
-	mov	r12d, dword ptr [r14 + 4*rax]
-	lea	r15, [rip + _TD0]
-	xor	r12d, dword ptr [r15 + 4*rbx]
-	mov	ebx, r10d
-	mov	eax, r10d
-	shr	eax, 24
-	shr	edx, 16
-	movzx	ecx, dl
-	mov	edx, dword ptr [r14 + 4*rcx]
-	xor	edx, dword ptr [r15 + 4*rax]
-	lea	r10, [rip + _TD2]
-	xor	edx, dword ptr [r10 + 4*rdi]
-	mov	ecx, r11d
-	mov	edi, r11d
-	shr	edi, 24
-	mov	eax, ebx
-	shr	eax, 16
-	movzx	eax, al
-	mov	eax, dword ptr [r14 + 4*rax]
-	xor	eax, dword ptr [r15 + 4*rdi]
-	movzx	r11d, cl
-	xor	eax, dword ptr [r10 + 4*rsi]
-	mov	edi, ecx
-	movzx	esi, ch
-	shr	r13d, 24
-	shr	edi, 16
-	movzx	ecx, dil
-	mov	ecx, dword ptr [r14 + 4*rcx]
-	xor	ecx, dword ptr [r15 + 4*r13]
-	movzx	edi, bh
-	xor	ecx, dword ptr [r10 + 4*rdi]
-	xor	r12d, dword ptr [r10 + 4*rsi]
-	lea	r10, [rip + _TD3]
-	xor	edx, dword ptr [r10 + 4*r11]
-	xor	eax, dword ptr [r10 + 4*r8]
-	xor	ecx, dword ptr [r10 + 4*r9]
-	mov	rdi, qword ptr [rbp - 56] 
-	xor	edx, dword ptr [rdi - 28]
-	xor	eax, dword ptr [rdi - 24]
-	xor	ecx, dword ptr [rdi - 20]
-	movzx	esi, bl
-	xor	r12d, dword ptr [r10 + 4*rsi]
-	mov	dword ptr [rbp - 44], edx 
-	shr	edx, 24
-	mov	r8d, edx
-	mov	rdx, r12
-	xor	edx, dword ptr [rdi - 16]
-	cmp	dword ptr [rbp - 64], 0 
-	je	LBB2_7
-
-	movzx	esi, ch
-	mov	r11, rsi
-	movzx	esi, cl
-	mov	qword ptr [rbp - 120], rsi 
-	mov	r13d, ecx
-	shr	ecx, 16
-	movzx	ecx, cl
-	mov	edi, edx
-	movzx	esi, dh
-	mov	qword ptr [rbp - 104], rsi 
-	movzx	esi, dl
-	mov	qword ptr [rbp - 112], rsi 
-	shr	edx, 24
-	lea	rsi, [rip + _TD1]
-	mov	ebx, dword ptr [rsi + 4*rcx]
-	lea	r12, [rip + _TD0]
-	xor	ebx, dword ptr [r12 + 4*rdx]
-	shr	edi, 16
-	movzx	edx, dil
-	movzx	r9d, al
-	mov	r14d, eax
-	mov	r15d, eax
-	movzx	edi, ah
-	mov	r10d, dword ptr [rsi + 4*rdx]
-	xor	r10d, dword ptr [r12 + 4*r8]
-	lea	r8, [rip + _TD2]
-	xor	r10d, dword ptr [r8 + 4*r11]
-	shr	r14d, 24
-	mov	ecx, dword ptr [rbp - 44] 
-	mov	eax, ecx
-	shr	eax, 16
-	movzx	eax, al
-	movzx	edx, ch
-	movzx	ecx, cl
-	mov	r11d, dword ptr [rsi + 4*rax]
-	xor	r11d, dword ptr [r12 + 4*r14]
-	mov	rax, qword ptr [rbp - 104] 
-	xor	r11d, dword ptr [r8 + 4*rax]
-	shr	r13d, 24
-	shr	r15d, 16
-	movzx	eax, r15b
-	mov	eax, dword ptr [rsi + 4*rax]
-	xor	eax, dword ptr [r12 + 4*r13]
-	xor	eax, dword ptr [r8 + 4*rdx]
-	xor	ebx, dword ptr [r8 + 4*rdi]
-	lea	rdx, [rip + _TD3]
-	xor	r10d, dword ptr [rdx + 4*r9]
-	mov	rsi, qword ptr [rbp - 120] 
-	xor	r11d, dword ptr [rdx + 4*rsi]
-	mov	rsi, qword ptr [rbp - 112] 
-	xor	eax, dword ptr [rdx + 4*rsi]
-	xor	ebx, dword ptr [rdx + 4*rcx]
-	mov	rcx, qword ptr [rbp - 56] 
-	xor	r10d, dword ptr [rcx - 12]
-	xor	r11d, dword ptr [rcx - 8]
-	xor	eax, dword ptr [rcx - 4]
-	xor	ebx, dword ptr [rcx]
-	add	rcx, 32
-	mov	qword ptr [rbp - 56], rcx 
-	mov	rdx, qword ptr [rbp - 64] 
-	dec	edx
-	mov	qword ptr [rbp - 64], rdx 
-	jmp	LBB2_5
-LBB2_7:
-	lea	r11, [rip + _Td4]
-	mov	r10d, edx
-	movzx	edi, dh
-	movzx	r9d, dl
-	shr	edx, 24
-	movzx	r14d, byte ptr [r11 + 4*rdx + 3]
-	movzx	edx, byte ptr [r11 + 4*r8 + 3]
-	shl	edx, 24
-	shr	r10d, 16
-	movzx	esi, r10b
-	movzx	esi, byte ptr [r11 + 4*rsi + 2]
-	shl	esi, 16
-	or	esi, edx
-	movzx	edx, ch
-	movzx	edx, byte ptr [r11 + 4*rdx + 1]
-	shl	edx, 8
-	or	edx, esi
-	movzx	esi, al
-	movzx	esi, byte ptr [r11 + 4*rsi]
-	or	esi, edx
-	mov	rdx, qword ptr [rbp - 72] 
-	xor	esi, dword ptr [rdx]
-	bswap	esi
-	mov	r15, qword ptr [rbp - 96] 
-	mov	dword ptr [r15], esi
-	mov	edx, eax
-	shr	edx, 24
-	movzx	edx, byte ptr [r11 + 4*rdx + 3]
-	shl	edx, 24
-	mov	ebx, dword ptr [rbp - 44] 
-	mov	esi, ebx
-	shr	esi, 16
-	movzx	esi, sil
-	movzx	esi, byte ptr [r11 + 4*rsi + 2]
-	shl	esi, 16
-	or	esi, edx
-	movzx	edx, cl
-	mov	r12d, ecx
-	shr	ecx, 16
-	movzx	r8d, cl
-	movzx	ecx, byte ptr [r11 + 4*rdi + 1]
-	shl	ecx, 8
-	or	ecx, esi
-	mov	esi, eax
-	movzx	eax, ah
-	movzx	edx, byte ptr [r11 + 4*rdx]
-	or	edx, ecx
-	movzx	ecx, bh
-	movzx	r10d, bl
-	mov	rdi, qword ptr [rbp - 80] 
-	shl	rdi, 4
-	mov	rbx, qword ptr [rbp - 88] 
-	xor	edx, dword ptr [rbx + rdi + 36]
-	bswap	edx
-	mov	dword ptr [r15 + 4], edx
-	shr	r12d, 24
-	movzx	edx, byte ptr [r11 + 4*r12 + 3]
-	shl	edx, 24
-	shr	esi, 16
-	movzx	esi, sil
-	movzx	esi, byte ptr [r11 + 4*rsi + 2]
-	shl	esi, 16
-	or	esi, edx
-	movzx	ecx, byte ptr [r11 + 4*rcx + 1]
-	shl	ecx, 8
-	or	ecx, esi
-	movzx	edx, byte ptr [r11 + 4*r9]
-	or	edx, ecx
-	xor	edx, dword ptr [rbx + rdi + 40]
-	bswap	edx
-	mov	dword ptr [r15 + 8], edx
-	shl	r14d, 24
-	movzx	ecx, byte ptr [r11 + 4*r8 + 2]
-	shl	ecx, 16
-	or	ecx, r14d
-	movzx	eax, byte ptr [r11 + 4*rax + 1]
-	shl	eax, 8
-	or	eax, ecx
-	movzx	ecx, byte ptr [r11 + 4*r10]
-	or	ecx, eax
-	xor	ecx, dword ptr [rbx + rdi + 44]
-	bswap	ecx
-	mov	dword ptr [r15 + 12], ecx
-	xor	eax, eax
-LBB2_8:
-	add	rsp, 88
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
-	pop	rbp
-	ret
-LBB2_9:
 	lea	rdi, [rip + L_.str.5]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 471
 	call	_crypt_argchk
-LBB2_10:
+LBB2_3:
+	jmp	LBB2_4
+LBB2_4:
+	jmp	LBB2_5
+LBB2_5:
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB2_7
+
 	lea	rdi, [rip + L_.str.6]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 472
 	call	_crypt_argchk
-LBB2_11:
+LBB2_7:
+	jmp	LBB2_8
+LBB2_8:
+	jmp	LBB2_9
+LBB2_9:
+	cmp	qword ptr [rbp - 32], 0
+	jne	LBB2_11
+
 	lea	rdi, [rip + L_.str.4]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 473
 	call	_crypt_argchk
+LBB2_11:
+	jmp	LBB2_12
+LBB2_12:
+	mov	rax, qword ptr [rbp - 32]
+	mov	ecx, dword ptr [rax + 480]
+	mov	dword ptr [rbp - 76], ecx
+	cmp	dword ptr [rbp - 76], 2
+	jl	LBB2_14
+
+	cmp	dword ptr [rbp - 76], 16
+	jle	LBB2_15
+LBB2_14:
+	mov	dword ptr [rbp - 4], 4
+	jmp	LBB2_36
+LBB2_15:
+	mov	rax, qword ptr [rbp - 32]
+	add	rax, 240
+	mov	qword ptr [rbp - 72], rax
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax]
+	mov	dword ptr [rbp - 36], ecx
+	mov	ecx, dword ptr [rbp - 36]
+	bswap	ecx
+	mov	dword ptr [rbp - 36], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax]
+	xor	ecx, dword ptr [rbp - 36]
+	mov	dword ptr [rbp - 36], ecx
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax + 4]
+	mov	dword ptr [rbp - 40], ecx
+	mov	ecx, dword ptr [rbp - 40]
+	bswap	ecx
+	mov	dword ptr [rbp - 40], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax + 4]
+	xor	ecx, dword ptr [rbp - 40]
+	mov	dword ptr [rbp - 40], ecx
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax + 8]
+	mov	dword ptr [rbp - 44], ecx
+	mov	ecx, dword ptr [rbp - 44]
+	bswap	ecx
+	mov	dword ptr [rbp - 44], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax + 8]
+	xor	ecx, dword ptr [rbp - 44]
+	mov	dword ptr [rbp - 44], ecx
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	ecx, dword ptr [rax + 12]
+	mov	dword ptr [rbp - 48], ecx
+	mov	ecx, dword ptr [rbp - 48]
+	bswap	ecx
+	mov	dword ptr [rbp - 48], ecx
+
+	mov	rax, qword ptr [rbp - 72]
+	mov	ecx, dword ptr [rax + 12]
+	xor	ecx, dword ptr [rbp - 48]
+	mov	dword ptr [rbp - 48], ecx
+	mov	ecx, dword ptr [rbp - 76]
+	sar	ecx, 1
+	mov	dword ptr [rbp - 80], ecx
+LBB2_24:                                
+	mov	eax, dword ptr [rbp - 36]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _TD0]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 48]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdi, [rip + _TD1]
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r8, [rip + _TD2]
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r9, [rip + _TD3]
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 16]
+	mov	dword ptr [rbp - 52], eax
+	mov	eax, dword ptr [rbp - 40]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 36]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 48]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 20]
+	mov	dword ptr [rbp - 56], eax
+	mov	eax, dword ptr [rbp - 44]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 36]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 48]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 24]
+	mov	dword ptr [rbp - 60], eax
+	mov	eax, dword ptr [rbp - 48]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 44]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 40]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 36]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 28]
+	mov	dword ptr [rbp - 64], eax
+	mov	rcx, qword ptr [rbp - 72]
+	add	rcx, 32
+	mov	qword ptr [rbp - 72], rcx
+	mov	eax, dword ptr [rbp - 80]
+	add	eax, -1
+	mov	dword ptr [rbp - 80], eax
+	cmp	eax, 0
+	jne	LBB2_26
+
+	jmp	LBB2_27
+LBB2_26:                                
+	mov	eax, dword ptr [rbp - 52]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _TD0]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdi, [rip + _TD1]
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r8, [rip + _TD2]
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	r9, [rip + _TD3]
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 36], eax
+	mov	eax, dword ptr [rbp - 56]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 4]
+	mov	dword ptr [rbp - 40], eax
+	mov	eax, dword ptr [rbp - 60]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 8]
+	mov	dword ptr [rbp - 44], eax
+	mov	eax, dword ptr [rbp - 64]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [rdi + 4*rcx]
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r8 + 4*rcx]
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	xor	eax, dword ptr [r9 + 4*rcx]
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 12]
+	mov	dword ptr [rbp - 48], eax
+	jmp	LBB2_24
+LBB2_27:
+	mov	eax, dword ptr [rbp - 52]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Td4]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	and	eax, -16777216
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 16711680
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 65280
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 255
+	xor	eax, esi
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx]
+	mov	dword ptr [rbp - 36], eax
+
+	mov	eax, dword ptr [rbp - 36]
+	bswap	eax
+	mov	dword ptr [rbp - 84], eax
+	mov	rdi, qword ptr [rbp - 24]
+	lea	rcx, [rbp - 84]
+	mov	rsi, rcx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	eax, dword ptr [rbp - 56]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Td4]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	and	eax, -16777216
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 16711680
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 65280
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 255
+	xor	eax, esi
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 4]
+	mov	dword ptr [rbp - 40], eax
+
+	mov	eax, dword ptr [rbp - 40]
+	bswap	eax
+	mov	dword ptr [rbp - 88], eax
+	mov	rcx, qword ptr [rbp - 24]
+	add	rcx, 4
+	lea	rdx, [rbp - 88]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	eax, dword ptr [rbp - 60]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Td4]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	and	eax, -16777216
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 16711680
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 65280
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 64]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 255
+	xor	eax, esi
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 8]
+	mov	dword ptr [rbp - 44], eax
+
+	mov	eax, dword ptr [rbp - 44]
+	bswap	eax
+	mov	dword ptr [rbp - 92], eax
+	mov	rcx, qword ptr [rbp - 24]
+	add	rcx, 8
+	lea	rdx, [rbp - 92]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	eax, dword ptr [rbp - 64]
+	shr	eax, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Td4]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	and	eax, -16777216
+	mov	esi, dword ptr [rbp - 60]
+	shr	esi, 16
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 16711680
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 56]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 65280
+	xor	eax, esi
+	mov	esi, dword ptr [rbp - 52]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	mov	esi, dword ptr [rdx + 4*rcx]
+	and	esi, 255
+	xor	eax, esi
+	mov	rcx, qword ptr [rbp - 72]
+	xor	eax, dword ptr [rcx + 12]
+	mov	dword ptr [rbp - 48], eax
+
+	mov	eax, dword ptr [rbp - 48]
+	bswap	eax
+	mov	dword ptr [rbp - 96], eax
+	mov	rcx, qword ptr [rbp - 24]
+	add	rcx, 12
+	lea	rdx, [rbp - 96]
+	mov	rdi, rcx
+	mov	rsi, rdx
+	mov	edx, 4
+	mov	rcx, -1
+	call	___memcpy_chk
+
+	mov	dword ptr [rbp - 4], 0
+LBB2_36:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 96
+	pop	rbp
+	ret
                                         
-	.section	__TEXT,__literal16,16byte_literals
-	.p2align	4               
-LCPI3_0:
-	.space	16
-	.section	__TEXT,__text,regular,pure_instructions
-	.globl	_rijndael_test
+	.globl	_rijndael_test          
 	.p2align	4, 0x90
 _rijndael_test:                         
 
 	push	rbp
 	mov	rbp, rsp
-	push	r15
-	push	r14
-	push	r13
-	push	r12
-	push	rbx
-	push	rax
-	mov	eax, 4328
+	mov	eax, 4352
 	call	____chkstk_darwin
 	sub	rsp, rax
-	pop	rax
 	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
 	mov	rax, qword ptr [rax]
-	mov	qword ptr [rbp - 48], rax
-	lea	rbx, [rbp - 4320]
-	xor	r15d, r15d
-	lea	r12, [rbp - 4304]
-	lea	r14, [rip + _rijndael_test.tests]
-	lea	r13, [rbp - 4336]
+	mov	qword ptr [rbp - 8], rax
+	mov	dword ptr [rbp - 4316], 0
 LBB3_1:                                 
                                         
                                         
                                         
-	mov	esi, 4256
-	mov	rdi, r12
-	call	_zeromem
-	mov	rax, r15
-	shl	rax, 6
-	mov	qword ptr [rbp - 4360], r15 
-	lea	r15, [rax + 4*r15]
-	lea	rdi, [r14 + r15 + 4]
-	mov	esi, dword ptr [r14 + r15]
-	xor	edx, edx
-	mov	rcx, r12
-	call	_rijndael_setup
-	test	eax, eax
-	jne	LBB3_2
-
-	lea	rdi, [r14 + r15 + 36]
-	mov	qword ptr [rbp - 4352], rdi 
-	mov	rsi, r13
-	mov	rdx, r12
-	call	_rijndael_ecb_encrypt
-	mov	rdi, r13
-	mov	rsi, rbx
-	mov	rdx, r12
-	call	_rijndael_ecb_decrypt
-	lea	rdx, [r14 + r15 + 52]
-	mov	esi, 16
-	mov	ecx, 16
-	mov	rdi, r13
-	lea	r8, [rip + L_.str.7]
-	mov	r15, qword ptr [rbp - 4360] 
-	mov	r9d, r15d
-	call	_compare_testvector
-	mov	dword ptr [rbp - 4340], 5 
-	test	eax, eax
-	jne	LBB3_14
-
-	mov	esi, 16
-	mov	ecx, 16
-	mov	rdi, rbx
-	mov	rdx, qword ptr [rbp - 4352] 
-	lea	r8, [rip + L_.str.8]
-	mov	r9d, r15d
-	call	_compare_testvector
-	test	eax, eax
-	jne	LBB3_14
-
-	mov	r14, rbx
-	xorps	xmm0, xmm0
-	movaps	xmmword ptr [rbp - 4336], xmm0
-	mov	ebx, 1000
-	.p2align	4, 0x90
-LBB3_6:                                 
                                         
-	mov	rdi, r13
-	mov	rsi, r13
-	mov	rdx, r12
+	cmp	dword ptr [rbp - 4316], 3
+	jge	LBB3_27
+
+	lea	rax, [rbp - 4264]
+	mov	rdi, rax
+	mov	esi, 4256
+	call	_zeromem
+	xor	edx, edx
+	lea	rax, [rip + _rijndael_test.tests]
+	movsxd	rcx, dword ptr [rbp - 4316]
+	imul	rcx, rcx, 68
+	mov	rsi, rax
+	add	rsi, rcx
+	add	rsi, 4
+	movsxd	rcx, dword ptr [rbp - 4316]
+	imul	rcx, rcx, 68
+	add	rax, rcx
+	mov	r8d, dword ptr [rax]
+	mov	rdi, rsi
+	mov	esi, r8d
+	lea	rcx, [rbp - 4264]
+	call	_rijndael_setup
+	mov	dword ptr [rbp - 4312], eax
+	cmp	eax, 0
+	je	LBB3_4
+
+	mov	eax, dword ptr [rbp - 4312]
+	mov	dword ptr [rbp - 4308], eax
+	jmp	LBB3_28
+LBB3_4:                                 
+	lea	rsi, [rbp - 4304]
+	lea	rax, [rip + _rijndael_test.tests]
+	movsxd	rcx, dword ptr [rbp - 4316]
+	imul	rcx, rcx, 68
+	add	rax, rcx
+	add	rax, 36
+	mov	rdi, rax
+	lea	rdx, [rbp - 4264]
 	call	_rijndael_ecb_encrypt
-	dec	ebx
+	lea	rcx, [rbp - 4304]
+	mov	rdx, rcx
+	add	rdx, 16
+	mov	rdi, rcx
+	mov	rsi, rdx
+	lea	rdx, [rbp - 4264]
+	mov	dword ptr [rbp - 4324], eax 
+	call	_rijndael_ecb_decrypt
+	lea	rcx, [rip + _rijndael_test.tests]
+	lea	rdi, [rbp - 4304]
+	movsxd	rdx, dword ptr [rbp - 4316]
+	imul	rdx, rdx, 68
+	add	rcx, rdx
+	add	rcx, 52
+	mov	r9d, dword ptr [rbp - 4316]
+	mov	edx, 16
+	mov	rsi, rdx
+	mov	qword ptr [rbp - 4336], rdx 
+	mov	rdx, rcx
+	mov	rcx, qword ptr [rbp - 4336] 
+	lea	r8, [rip + L_.str.7]
+	mov	dword ptr [rbp - 4340], eax 
+	call	_compare_testvector
+	cmp	eax, 0
 	jne	LBB3_6
 
-	mov	ebx, 1000
-	.p2align	4, 0x90
+	lea	rax, [rip + _rijndael_test.tests]
+	lea	rcx, [rbp - 4304]
+	add	rcx, 16
+	movsxd	rdx, dword ptr [rbp - 4316]
+	imul	rdx, rdx, 68
+	add	rax, rdx
+	add	rax, 36
+	mov	r9d, dword ptr [rbp - 4316]
+	mov	rdi, rcx
+	mov	ecx, 16
+	mov	rsi, rcx
+	mov	rdx, rax
+	lea	r8, [rip + L_.str.8]
+	call	_compare_testvector
+	cmp	eax, 0
+	je	LBB3_7
+LBB3_6:
+	mov	dword ptr [rbp - 4308], 5
+	jmp	LBB3_28
+LBB3_7:                                 
+	mov	dword ptr [rbp - 4320], 0
 LBB3_8:                                 
                                         
-	mov	rdi, r13
-	mov	rsi, r13
-	mov	rdx, r12
-	call	_rijndael_ecb_decrypt
-	dec	ebx
-	jne	LBB3_8
+	cmp	dword ptr [rbp - 4320], 16
+	jge	LBB3_11
 
-	xor	eax, eax
-	mov	rbx, r14
-	lea	r14, [rip + _rijndael_test.tests]
-	.p2align	4, 0x90
+	movsxd	rax, dword ptr [rbp - 4320]
+	mov	byte ptr [rbp + rax - 4304], 0
+
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB3_8
 LBB3_11:                                
+	mov	dword ptr [rbp - 4320], 0
+LBB3_12:                                
                                         
-	cmp	byte ptr [rbp + rax - 4336], 0
-	jne	LBB3_14
+	cmp	dword ptr [rbp - 4320], 1000
+	jge	LBB3_15
 
-	inc	rax
-	cmp	rax, 16
-	jne	LBB3_11
+	lea	rax, [rbp - 4304]
+	mov	rdi, rax
+	mov	rsi, rax
+	lea	rdx, [rbp - 4264]
+	call	_rijndael_ecb_encrypt
 
-	inc	r15
-	cmp	r15, 3
-	jne	LBB3_1
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB3_12
+LBB3_15:                                
+	mov	dword ptr [rbp - 4320], 0
+LBB3_16:                                
+                                        
+	cmp	dword ptr [rbp - 4320], 1000
+	jge	LBB3_19
 
-	mov	dword ptr [rbp - 4340], 0 
-	jmp	LBB3_14
-LBB3_2:
-	mov	dword ptr [rbp - 4340], eax 
-LBB3_14:
-	mov	rax, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
-	mov	rax, qword ptr [rax]
-	cmp	rax, qword ptr [rbp - 48]
-	jne	LBB3_16
+	lea	rax, [rbp - 4304]
+	mov	rdi, rax
+	mov	rsi, rax
+	lea	rdx, [rbp - 4264]
+	call	_rijndael_ecb_decrypt
 
-	mov	eax, dword ptr [rbp - 4340] 
-	add	rsp, 4328
-	pop	rbx
-	pop	r12
-	pop	r13
-	pop	r14
-	pop	r15
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB3_16
+LBB3_19:                                
+	mov	dword ptr [rbp - 4320], 0
+LBB3_20:                                
+                                        
+	cmp	dword ptr [rbp - 4320], 16
+	jge	LBB3_25
+
+	movsxd	rax, dword ptr [rbp - 4320]
+	movzx	ecx, byte ptr [rbp + rax - 4304]
+	cmp	ecx, 0
+	je	LBB3_23
+
+	mov	dword ptr [rbp - 4308], 5
+	jmp	LBB3_28
+LBB3_23:                                
+	jmp	LBB3_24
+LBB3_24:                                
+	mov	eax, dword ptr [rbp - 4320]
+	add	eax, 1
+	mov	dword ptr [rbp - 4320], eax
+	jmp	LBB3_20
+LBB3_25:                                
+	jmp	LBB3_26
+LBB3_26:                                
+	mov	eax, dword ptr [rbp - 4316]
+	add	eax, 1
+	mov	dword ptr [rbp - 4316], eax
+	jmp	LBB3_1
+LBB3_27:
+	mov	dword ptr [rbp - 4308], 0
+LBB3_28:
+	mov	eax, dword ptr [rbp - 4308]
+	mov	rcx, qword ptr [rip + ___stack_chk_guard@GOTPCREL]
+	mov	rcx, qword ptr [rcx]
+	mov	rdx, qword ptr [rbp - 8]
+	cmp	rcx, rdx
+	mov	dword ptr [rbp - 4344], eax 
+	jne	LBB3_30
+
+	mov	eax, dword ptr [rbp - 4344] 
+	add	rsp, 4352
 	pop	rbp
 	ret
-LBB3_16:
+LBB3_30:
 	call	___stack_chk_fail
+	ud2
                                         
 	.globl	_rijndael_done          
 	.p2align	4, 0x90
@@ -1025,6 +1970,7 @@ _rijndael_done:
 
 	push	rbp
 	mov	rbp, rsp
+	mov	qword ptr [rbp - 8], rdi
 	pop	rbp
 	ret
                                         
@@ -1034,50 +1980,85 @@ _rijndael_keysize:
 
 	push	rbp
 	mov	rbp, rsp
-	test	rdi, rdi
-	je	LBB5_4
+	sub	rsp, 16
+	mov	qword ptr [rbp - 16], rdi
 
-	mov	ecx, dword ptr [rdi]
-	mov	eax, 3
-	cmp	ecx, 16
-	jl	LBB5_3
+	cmp	qword ptr [rbp - 16], 0
+	jne	LBB5_3
 
-	xor	eax, eax
-	cmp	ecx, 31
-	setg	al
-	cmp	ecx, 24
-	lea	eax, [8*rax + 24]
-	mov	ecx, 16
-	cmovge	ecx, eax
-	mov	dword ptr [rdi], ecx
-	xor	eax, eax
-LBB5_3:
-	pop	rbp
-	ret
-LBB5_4:
 	lea	rdi, [rip + L_.str.9]
 	lea	rsi, [rip + L_.str.3]
 	mov	edx, 726
 	call	_crypt_argchk
+LBB5_3:
+	jmp	LBB5_4
+LBB5_4:
+	mov	rax, qword ptr [rbp - 16]
+	cmp	dword ptr [rax], 16
+	jge	LBB5_6
+
+	mov	dword ptr [rbp - 4], 3
+	jmp	LBB5_11
+LBB5_6:
+	mov	rax, qword ptr [rbp - 16]
+	cmp	dword ptr [rax], 24
+	jge	LBB5_8
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	dword ptr [rax], 16
+	mov	dword ptr [rbp - 4], 0
+	jmp	LBB5_11
+LBB5_8:
+	mov	rax, qword ptr [rbp - 16]
+	cmp	dword ptr [rax], 32
+	jge	LBB5_10
+
+	mov	rax, qword ptr [rbp - 16]
+	mov	dword ptr [rax], 24
+	mov	dword ptr [rbp - 4], 0
+	jmp	LBB5_11
+LBB5_10:
+	mov	rax, qword ptr [rbp - 16]
+	mov	dword ptr [rax], 32
+	mov	dword ptr [rbp - 4], 0
+LBB5_11:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 16
+	pop	rbp
+	ret
                                         
 	.p2align	4, 0x90         
 _setup_mix:                             
 
 	push	rbp
 	mov	rbp, rsp
-	mov	ecx, edi
-	mov	eax, edi
+	mov	dword ptr [rbp - 4], edi
+	mov	eax, dword ptr [rbp - 4]
 	shr	eax, 16
-	movzx	edx, al
-	lea	rsi, [rip + _Te4_3]
-	movzx	eax, ch
-	lea	rdi, [rip + _Te4_2]
-	mov	eax, dword ptr [rdi + 4*rax]
-	xor	eax, dword ptr [rsi + 4*rdx]
-	movzx	edx, cl
-	lea	rsi, [rip + _Te4_1]
-	xor	eax, dword ptr [rsi + 4*rdx]
-	shr	ecx, 24
+	and	eax, 255
+	mov	eax, eax
+	mov	ecx, eax
+	lea	rdx, [rip + _Te4_3]
+	mov	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 4]
+	shr	esi, 8
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_2]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 4]
+	shr	esi, 0
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
+	lea	rdx, [rip + _Te4_1]
+	xor	eax, dword ptr [rdx + 4*rcx]
+	mov	esi, dword ptr [rbp - 4]
+	shr	esi, 24
+	and	esi, 255
+	mov	esi, esi
+	mov	ecx, esi
 	lea	rdx, [rip + _Te4_0]
 	xor	eax, dword ptr [rdx + 4*rcx]
 	pop	rbp
@@ -1162,7 +2143,7 @@ L_.str.2:
 	.asciz	"key != NULL"
 
 L_.str.3:                               
-	.asciz	"/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/libtomcrypt/src/ciphers/aes/aes.c"
+	.asciz	"./crypto_implementations/libtomcrypt/src/ciphers/aes/aes.c"
 
 L_.str.4:                               
 	.asciz	"skey != NULL"
