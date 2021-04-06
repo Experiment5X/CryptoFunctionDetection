@@ -8,7 +8,7 @@ import asm2vec.asm
 import asm2vec.parse
 import asm2vec.model
 
-from examples.crypto_code.des_aimxhaisse_functions import function_names as func_names
+from examples.crypto_code.rsa_botan_functions import function_names as func_names
 
 
 def cosine_similarity(v1, v2):
@@ -18,10 +18,10 @@ def cosine_similarity(v1, v2):
 def main():
     # func_names = ['_rsa_encrypt_key_ex']
     training_funcs = asm2vec.parse.parse(
-        'crypto_code/des_aimxhaisse-o0.s', func_names=func_names
+        'crypto_code/rsa_botan-o0.s', func_names=func_names
     )
     estimating_funcs = asm2vec.parse.parse(
-        'crypto_code/des_aimxhaisse-o1.s', func_names=func_names
+        'crypto_code/rsa_botan-o1.s', func_names=func_names
     )
 
     print('# of training functions:', len(training_funcs))
