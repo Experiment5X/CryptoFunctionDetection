@@ -1,0 +1,20 @@
+function_names = [
+    '_noctt_get_pos',
+    '_noctt_kill',
+    '_noctt_dead',
+    '_noctt_tr',
+    '_noctt_clone',
+    '_noctt_prog_create',
+    '_mat_mult',
+    '_noctt_prog_delete',
+    '_noctt_prog_iter',
+    '_noctt_rand',
+    '_noctt_frand',
+    '_noctt_brand',
+    '_noctt_pm',
+    '_noctt_poly',
+    '_noctt_square',
+    '_noctt_rsquare',
+    '_noctt_circle',
+    '_noctt_star'
+]

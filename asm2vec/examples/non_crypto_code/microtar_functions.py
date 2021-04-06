@@ -1,0 +1,20 @@
+function_names = [
+    '_mtar_strerror',
+    '_mtar_open',
+    '_file_write',
+    '_file_read',
+    '_file_seek',
+    '_file_close',
+    '_mtar_read_header',
+    '_mtar_close',
+    '_mtar_seek',
+    '_mtar_rewind',
+    '_mtar_next',
+    '_mtar_find',
+    '_mtar_read_data',
+    '_mtar_write_header',
+    '_mtar_write_file_header',
+    '_mtar_write_dir_header',
+    '_mtar_write_data',
+    '_mtar_finalize'
+]
