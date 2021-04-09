@@ -13,6 +13,8 @@ import asm2vec.asm
 import asm2vec.parse
 import asm2vec.model
 
+from classifier import Classifier
+
 from examples.crypto_code.rsa.rsa_botan_functions import function_names as func_names
 import examples.non_crypto_code
 
@@ -131,22 +133,33 @@ def train_classifier_model(asm2vec_model, separated_funcs):
 
     funcs_tensor = torch.Tensor(vectorized_funcs)
     labels_tensor = torch.LongTensor(list(labels))
-    labels_tensor = torch.nn.functional.one_hot(
-        labels_tensor, num_classes=len(separated_funcs)
-    )
+
+    classifier = Classifier()
+    criterion = torch.nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(classifier.parameters())
 
     batch_size = 10
-    for epoch in range(0, 2):
+    for epoch in range(0, 10):
         for batch_index in range(0, funcs_tensor.shape[0] // batch_size):
             start_index = int(batch_index * batch_size)
             end_index = int((batch_index + 1) * batch_size)
 
             batch_funcs_tensor = funcs_tensor[start_index:end_index, ::]
-            batch_labels_tensor = labels_tensor[start_index:end_index, ::]
+            batch_labels_tensor = labels_tensor[start_index:end_index]
 
-            print(
-                f'batch: {batch_index} - {batch_funcs_tensor.shape} - {batch_labels_tensor.shape}'
+            predictions = classifier.forward(batch_funcs_tensor)
+
+            loss = criterion(predictions, batch_labels_tensor)
+            loss.backward()
+            optimizer.step()
+
+            batch_predicted_labels = predictions.argmax(dim=1)
+            batch_correct_predictions = torch.sum(
+                batch_predicted_labels == batch_labels_tensor
             )
+            batch_accuracy = batch_correct_predictions / batch_size
+
+            print(f'Loss: {loss.item():.4f} - Accuracy: {batch_accuracy:.4f}')
 
 
 def main():
