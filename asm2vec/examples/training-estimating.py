@@ -96,6 +96,15 @@ def merge_functions(non_crypto_funcs, aes_funcs, des_funcs, rsa_funcs):
 
 
 def train_asm2vec(separated_funcs):
+    asm2vec_model_path = 'asm2vec_model.p'
+
+    if os.path.isfile(asm2vec_model_path):
+        with open(asm2vec_model_path, 'rb') as f:
+            asm2vec_model = pickle.load(f)
+            print('Loaded asm2vec model from cache')
+
+            return asm2vec_model
+
     all_funcs, all_labels = merge_functions(*separated_funcs)
 
     training_funcs = all_funcs[:50]
@@ -114,6 +123,9 @@ def train_asm2vec(separated_funcs):
             )
         )
 
+    with open(asm2vec_model_path, 'wb') as f:
+        pickle.dump(model, f)
+
     return model
 
 
@@ -125,15 +137,35 @@ def balance_separated_funcs(separated_funcs):
 
 
 def train_classifier_model(asm2vec_model, separated_funcs):
-    balanced_funcs = balance_separated_funcs(separated_funcs)
-    funcs, labels = merge_functions(*balanced_funcs)
+    vectorized_funcs_path = 'vectorized_funcs.p'
+    vectorized_func_labels_path = 'vectorized_func_labels.p'
 
-    vectorized_funcs = list(map(asm2vec_model.to_vec, funcs))
+    if os.path.isfile(vectorized_funcs_path) and os.path.isfile(
+        vectorized_func_labels_path
+    ):
+        with open(vectorized_funcs_path, 'rb') as f:
+            vectorized_funcs = pickle.load(f)
+
+        with open(vectorized_func_labels_path, 'rb') as f:
+            labels = pickle.load(f)
+
+        print('Loaded vectorized funcs from cache')
+    else:
+        balanced_funcs = balance_separated_funcs(separated_funcs)
+        funcs, labels = merge_functions(*balanced_funcs)
+
+        vectorized_funcs = list(map(asm2vec_model.to_vec, funcs))
+
+        with open(vectorized_funcs_path, 'wb') as f:
+            pickle.dump(vectorized_funcs, f)
+
+        with open(vectorized_func_labels_path, 'wb') as f:
+            pickle.dump(list(labels), f)
 
     funcs_tensor = torch.Tensor(vectorized_funcs)
     labels_tensor = torch.LongTensor(list(labels))
 
-    print(f'Got a total of {len(funcs)} funcs for training')
+    print(f'Got a total of {len(vectorized_funcs)} funcs for training')
     for label_class in set(labels):
         class_count = torch.sum(labels_tensor == label_class)
         print(f'\t{class_count} for class {label_class}')
@@ -163,7 +195,14 @@ def train_classifier_model(asm2vec_model, separated_funcs):
             )
             batch_accuracy = batch_correct_predictions / batch_size
 
-            print(f'Loss: {loss.item():.4f} - Accuracy: {batch_accuracy:.4f}')
+        all_predictions = classifier.forward(funcs_tensor)
+        loss = criterion(all_predictions, labels_tensor)
+
+        all_prediction_labels = all_predictions.argmax(dim=1)
+        correct_predictions = torch.sum(all_prediction_labels == labels_tensor)
+        overall_accuracy = correct_predictions / labels_tensor.shape[0]
+
+        print(f'Finished epoch {epoch}, accuracy: {overall_accuracy:.4f}')
 
     return classifier
 
@@ -212,9 +251,6 @@ def main():
 
     asm2vec_model = train_asm2vec(training_funcs)
     classifier = train_classifier_model(asm2vec_model, training_funcs)
-
-    with open('asm2vec_model.p', 'wb') as f:
-        pickle.dump(asm2vec_model, f)
 
     with open('classifier_model.p', 'wb') as f:
         pickle.dump(classifier, f)
