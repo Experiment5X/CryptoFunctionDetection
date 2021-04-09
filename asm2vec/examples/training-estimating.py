@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append('/Users/adamspindler/Developer/DeepLearningSecurity/Project/asm2vec')
+sys.path.append('../')
 
 import os
 import torch
