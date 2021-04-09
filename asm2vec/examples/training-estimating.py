@@ -47,8 +47,8 @@ def get_functions_from_directory(directory_path, package_path):
                     )
 
                     functions.extend(parsed_functions)
-            except:
-                print(f'Could not load: {base_code_name}')
+            except Exception as ex:
+                print(f'Could not load: {base_code_name}, \n' + str(ex))
 
     return functions
 
@@ -161,11 +161,55 @@ def train_classifier_model(asm2vec_model, separated_funcs):
 
             print(f'Loss: {loss.item():.4f} - Accuracy: {batch_accuracy:.4f}')
 
+    return classifier
+
+
+def split_train_test(separated_funcs, split_fraction=0.25):
+    fewest_funcs_in_class = min(*map(len, separated_funcs))
+    test_set_size = int(fewest_funcs_in_class * split_fraction)
+
+    training_funcs = []
+    testing_funcs = []
+
+    for function_list in separated_funcs:
+        training_function_list = function_list[:-test_set_size]
+        testing_function_list = function_list[-test_set_size:]
+
+        training_funcs.append(training_function_list)
+        testing_funcs.append(testing_function_list)
+
+    return training_funcs, testing_funcs
+
+
+def evaluate_trained_model(
+    asm2vec_model,
+    classifier,
+    testing_funcs,
+    classes=['non_crypto', 'aes', 'des', 'rsa'],
+):
+    for class_index, class_funcs in enumerate(testing_funcs):
+        vectorized_funcs = list(map(asm2vec_model.to_vec, class_funcs))
+        funcs_tensor = torch.Tensor(vectorized_funcs)
+        labels_tensor = class_index * torch.ones(len(vectorized_funcs))
+
+        predictions = classifier.forward(funcs_tensor)
+        prediction_classes = predictions.argmax(dim=1)
+        correct_amount = torch.sum(prediction_classes == labels_tensor)
+
+        accuracy = correct_amount / len(vectorized_funcs)
+        print(
+            f'Testing accuracy for {classes[class_index]}: {accuracy:.4f} => {correct_amount} out of {len(class_funcs)}'
+        )
+
 
 def main():
     separated_funcs = get_all_functions()
-    model = train_asm2vec(separated_funcs)
-    train_classifier_model(model, separated_funcs)
+    training_funcs, testing_funcs = split_train_test(separated_funcs)
+
+    model = train_asm2vec(training_funcs)
+    classifier = train_classifier_model(model, training_funcs)
+
+    evaluate_trained_model(model, classifier, testing_funcs)
 
     return
 

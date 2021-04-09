@@ -51838,8 +51838,6 @@ L_.str.103:
 L_.str.104:                             
 	.asciz	"} "
 
-.tbss __ZN6loguruL13thread_ec_ptrE$tlv$init, 8, 3 
-
 	.section	__DATA,__thread_vars,thread_local_variables
 __ZN6loguruL13thread_ec_ptrE:
 	.quad	__tlv_bootstrap
