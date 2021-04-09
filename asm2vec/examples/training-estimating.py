@@ -4,6 +4,7 @@ sys.path.append('../')
 
 import os
 import torch
+import pickle
 import random
 import numpy as np
 from importlib import import_module
@@ -127,12 +128,15 @@ def train_classifier_model(asm2vec_model, separated_funcs):
     balanced_funcs = balance_separated_funcs(separated_funcs)
     funcs, labels = merge_functions(*balanced_funcs)
 
-    print(f'Got a total of {len(funcs)} funcs for training')
-
     vectorized_funcs = list(map(asm2vec_model.to_vec, funcs))
 
     funcs_tensor = torch.Tensor(vectorized_funcs)
     labels_tensor = torch.LongTensor(list(labels))
+
+    print(f'Got a total of {len(funcs)} funcs for training')
+    for label_class in set(labels):
+        class_count = torch.sum(labels_tensor == label_class)
+        print(f'\t{class_count} for class {label_class}')
 
     classifier = Classifier()
     criterion = torch.nn.CrossEntropyLoss()
@@ -206,10 +210,16 @@ def main():
     separated_funcs = get_all_functions()
     training_funcs, testing_funcs = split_train_test(separated_funcs)
 
-    model = train_asm2vec(training_funcs)
-    classifier = train_classifier_model(model, training_funcs)
+    asm2vec_model = train_asm2vec(training_funcs)
+    classifier = train_classifier_model(asm2vec_model, training_funcs)
 
-    evaluate_trained_model(model, classifier, testing_funcs)
+    with open('asm2vec_model.p', 'wb') as f:
+        pickle.dump(asm2vec_model, f)
+
+    with open('classifier_model.p', 'wb') as f:
+        pickle.dump(classifier, f)
+
+    evaluate_trained_model(asm2vec_model, classifier, testing_funcs)
 
     return
 
@@ -217,7 +227,9 @@ def main():
         'crypto_code/rsa/rsa_botan-o1.s', func_names=func_names
     )
 
-    estimating_funcs_vec = list(map(lambda f: model.to_vec(f), estimating_funcs))
+    estimating_funcs_vec = list(
+        map(lambda f: asm2vec_model.to_vec(f), estimating_funcs)
+    )
     print('Estimating complete.')
 
     for (ef, efv) in zip(estimating_funcs, estimating_funcs_vec):
