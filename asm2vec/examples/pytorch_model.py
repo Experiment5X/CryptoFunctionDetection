@@ -45,9 +45,8 @@ class FunctionDataset(torch.utils.data.Dataset):
 
 model = torch.nn.Sequential(
     torch.nn.Linear(400, 800),
-    torch.nn.ELU(),
-    torch.nn.Linear(800, 800),
     torch.nn.ReLU(),
+    torch.nn.Dropout(0.5),
     torch.nn.Linear(800, 4),
     torch.nn.Softmax(dim=1),
 )
@@ -57,19 +56,17 @@ optimizer = torch.optim.Adam(model.parameters())
 
 dataset = FunctionDataset()
 train, test = dataset.get_splits()
-dataloader = torch.utils.data.DataLoader(train, batch_size=16)
+dataloader = torch.utils.data.DataLoader(train, batch_size=8)
 
 print(f'Train: {len(train)}, Test: {len(test)}')
 
-for epoch in range(0, 10):
+for epoch in range(0, 6):
     for batch_x, batch_y in dataloader:
         predictions = model.forward(batch_x.type(torch.FloatTensor))
         loss = criterion(predictions, batch_y)
         loss.backward()
 
         optimizer.step()
-
-        # display_accuracy(predictions, batch_y, 'batch')
 
     test_x, test_y = test[:]
     test_x = torch.FloatTensor(test_x)
