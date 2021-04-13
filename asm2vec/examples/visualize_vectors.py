@@ -31,6 +31,7 @@ for vector, label in zip(reduced_func_vectors, labels):
 
 
 colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple']
+label_names = {0: 'non_crypto', 1: 'aes', 2: 'des', 3: 'rsa'}
 for label in vectors_by_class:
     vectors = np.array(vectors_by_class[label])
     vectors_split = np.split(vectors, 2, 1)
@@ -39,7 +40,9 @@ for label in vectors_by_class:
     y = vectors_split[1]
 
     color = colors[int(label)]
+    label_name = label_names[int(label)]
 
-    plt.scatter(x, y, c=color)
+    plt.scatter(x, y, c=color, s=1.5, label=label_name)
 
+plt.legend()
 plt.savefig('./vectors_visualized.png')
