@@ -1,32 +1,37 @@
 import re
+import subprocess
 
-class AssemblyFile:
-    def __init__(self, file_path):
-        self.file_path = file_path
+class BinaryFile:
+    def __init__(self, binary_path):
+        self.binary_path = binary_path
         self.parse_asm()
 
-    def load_file(self):
-        with open(self.file_path, 'r') as asm_file:
-            asm_lines = asm_file.readlines()
+    def dump_assembly(self):
+        result = subprocess.run(['dumpbin', '/DISASM:NOBYTES', self.binary_path], stdout=subprocess.PIPE)
+        return result.stdout.decode('utf-8')
 
-            # remove info at start of dump
-            asm_lines = asm_lines[5:]
+    def load_assembly(self):
+        assembly = self.dump_assembly()
+        asm_lines = assembly.split('\n')
 
-            # strip all lines
-            asm_lines = [l.strip() for l in asm_lines if len(l.strip()) != 0]
+        # remove info at start of dump
+        asm_lines = asm_lines[8:]
 
-            # remove Summary info at end
-            summary_line = None
-            for i in range(1, len(asm_lines)):
-                if asm_lines[-i] == 'Summary':
-                    summary_line = -i
-            
-            asm_lines = asm_lines[:summary_line]
-            self.asm_lines = asm_lines
-            return asm_lines
+        # strip all lines
+        asm_lines = [l.strip() for l in asm_lines if len(l.strip()) != 0]
+
+        # remove Summary info at end
+        summary_line = None
+        for i in range(1, len(asm_lines)):
+            if asm_lines[-i] == 'Summary':
+                summary_line = -i
+        
+        asm_lines = asm_lines[:summary_line]
+        self.asm_lines = asm_lines
+        return asm_lines
 
     def parse_asm(self):
-        asm_lines = self.load_file()
+        asm_lines = self.load_assembly()
 
         self.instructions = []
         self.labels = {}
@@ -71,7 +76,7 @@ class AssemblyFile:
                 out_file.write(f'        {instruction}\n')
 
 
-asm = AssemblyFile('./raw_output/disasm_strings.txt')
+asm = BinaryFile('./binaries/strings.exe')
 print(asm.asm_lines[0])
 print(asm.asm_lines[1])
 print(asm.asm_lines[2])
@@ -80,5 +85,4 @@ print(asm.asm_lines[-3])
 print(asm.asm_lines[-2])
 print(asm.asm_lines[-1])
 
-print(asm.labels)
 asm.dump_cleaned_asm('./cleaned.txt')
