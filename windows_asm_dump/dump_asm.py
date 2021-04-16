@@ -1,5 +1,6 @@
 import re
 import subprocess
+from collections import OrderedDict
 
 class BinaryFile:
     def __init__(self, binary_path):
@@ -33,7 +34,7 @@ class BinaryFile:
     def parse_asm(self):
         asm_lines = self.load_assembly()
 
-        self.instructions = []
+        self.instructions = OrderedDict()
         self.labels = {}
 
         for line in asm_lines:
@@ -64,11 +65,28 @@ class BinaryFile:
                 # replace address reference with label
                 instruction = instruction.replace(jump_address_str, jump_label)
             
-            self.instructions.append((address, instruction))
+            self.instructions[address] = instruction
+
+    def get_functions(self):
+        functions = []
+
+        # filter out any functions that refer to stubs
+        for label_address in self.labels:
+            label = self.labels[label_address]
+            if not label.startswith('sub_'):
+                continue
+
+            first_function_instruction = self.instructions[label_address]
+            if not first_function_instruction.startswith('jmp'):
+                functions.append(label)
+        
+        return functions
 
     def dump_cleaned_asm(self, out_file_name):
         with open(out_file_name, 'w') as out_file:
-            for (address, instruction) in self.instructions:
+            for address in self.instructions:
+                instruction = self.instructions[address]
+
                 # check for a label
                 if address in self.labels:
                     label_line = f'{self.labels[address]}:\n'
@@ -76,13 +94,13 @@ class BinaryFile:
                 out_file.write(f'        {instruction}\n')
 
 
-asm = BinaryFile('./binaries/strings.exe')
-print(asm.asm_lines[0])
-print(asm.asm_lines[1])
-print(asm.asm_lines[2])
-print('...')
-print(asm.asm_lines[-3])
-print(asm.asm_lines[-2])
-print(asm.asm_lines[-1])
+# asm = BinaryFile('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\binaries\\strings.exe')
+# asm.dump_cleaned_asm('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\cleaned.txt')
 
-asm.dump_cleaned_asm('./cleaned.txt')
+asm = BinaryFile('./binaries/MFPlay.dll')
+asm.dump_cleaned_asm('./cleaned.s')
+
+# print(asm.labels)
+funcs = asm.get_functions()
+for func in funcs:
+    print(func)
