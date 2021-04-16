@@ -9,7 +9,7 @@ class BinaryCollection:
     def __init__(self, in_directory, out_directory):
         self.in_directory = in_directory
         self.out_directory = out_directory
-    
+
     def process_all(self):
         binaries_processed = 0
         for filename in os.listdir(self.in_directory):
@@ -18,8 +18,12 @@ class BinaryCollection:
 
             if file_path.suffix == '.exe' or file_path.suffix == '.dll':
                 file_name_no_exetension = file_path.stem
-                out_asm_path = os.path.join(self.out_directory, f'{file_name_no_exetension}.s')
-                out_functions_path = os.path.join(self.out_directory, f'{file_name_no_exetension}_functions.txt')
+                out_asm_path = os.path.join(
+                    self.out_directory, f'{file_name_no_exetension}.s'
+                )
+                out_functions_path = os.path.join(
+                    self.out_directory, f'{file_name_no_exetension}_functions.txt'
+                )
 
                 binary_file = BinaryFile(file_path_str)
                 binary_file.dump_cleaned_asm(out_asm_path)
@@ -30,7 +34,7 @@ class BinaryCollection:
 
                 print(f'Processed {filename}')
                 binaries_processed += 1
-        
+
         print(f'Processed {binaries_processed} binary files')
 
 
@@ -40,7 +44,9 @@ class BinaryFile:
         self.parse_asm()
 
     def dump_assembly(self):
-        result = subprocess.run(['dumpbin', '/DISASM:NOBYTES', self.binary_path], stdout=subprocess.PIPE)
+        result = subprocess.run(
+            ['dumpbin', '/DISASM:NOBYTES', self.binary_path], stdout=subprocess.PIPE
+        )
         return result.stdout.decode('utf-8')
 
     def load_assembly(self):
@@ -58,7 +64,7 @@ class BinaryFile:
         for i in range(1, len(asm_lines)):
             if asm_lines[-i] == 'Summary':
                 summary_line = -i
-        
+
         asm_lines = asm_lines[:summary_line]
         self.asm_lines = asm_lines
         return asm_lines
@@ -80,14 +86,22 @@ class BinaryFile:
                 is_operand_address = False
 
             # check for call instructions
-            if line_components[1] == 'call' and len(line_components) == 3 and is_operand_address:
+            if (
+                line_components[1] == 'call'
+                and len(line_components) == 3
+                and is_operand_address
+            ):
                 call_address_str = line_components[2]
                 call_address = int(call_address_str, 16)
 
                 self.labels[call_address] = f'sub_{call_address_str}'
-            
+
             # check for jump instructions
-            if line_components[1].startswith('j') and len(line_components) == 3 and is_operand_address:
+            if (
+                line_components[1].startswith('j')
+                and len(line_components) == 3
+                and is_operand_address
+            ):
                 jump_address_str = line_components[2]
                 jump_address = int(jump_address_str, 16)
 
@@ -96,7 +110,7 @@ class BinaryFile:
 
                 # replace address reference with label
                 instruction = instruction.replace(jump_address_str, jump_label)
-            
+
             self.instructions[address] = instruction
 
     def get_functions(self):
@@ -111,7 +125,7 @@ class BinaryFile:
             first_function_instruction = self.instructions[label_address]
             if not first_function_instruction.startswith('jmp'):
                 functions.append(label)
-        
+
         return functions
 
     def dump_cleaned_asm(self, out_file_name):
@@ -125,17 +139,6 @@ class BinaryFile:
                     out_file.write(label_line)
                 out_file.write(f'        {instruction}\n')
 
-
-# asm = BinaryFile('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\binaries\\strings.exe')
-# asm.dump_cleaned_asm('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\cleaned.txt')
-
-# asm = BinaryFile('./binaries/MFPlay.dll')
-# asm.dump_cleaned_asm('./cleaned.s')
-# 
-# # print(asm.labels)
-# funcs = asm.get_functions()
-# for func in funcs:
-#     print(func)
 
 collection = BinaryCollection('./binaries/', './dumped_output')
 collection.process_all()
