@@ -1,6 +1,38 @@
+import os
 import re
 import subprocess
+from pathlib import Path
 from collections import OrderedDict
+
+
+class BinaryCollection:
+    def __init__(self, in_directory, out_directory):
+        self.in_directory = in_directory
+        self.out_directory = out_directory
+    
+    def process_all(self):
+        binaries_processed = 0
+        for filename in os.listdir(self.in_directory):
+            file_path_str = os.path.join(self.in_directory, filename)
+            file_path = Path(file_path_str)
+
+            if file_path.suffix == '.exe' or file_path.suffix == '.dll':
+                file_name_no_exetension = file_path.stem
+                out_asm_path = os.path.join(self.out_directory, f'{file_name_no_exetension}.s')
+                out_functions_path = os.path.join(self.out_directory, f'{file_name_no_exetension}_functions.txt')
+
+                binary_file = BinaryFile(file_path_str)
+                binary_file.dump_cleaned_asm(out_asm_path)
+                function_names = binary_file.get_functions()
+
+                with open(out_functions_path, 'w') as out_functions_file:
+                    out_functions_file.writelines([f'{f}\n' for f in function_names])
+
+                print(f'Processed {filename}')
+                binaries_processed += 1
+        
+        print(f'Processed {binaries_processed} binary files')
+
 
 class BinaryFile:
     def __init__(self, binary_path):
@@ -97,10 +129,13 @@ class BinaryFile:
 # asm = BinaryFile('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\binaries\\strings.exe')
 # asm.dump_cleaned_asm('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\cleaned.txt')
 
-asm = BinaryFile('./binaries/MFPlay.dll')
-asm.dump_cleaned_asm('./cleaned.s')
+# asm = BinaryFile('./binaries/MFPlay.dll')
+# asm.dump_cleaned_asm('./cleaned.s')
+# 
+# # print(asm.labels)
+# funcs = asm.get_functions()
+# for func in funcs:
+#     print(func)
 
-# print(asm.labels)
-funcs = asm.get_functions()
-for func in funcs:
-    print(func)
+collection = BinaryCollection('./binaries/', './dumped_output')
+collection.process_all()
