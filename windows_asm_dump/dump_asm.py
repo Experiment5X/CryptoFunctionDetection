@@ -10,7 +10,7 @@ class BinaryCollection:
         self.in_directory = in_directory
         self.out_directory = out_directory
     
-    def process_all(self):
+    def process_all(self, limit=500):
         binaries_processed = 0
         for filename in os.listdir(self.in_directory):
             file_path_str = os.path.join(self.in_directory, filename)
@@ -21,15 +21,24 @@ class BinaryCollection:
                 out_asm_path = os.path.join(self.out_directory, f'{file_name_no_exetension}.s')
                 out_functions_path = os.path.join(self.out_directory, f'{file_name_no_exetension}_functions.txt')
 
-                binary_file = BinaryFile(file_path_str)
-                binary_file.dump_cleaned_asm(out_asm_path)
-                function_names = binary_file.get_functions()
+                try:
+                    binary_file = BinaryFile(file_path_str)
+                    if len(binary_file.labels) == 0:
+                        continue
+                    binary_file.dump_cleaned_asm(out_asm_path)
+                    function_names = binary_file.get_functions()
+                except:
+                    print('skipping ', filename)
+                    continue
 
                 with open(out_functions_path, 'w') as out_functions_file:
                     out_functions_file.writelines([f'{f}\n' for f in function_names])
 
                 print(f'Processed {filename}')
                 binaries_processed += 1
+
+                if binaries_processed >= limit:
+                    break
         
         print(f'Processed {binaries_processed} binary files')
 
@@ -46,6 +55,9 @@ class BinaryFile:
     def load_assembly(self):
         assembly = self.dump_assembly()
         asm_lines = assembly.split('\n')
+
+        if len(asm_lines) < 1000:
+            return []
 
         # remove info at start of dump
         asm_lines = asm_lines[8:]
@@ -137,5 +149,6 @@ class BinaryFile:
 # for func in funcs:
 #     print(func)
 
-collection = BinaryCollection('./binaries/', './dumped_output')
+collection = BinaryCollection('C:/Windows/System32', './dumped_output')
+# collection = BinaryCollection('./binaries', './dumped_output')
 collection.process_all()
