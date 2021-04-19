@@ -16,7 +16,7 @@ class BinaryCollection:
             file_path_str = os.path.join(self.in_directory, filename)
             file_path = Path(file_path_str)
 
-            if file_path.suffix == '.exe' or file_path.suffix == '.dll':
+            if not filename.startswith('.'): # file_path.suffix == '.exe' or file_path.suffix == '.dll':
                 file_name_no_exetension = file_path.stem
                 out_asm_path = os.path.join(
                     self.out_directory, f'{file_name_no_exetension}.s'
@@ -25,18 +25,20 @@ class BinaryCollection:
                     self.out_directory, f'{file_name_no_exetension}_functions.txt'
                 )
 
-                try:
-                    binary_file = BinaryFile(file_path_str)
-                    if len(binary_file.labels) == 0:
-                        continue
-                    binary_file.dump_cleaned_asm(out_asm_path)
-                    function_names = binary_file.get_functions()
-                except:
-                    print('skipping ', filename)
+                binary_file = BinaryFile(file_path_str)
+                if len(binary_file.labels) == 0:
                     continue
 
+                function_names = binary_file.get_functions()
                 with open(out_functions_path, 'w') as out_functions_file:
                     out_functions_file.writelines([f'{f}\n' for f in function_names])
+
+                dumped_functions = binary_file.dump_cleaned_asm(out_asm_path)
+                dumped_functions = set(dumped_functions)
+
+                for func_name in function_names:
+                    if func_name not in dumped_functions:
+                        print(f'{func_name} detected as a function but label wasnt dumped to asm file')
 
                 print(f'Processed {filename}')
                 binaries_processed += 1
@@ -134,6 +136,9 @@ class BinaryFile:
             if not label.startswith('sub_'):
                 continue
 
+            if label_address not in self.instructions:
+                continue
+
             first_function_instruction = self.instructions[label_address]
             if not first_function_instruction.startswith('jmp'):
                 functions.append(label)
@@ -141,16 +146,24 @@ class BinaryFile:
         return functions
 
     def dump_cleaned_asm(self, out_file_name):
+        functions_dumped = []
         with open(out_file_name, 'w') as out_file:
             for address in self.instructions:
                 instruction = self.instructions[address]
 
                 # check for a label
                 if address in self.labels:
-                    label_line = f'{self.labels[address]}:\n'
+                    label = self.labels[address]
+
+                    if label.startswith('sub_'):
+                        functions_dumped.append(label)
+
+                    label_line = f'{label}:\n'
                     out_file.write(label_line)
                 out_file.write(f'        {instruction}\n')
 
+        return functions_dumped
 
-collection = BinaryCollection('./binaries/', './dumped_output')
+
+collection = BinaryCollection('C:\\Users\\Adam\\Downloads\\CryptoRansomware', 'C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\dumped_output_ransomware')
 collection.process_all()
