@@ -55,7 +55,10 @@ def get_functions_from_directory(directory_path, package_path):
 
 
 def get_dumped_functions_from_directory(directory_path):
-    functions = []
+    all_functions = []
+
+    limit = 1e10
+    processed = 0
 
     for file_name in os.listdir(directory_path):
         file_path_str = os.path.join(directory_path, file_name)
@@ -69,16 +72,29 @@ def get_dumped_functions_from_directory(directory_path):
                 directory_path, f'{file_path.stem}_functions.txt'
             )
 
+            if not os.path.isfile(functions_file_path):
+                continue
+
             with open(functions_file_path, 'r') as functions_file:
                 functions = functions_file.readlines()
                 functions = [f.strip() for f in functions]
 
-            parsed_functions = asm2vec.parse.parse(
-                assembly_file_path, func_names=functions,
-            )
-            functions.extend(parsed_functions)
+            try:
+                parsed_functions = asm2vec.parse.parse(
+                    assembly_file_path, func_names=functions,
+                )
+                all_functions.extend(parsed_functions)
+            except:
+                print('Broke when loading: ', file_name)
+
+            if len(all_functions) > 2000:
+                break
     
-    return functions
+        processed += 1
+        if processed >= limit:
+            break
+    
+    return all_functions
 
 
 def get_all_functions():
@@ -96,32 +112,42 @@ def get_all_functions():
         './crypto_code/rsa', 'examples.crypto_code.rsa.'
     )
 
-    benignware_functions = get_dumped_functions_from_directory('../../windows_asm_dump/dumped_output')
+    print('Loaded compiled functoins')
 
+    benignware_functions = get_dumped_functions_from_directory('../../windows_asm_dump/dumped_output')
     print(f'Loaded {len(benignware_functions)} benignware functions')
+
+    ransomware_functions = get_dumped_functions_from_directory('../../windows_asm_dump/dumped_output_ransomware')
+    print(f'Loaded {len(ransomware_functions)} ransomware functions')
 
     functions = [
         non_crypto_functions,
         aes_functions,
         des_functions,
         rsa_functions,
+        benignware_functions,
+        ransomware_functions,
     ]
 
     return functions
 
 
-def merge_functions(non_crypto_funcs, aes_funcs, des_funcs, rsa_funcs):
+def merge_functions(non_crypto_funcs, aes_funcs, des_funcs, rsa_funcs, benignware_funcs, ransomware_funcs):
     all_labels = []
     all_labels.extend([0] * len(non_crypto_funcs))
     all_labels.extend([1] * len(aes_funcs))
     all_labels.extend([2] * len(des_funcs))
     all_labels.extend([3] * len(rsa_funcs))
+    all_labels.extend([4] * len(benignware_funcs))
+    all_labels.extend([5] * len(ransomware_funcs))
 
     all_funcs = []
     all_funcs.extend(non_crypto_funcs)
     all_funcs.extend(aes_funcs)
     all_funcs.extend(des_funcs)
     all_funcs.extend(rsa_funcs)
+    all_funcs.extend(benignware_funcs)
+    all_funcs.extend(ransomware_funcs)
 
     labeled_funcs = list(zip(all_funcs, all_labels))
     random.shuffle(labeled_funcs)
@@ -168,7 +194,9 @@ def train_asm2vec(separated_funcs):
 
 
 def balance_separated_funcs(separated_funcs):
-    truncate_length = 10  # min(*map(len, separated_funcs))
+    separated_funcs = separated_funcs[:4]
+
+    truncate_length = min(*map(len, separated_funcs))
     truncated_funcs = map(lambda funcs: funcs[:truncate_length], separated_funcs)
 
     return truncated_funcs
@@ -183,8 +211,10 @@ def save_vectorized_funcs(asm2vec_model, separated_funcs):
     ):
         print('Function vectors file already exists')
     else:
+        print('Working to vectorize the functions...')
         balanced_funcs = balance_separated_funcs(separated_funcs)
         funcs, labels = merge_functions(*balanced_funcs)
+        print(f'Found {len(funcs)} to vectorize')
 
         vectorized_funcs = list(map(asm2vec_model.to_vec, funcs))
 
@@ -193,6 +223,8 @@ def save_vectorized_funcs(asm2vec_model, separated_funcs):
 
         with open(vectorized_func_labels_path, 'wb') as f:
             pickle.dump(list(labels), f)
+
+        print('Done.')
 
 
 def split_train_test(separated_funcs, split_fraction=0.25):
