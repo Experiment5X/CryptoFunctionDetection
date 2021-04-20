@@ -76,4 +76,4 @@ def dump_functions_in_directory(directory_path):
 
 if __name__ == '__main__':
     dump_functions_in_directory('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\dumped_output')
-    dump_functions_in_directory('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\dumped_output')
+    dump_functions_in_directory('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\dumped_output_ransomware')
