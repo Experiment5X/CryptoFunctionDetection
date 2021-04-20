@@ -2,3 +2,4 @@
 *.a
 *.swp
 .DS_STORE
+windows_asm_dump/dumped_output
