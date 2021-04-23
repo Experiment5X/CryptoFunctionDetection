@@ -3,8 +3,8 @@ import pickle
 import numpy as np
 
 
-vectorized_funcs_path = 'vectorized_funcs.p'
-vectorized_func_labels_path = 'vectorized_func_labels.p'
+vectorized_funcs_path = 'vectorized_funcs.p.bak'
+vectorized_func_labels_path = 'vectorized_func_labels.p.bak'
 
 
 def display_accuracy(predictions, labels, display_label=''):
@@ -25,7 +25,7 @@ class FunctionDataset(torch.utils.data.Dataset):
 
         with open(vectorized_func_labels_path, 'rb') as f:
             self.labels = pickle.load(f)
-            self.labels = np.array(self.labels)
+            self.labels = np.array(self.labels, dtype=np.int64)
 
     # number of rows in dataset
     def __len__(self):
@@ -75,3 +75,7 @@ for epoch in range(0, 6):
     test_predictions = model.forward(test_x)
 
     display_accuracy(test_predictions, test_y, 'test')
+
+
+with open('./model.p', 'wb') as model_file:
+    pickle.dump(model, model_file)
