@@ -1,10 +1,8 @@
 function_names = [
-    '_rijndael_encrypt',
-    '_rijndael_decrypt',
+    '_cipher_block_add',
+    '_cipher_block_xor',
+    '_do_decrypt_fn',
+    '_do_encrypt_fn',
     '_do_setkey',
-    '_do_encrypt',
-    '_do_decrypt',
-    '_prefetch_enc',
-    '_prefetch_dec',
     '_prepare_decryption',
 ]
