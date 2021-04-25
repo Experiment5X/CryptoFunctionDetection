@@ -1,10 +1,8 @@
 function_names = [
-    '_do_des_encrypt',
-    '_do_des_decrypt',
-    '_do_tripledes_setkey',
-    '_do_tripledes_encrypt',
-    '_do_tripledes_decrypt',
     '_des_key_schedule',
     '_des_ecb_crypt',
+    '_des_key_schedule',
     '_tripledes_ecb_crypt',
+    '_cipher_block_add',
+    '_cipher_block_xor',
 ]

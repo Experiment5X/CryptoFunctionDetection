@@ -1,7 +1,8 @@
 function_names = [
-    '__ZN3DES6keygenERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEi',
+    '__ZN3DES12initialPermuERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
+    '__ZN3DES10finalPermuERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
+    '__ZN3DES4sBoxERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
     '__ZN3DES13straightPermuERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
-    '__ZN3DES14expansionPermuERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
-    '__ZN3DES16compressionPermuERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
     '__ZN3DES15parityDropPermuERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
+    '__ZN3DES16compressionPermuERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE',
 ]
