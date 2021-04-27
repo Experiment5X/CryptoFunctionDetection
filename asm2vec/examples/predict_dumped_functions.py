@@ -19,6 +19,9 @@ def predict_functions(model, functions_file_path):
 
         print(f'VFuncs tensor: {vfuncs_tensor.shape}')
 
+        if vfuncs_tensor.shape[0] == 0:
+            return [0, 0, 0]
+
         function_predictions = model.forward(vfuncs_tensor)
         print(f'Predictions: {function_predictions[:, 3].max().item()}')
 
@@ -62,3 +65,4 @@ def predict_functions_in_directory(directory_path):
 
 if __name__ == '__main__':
     predict_functions_in_directory('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\dumped_output')
+    predict_functions_in_directory('C:\\Users\\Adam\\Developer\\CryptoFunctionDetection\\windows_asm_dump\\dumped_output_ransomware')
