@@ -24,7 +24,7 @@ def cosine_similarity(v1, v2):
     return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 
-def get_functions_from_directory(directory_path, package_path):
+def get_functions_from_directory(directory_path, package_path, check_funcs=False):
     functions = []
 
     for file_name in os.listdir(directory_path):
@@ -36,16 +36,44 @@ def get_functions_from_directory(directory_path, package_path):
             python_package = import_module(package_name)
 
             try:
-                for optimization_level in range(0, 3):
+                for optimization_level in [0, 1, 2, 3, 's']:
                     base_code_name = file_name.replace('_functions.py', '')
                     assembly_file_name = f'{base_code_name}-o{optimization_level}.s'
                     assembly_file_path = os.path.join(
                         directory_path, assembly_file_name
                     )
 
+                    if not os.path.isfile(assembly_file_path):
+                        continue
+
+                    if assembly_file_name == 'rsa_libgcrypt-o3.s':
+                        function_names = python_package.function_names.copy()
+                        function_names.remove('_gen_x931_parm_xp')
+                    elif assembly_file_name == 'aes_botan-os.s':
+                        function_names = python_package.function_names.copy()
+                        function_names.remove('__ZN5Botan12_GLOBAL__N_111mix_columnsEPj')
+                    else:
+                        function_names = python_package.function_names
+
+                    if check_funcs:
+                        with open(assembly_file_path, 'r') as asm_file:
+                            asm_code = asm_file.read()
+
+                        # make sure all the functions are in the code
+                        function_names_to_use = []
+                        for func_name in function_names:
+                            if f'{func_name}:' in asm_code:
+                                function_names_to_use.append(func_name)
+
+                        if len(function_names) != len(function_names_to_use):
+                            print(f'{file_name}-o{optimization_level} reduced funcs to {len(function_names_to_use)}')
+
+                        function_names = function_names_to_use
+
                     parsed_functions = asm2vec.parse.parse(
-                        assembly_file_path, func_names=python_package.function_names
+                        assembly_file_path, func_names=function_names
                     )
+
 
                     functions.extend(parsed_functions)
             except Exception as ex:
@@ -58,6 +86,7 @@ def get_dumped_functions_from_directory(directory_path):
     all_functions = []
 
     limit = 1e10
+    function_limit = 6000
     processed = 0
 
     for file_name in os.listdir(directory_path):
@@ -87,14 +116,14 @@ def get_dumped_functions_from_directory(directory_path):
             except:
                 print('Broke when loading: ', file_name)
 
-            if len(all_functions) > 2000:
+            if len(all_functions) > function_limit:
                 break
     
         processed += 1
         if processed >= limit:
             break
     
-    return all_functions
+    return all_functions[:function_limit]
 
 
 def get_all_functions():
@@ -103,16 +132,20 @@ def get_all_functions():
     )
 
     aes_functions = get_functions_from_directory(
-        './crypto_code/aes', 'examples.crypto_code.aes.'
+        './crypto_code/aes', 'examples.crypto_code.aes.', True
     )
     des_functions = get_functions_from_directory(
-        './crypto_code/des', 'examples.crypto_code.des.'
+        './crypto_code/des', 'examples.crypto_code.des.', True
     )
     rsa_functions = get_functions_from_directory(
-        './crypto_code/rsa', 'examples.crypto_code.rsa.'
+        './crypto_code/rsa', 'examples.crypto_code.rsa.', True
     )
 
-    print('Loaded compiled functoins')
+    print('Loaded compiled functions')
+    print(f'    {len(non_crypto_functions)} non-crypto functions')
+    print(f'    {len(aes_functions)} aes functions')
+    print(f'    {len(des_functions)} des functions')
+    print(f'    {len(rsa_functions)} rsa functions')
 
     benignware_functions = get_dumped_functions_from_directory('../../windows_asm_dump/dumped_output')
     print(f'Loaded {len(benignware_functions)} benignware functions')
@@ -132,7 +165,7 @@ def get_all_functions():
     return functions
 
 
-def merge_functions(non_crypto_funcs, aes_funcs, des_funcs, rsa_funcs, benignware_funcs, ransomware_funcs):
+def merge_functions(non_crypto_funcs, aes_funcs, des_funcs, rsa_funcs, benignware_funcs=[], ransomware_funcs=[]):
     all_labels = []
     all_labels.extend([0] * len(non_crypto_funcs))
     all_labels.extend([1] * len(aes_funcs))
@@ -160,7 +193,7 @@ def merge_functions(non_crypto_funcs, aes_funcs, des_funcs, rsa_funcs, benignwar
 
 
 def train_asm2vec(separated_funcs):
-    asm2vec_model_path = 'asm2vec_model.p'
+    asm2vec_model_path = 'asm2vec_model-new.p'
 
     if os.path.isfile(asm2vec_model_path):
         with open(asm2vec_model_path, 'rb') as f:
