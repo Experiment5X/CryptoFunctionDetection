@@ -1,0 +1,3 @@
+repository='https://github.com/nanopb/nanopb'
+module=''
+tag=''

@@ -1,0 +1,13 @@
+# Target labels
+ relic-ext
+# Source files and their labels
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/CMakeFiles/relic-ext
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/CMakeFiles/relic-ext.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/CMakeFiles/relic-ext-complete.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-install.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-mkdir.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-download.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-update.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-patch.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-configure.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-build.rule

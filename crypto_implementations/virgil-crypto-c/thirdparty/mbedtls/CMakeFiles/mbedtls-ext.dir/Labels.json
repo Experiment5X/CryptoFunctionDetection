@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/CMakeFiles/mbedtls-ext"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/CMakeFiles/mbedtls-ext.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/CMakeFiles/mbedtls-ext-complete.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/mbedtls-ext-prefix/src/mbedtls-ext-stamp/mbedtls-ext-install.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/mbedtls-ext-prefix/src/mbedtls-ext-stamp/mbedtls-ext-mkdir.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/mbedtls-ext-prefix/src/mbedtls-ext-stamp/mbedtls-ext-download.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/mbedtls-ext-prefix/src/mbedtls-ext-stamp/mbedtls-ext-update.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/mbedtls-ext-prefix/src/mbedtls-ext-stamp/mbedtls-ext-patch.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/mbedtls-ext-prefix/src/mbedtls-ext-stamp/mbedtls-ext-configure.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/mbedtls/mbedtls-ext-prefix/src/mbedtls-ext-stamp/mbedtls-ext-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"mbedtls-ext"
+		],
+		"name" : "mbedtls-ext"
+	}
+}

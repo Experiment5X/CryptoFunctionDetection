@@ -1,0 +1,4607 @@
+{
+  "abi_rev": 0,
+  "abs_root_dir": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+  "all_targets": "libs docs cli tests",
+  "ar_command": "ar",
+  "ar_options": "crs",
+  "ar_output_to": "",
+  "arch": "x86_64",
+  "base_dir": "",
+  "bindir": "/usr/local/bin",
+  "bogo_shim_src": "src/bogo_shim/bogo_shim.cpp",
+  "botan_pkgconfig": "build/botan-3.pc",
+  "build_bogo_shim": false,
+  "build_cli_exe": true,
+  "build_coverage": false,
+  "build_dir": "build",
+  "build_fuzzers": null,
+  "build_shared_lib": true,
+  "build_static_lib": true,
+  "cc_compile_debug_flags": "-g",
+  "cc_compile_flags": "-O3",
+  "cc_compile_opt_flags": "-O3",
+  "cc_lang_flags": "-std=c++17 -D_REENTRANT",
+  "cc_macro": "CLANG",
+  "cc_sysroot": "",
+  "cc_warning_flags": "-Wall -Wextra -Wpedantic -Wshadow -Wstrict-aliasing -Wstrict-overflow=5 -Wcast-align -Wmissing-declarations -Wpointer-arith -Wcast-qual -Wshorten-64-to-32",
+  "cli_build_info": [
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/argon2.o",
+      "src": "src/cli/argon2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/asn1.o",
+      "src": "src/cli/asn1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/bcrypt.o",
+      "src": "src/cli/bcrypt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/cc_enc.o",
+      "src": "src/cli/cc_enc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/cipher.o",
+      "src": "src/cli/cipher.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/cli.o",
+      "src": "src/cli/cli.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/cli_rng.o",
+      "src": "src/cli/cli_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/codec.o",
+      "src": "src/cli/codec.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/compress.o",
+      "src": "src/cli/compress.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/entropy.o",
+      "src": "src/cli/entropy.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/hash.o",
+      "src": "src/cli/hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/hmac.o",
+      "src": "src/cli/hmac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/main.o",
+      "src": "src/cli/main.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/math.o",
+      "src": "src/cli/math.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/pbkdf.o",
+      "src": "src/cli/pbkdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/pk_crypt.o",
+      "src": "src/cli/pk_crypt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/psk.o",
+      "src": "src/cli/psk.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/pubkey.o",
+      "src": "src/cli/pubkey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/roughtime.o",
+      "src": "src/cli/roughtime.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/sandbox.o",
+      "src": "src/cli/sandbox.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/speed.o",
+      "src": "src/cli/speed.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/timing_tests.o",
+      "src": "src/cli/timing_tests.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/tls_client.o",
+      "src": "src/cli/tls_client.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/tls_http_server.o",
+      "src": "src/cli/tls_http_server.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/tls_proxy.o",
+      "src": "src/cli/tls_proxy.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/tls_server.o",
+      "src": "src/cli/tls_server.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/tls_utils.o",
+      "src": "src/cli/tls_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/tss.o",
+      "src": "src/cli/tss.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/utils.o",
+      "src": "src/cli/utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/cli/x509.o",
+      "src": "src/cli/x509.cpp"
+    }
+  ],
+  "cli_exe": "./botan",
+  "cli_exe_name": "botan",
+  "cli_headers": [
+    "src/cli/argparse.h",
+    "src/cli/cli_exceptions.h",
+    "src/cli/cli.h",
+    "src/cli/socket_utils.h",
+    "src/cli/tls_helpers.h",
+    "src/cli/sandbox.h"
+  ],
+  "cli_objs": [
+    "build/obj/cli/argon2.o",
+    "build/obj/cli/asn1.o",
+    "build/obj/cli/bcrypt.o",
+    "build/obj/cli/cc_enc.o",
+    "build/obj/cli/cipher.o",
+    "build/obj/cli/cli.o",
+    "build/obj/cli/cli_rng.o",
+    "build/obj/cli/codec.o",
+    "build/obj/cli/compress.o",
+    "build/obj/cli/entropy.o",
+    "build/obj/cli/hash.o",
+    "build/obj/cli/hmac.o",
+    "build/obj/cli/main.o",
+    "build/obj/cli/math.o",
+    "build/obj/cli/pbkdf.o",
+    "build/obj/cli/pk_crypt.o",
+    "build/obj/cli/psk.o",
+    "build/obj/cli/pubkey.o",
+    "build/obj/cli/roughtime.o",
+    "build/obj/cli/sandbox.o",
+    "build/obj/cli/speed.o",
+    "build/obj/cli/timing_tests.o",
+    "build/obj/cli/tls_client.o",
+    "build/obj/cli/tls_http_server.o",
+    "build/obj/cli/tls_proxy.o",
+    "build/obj/cli/tls_server.o",
+    "build/obj/cli/tls_utils.o",
+    "build/obj/cli/tss.o",
+    "build/obj/cli/utils.o",
+    "build/obj/cli/x509.o"
+  ],
+  "cli_srcs": [
+    "src/cli/argon2.cpp",
+    "src/cli/asn1.cpp",
+    "src/cli/bcrypt.cpp",
+    "src/cli/cc_enc.cpp",
+    "src/cli/cipher.cpp",
+    "src/cli/cli.cpp",
+    "src/cli/cli_rng.cpp",
+    "src/cli/codec.cpp",
+    "src/cli/compress.cpp",
+    "src/cli/entropy.cpp",
+    "src/cli/hash.cpp",
+    "src/cli/hmac.cpp",
+    "src/cli/main.cpp",
+    "src/cli/math.cpp",
+    "src/cli/pbkdf.cpp",
+    "src/cli/pk_crypt.cpp",
+    "src/cli/psk.cpp",
+    "src/cli/pubkey.cpp",
+    "src/cli/roughtime.cpp",
+    "src/cli/sandbox.cpp",
+    "src/cli/speed.cpp",
+    "src/cli/timing_tests.cpp",
+    "src/cli/tls_client.cpp",
+    "src/cli/tls_http_server.cpp",
+    "src/cli/tls_proxy.cpp",
+    "src/cli/tls_server.cpp",
+    "src/cli/tls_utils.cpp",
+    "src/cli/tss.cpp",
+    "src/cli/utils.cpp",
+    "src/cli/x509.cpp"
+  ],
+  "cliobj_dir": "build/obj/cli",
+  "cmake_lib_flags": "-fPIC -fvisibility=hidden",
+  "cmake_link_to": "dl \"-framework CoreFoundation\" \"-framework Security\"",
+  "command_line": "configure.py",
+  "compiler": "clang",
+  "compiler_include_dirs": "build/include build/include/external",
+  "cpu_family": "x86",
+  "cpu_features": [
+    "aesni",
+    "avx2",
+    "bmi2",
+    "rdrand",
+    "rdseed",
+    "sha",
+    "sse2",
+    "sse41",
+    "sse42",
+    "ssse3"
+  ],
+  "cpu_is_64bit": true,
+  "cxx": "clang++",
+  "cxx_abi_debug_flags": "-fstack-protector -m64 -pthread -stdlib=libc++",
+  "cxx_abi_flags": "-fstack-protector -m64 -pthread -stdlib=libc++",
+  "cxx_abi_opt_flags": "-fstack-protector -m64 -pthread -stdlib=libc++",
+  "dash_c": "-c",
+  "dash_o": "-o ",
+  "distribution_info": "unspecified",
+  "doc_dir": "doc",
+  "doc_output_dir": "build/docs",
+  "doc_output_dir_doxygen": null,
+  "doc_stamp_file": "build/doc.stamp",
+  "docdir": "doc",
+  "endian": "little",
+  "exe_link_cmd": "$(LINKER)",
+  "external_headers": [
+    "pkcs11.h",
+    "pkcs11f.h",
+    "pkcs11t.h"
+  ],
+  "external_link_cmd": "",
+  "extra_libs": "",
+  "fuzzer_bin": "",
+  "fuzzer_build_info": [],
+  "fuzzer_lib": "",
+  "fuzzer_mode": false,
+  "fuzzer_objs": [],
+  "fuzzer_output_dir": "",
+  "fuzzer_srcs": [],
+  "fuzzer_type": "",
+  "fuzzobj_dir": null,
+  "handbook_output_dir": "build/docs/handbook",
+  "include_paths": "-Ibuild/include -Ibuild/include/external",
+  "includedir": "include",
+  "innosetup_arch": null,
+  "install_python_module": true,
+  "install_targets": "libs cli docs",
+  "installed_include_dir": "/usr/local/include/botan-3/botan",
+  "internal_headers": [
+    "adler32.h",
+    "aes.h",
+    "aria.h",
+    "atomic.h",
+    "barrier.h",
+    "bit_ops.h",
+    "blake2b.h",
+    "blake2bmac.h",
+    "blinding.h",
+    "blowfish.h",
+    "bswap.h",
+    "calendar.h",
+    "camellia.h",
+    "cascade.h",
+    "cast128.h",
+    "cbc.h",
+    "ccm.h",
+    "cfb.h",
+    "chacha.h",
+    "chacha20poly1305.h",
+    "charset.h",
+    "cmac.h",
+    "code_based_util.h",
+    "codec_base.h",
+    "comb4p.h",
+    "cpuid.h",
+    "crc24.h",
+    "crc32.h",
+    "ct_utils.h",
+    "ctr.h",
+    "curve_nistp.h",
+    "des.h",
+    "divide.h",
+    "donna128.h",
+    "dyn_load.h",
+    "eax.h",
+    "ed25519_fe.h",
+    "ed25519_internal.h",
+    "eme.h",
+    "eme_pkcs.h",
+    "eme_raw.h",
+    "emsa.h",
+    "emsa1.h",
+    "emsa_pkcs1.h",
+    "emsa_raw.h",
+    "emsa_x931.h",
+    "ffi_mp.h",
+    "ffi_pkey.h",
+    "ffi_rng.h",
+    "ffi_util.h",
+    "filesystem.h",
+    "gcm.h",
+    "getentropy.h",
+    "gf2m_small_m.h",
+    "ghash.h",
+    "gmac.h",
+    "gost_28147.h",
+    "gost_3411.h",
+    "hash_id.h",
+    "hkdf.h",
+    "hmac.h",
+    "http_util.h",
+    "idea.h",
+    "iso9796.h",
+    "kdf1.h",
+    "kdf1_iso18033.h",
+    "kdf2.h",
+    "keccak.h",
+    "keypair.h",
+    "lion.h",
+    "loadstor.h",
+    "locking_allocator.h",
+    "mce_internal.h",
+    "md4.h",
+    "md5.h",
+    "mdx_hash.h",
+    "mem_pool.h",
+    "mgf1.h",
+    "mode_pad.h",
+    "monty.h",
+    "monty_exp.h",
+    "mp_asmi.h",
+    "mp_core.h",
+    "mp_madd.h",
+    "mp_monty.h",
+    "mul128.h",
+    "noekeon.h",
+    "oaep.h",
+    "ocb.h",
+    "ofb.h",
+    "os_utils.h",
+    "out_buf.h",
+    "p11_mechanism.h",
+    "padding.h",
+    "par_hash.h",
+    "parsing.h",
+    "pbes2.h",
+    "pk_ops.h",
+    "pk_ops_impl.h",
+    "point_mul.h",
+    "poly1305.h",
+    "poly_dbl.h",
+    "polyn_gf2m.h",
+    "prf_tls.h",
+    "prf_x942.h",
+    "primality.h",
+    "pssr.h",
+    "rc4.h",
+    "rdseed.h",
+    "rfc6979.h",
+    "rmd160.h",
+    "rotate.h",
+    "rounding.h",
+    "rwlock.h",
+    "safeint.h",
+    "salsa20.h",
+    "scan_name.h",
+    "secqueue.h",
+    "seed.h",
+    "semaphore.h",
+    "serpent.h",
+    "serpent_sbox.h",
+    "sha160.h",
+    "sha2_32.h",
+    "sha2_64.h",
+    "sha3.h",
+    "shacal2.h",
+    "shake.h",
+    "shake_cipher.h",
+    "simd_32.h",
+    "simd_avx2.h",
+    "siphash.h",
+    "siv.h",
+    "skein_512.h",
+    "sm3.h",
+    "sm4.h",
+    "socket.h",
+    "socket_udp.h",
+    "sp800_108.h",
+    "sp800_56a.h",
+    "sp800_56c.h",
+    "stl_util.h",
+    "stream_mode.h",
+    "streebog.h",
+    "thread_pool.h",
+    "threefish_512.h",
+    "timer.h",
+    "tls_cbc.h",
+    "tls_handshake_hash.h",
+    "tls_handshake_io.h",
+    "tls_handshake_state.h",
+    "tls_reader.h",
+    "tls_record.h",
+    "tls_seq_numbers.h",
+    "tls_session_key.h",
+    "twofish.h",
+    "uri.h",
+    "whrlpool.h",
+    "workfactor.h",
+    "x919_mac.h",
+    "xmss_address.h",
+    "xmss_common_ops.h",
+    "xmss_common_ops.h",
+    "xmss_index_registry.h",
+    "xmss_signature.h",
+    "xmss_signature_operation.h",
+    "xmss_tools.h",
+    "xmss_verification_operation.h",
+    "xmss_wots_addressed_privatekey.h",
+    "xmss_wots_addressed_publickey.h",
+    "xts.h"
+  ],
+  "isa_build_info": [
+    {
+      "isa_flags": "-maes -mpclmul -msse2 -mssse3",
+      "obj": "build/obj/lib/block_aes_ni.o",
+      "src": "src/lib/block/aes/aes_ni/aes_ni.cpp"
+    },
+    {
+      "isa_flags": "-msse2 -mssse3",
+      "obj": "build/obj/lib/block_aes_vperm.o",
+      "src": "src/lib/block/aes/aes_vperm/aes_vperm.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_idea_sse2.o",
+      "src": "src/lib/block/idea/idea_sse2/idea_sse2.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_noekeon_simd.o",
+      "src": "src/lib/block/noekeon/noekeon_simd/noekeon_simd.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/block_serpent_avx2.o",
+      "src": "src/lib/block/serpent/serpent_avx2/serpent_avx2.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_serpent_simd.o",
+      "src": "src/lib/block/serpent/serpent_simd/serpent_simd.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/block_shacal2_avx2.o",
+      "src": "src/lib/block/shacal2/shacal2_avx2/shacal2_avx2.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_shacal2_simd.o",
+      "src": "src/lib/block/shacal2/shacal2_simd/shacal2_simd.cpp"
+    },
+    {
+      "isa_flags": "-msha -msse2 -mssse3",
+      "obj": "build/obj/lib/block_shacal2_x86.o",
+      "src": "src/lib/block/shacal2/shacal2_x86/shacal2_x86.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/block_threefish_512_threefish_512_avx2.o",
+      "src": "src/lib/block/threefish_512/threefish_512_avx2/threefish_512_avx2.cpp"
+    },
+    {
+      "isa_flags": "-mrdseed -msse2",
+      "obj": "build/obj/lib/entropy_rdseed.o",
+      "src": "src/lib/entropy/rdseed/rdseed.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/hash_sha1_sse2.o",
+      "src": "src/lib/hash/sha1/sha1_sse2/sha1_sse2.cpp"
+    },
+    {
+      "isa_flags": "-msha -msse2 -msse4.1 -mssse3",
+      "obj": "build/obj/lib/hash_sha1_x86.o",
+      "src": "src/lib/hash/sha1/sha1_x86/sha1_x86.cpp"
+    },
+    {
+      "isa_flags": "-mbmi -mbmi2",
+      "obj": "build/obj/lib/hash_sha2_32_sha2_32_bmi2.o",
+      "src": "src/lib/hash/sha2_32/sha2_32_bmi2/sha2_32_bmi2.cpp"
+    },
+    {
+      "isa_flags": "-msha -msse2 -msse4.1 -mssse3",
+      "obj": "build/obj/lib/hash_sha2_32_sha2_32_x86.o",
+      "src": "src/lib/hash/sha2_32/sha2_32_x86/sha2_32_x86.cpp"
+    },
+    {
+      "isa_flags": "-mbmi -mbmi2",
+      "obj": "build/obj/lib/hash_sha2_64_sha2_64_bmi2.o",
+      "src": "src/lib/hash/sha2_64/sha2_64_bmi2/sha2_64_bmi2.cpp"
+    },
+    {
+      "isa_flags": "-mbmi -mbmi2",
+      "obj": "build/obj/lib/hash_sha3_bmi2.o",
+      "src": "src/lib/hash/sha3/sha3_bmi2/sha3_bmi2.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/stream_chacha_avx2.o",
+      "src": "src/lib/stream/chacha/chacha_avx2/chacha_avx2.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/stream_chacha_simd32.o",
+      "src": "src/lib/stream/chacha/chacha_simd32/chacha_simd32.cpp"
+    },
+    {
+      "isa_flags": "-maes -mpclmul -msse2 -mssse3",
+      "obj": "build/obj/lib/utils_ghash_cpu.o",
+      "src": "src/lib/utils/ghash/ghash_cpu/ghash_cpu.cpp"
+    },
+    {
+      "isa_flags": "-msse2 -mssse3",
+      "obj": "build/obj/lib/utils_ghash_vperm.o",
+      "src": "src/lib/utils/ghash/ghash_vperm/ghash_vperm.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/test/test_simd.o",
+      "src": "src/tests/test_simd.cpp"
+    }
+  ],
+  "ldflags": "",
+  "lib_build_info": [
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_alg_id.o",
+      "src": "src/lib/asn1/alg_id.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_obj.o",
+      "src": "src/lib/asn1/asn1_obj.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_oid.o",
+      "src": "src/lib/asn1/asn1_oid.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_print.o",
+      "src": "src/lib/asn1/asn1_print.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_str.o",
+      "src": "src/lib/asn1/asn1_str.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_time.o",
+      "src": "src/lib/asn1/asn1_time.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_ber_dec.o",
+      "src": "src/lib/asn1/ber_dec.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_der_enc.o",
+      "src": "src/lib/asn1/der_enc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_oid_maps.o",
+      "src": "src/lib/asn1/oid_maps.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/asn1_oids.o",
+      "src": "src/lib/asn1/oids.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/base_buf_comp.o",
+      "src": "src/lib/base/buf_comp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/base_sym_algo.o",
+      "src": "src/lib/base/sym_algo.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/base_symkey.o",
+      "src": "src/lib/base/symkey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_aes.o",
+      "src": "src/lib/block/aes/aes.cpp"
+    },
+    {
+      "isa_flags": "-maes -mpclmul -msse2 -mssse3",
+      "obj": "build/obj/lib/block_aes_ni.o",
+      "src": "src/lib/block/aes/aes_ni/aes_ni.cpp"
+    },
+    {
+      "isa_flags": "-msse2 -mssse3",
+      "obj": "build/obj/lib/block_aes_vperm.o",
+      "src": "src/lib/block/aes/aes_vperm/aes_vperm.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_aria.o",
+      "src": "src/lib/block/aria/aria.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_cipher.o",
+      "src": "src/lib/block/block_cipher.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_blowfish.o",
+      "src": "src/lib/block/blowfish/blowfish.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_camellia.o",
+      "src": "src/lib/block/camellia/camellia.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_cascade.o",
+      "src": "src/lib/block/cascade/cascade.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_cast128.o",
+      "src": "src/lib/block/cast128/cast128.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_des.o",
+      "src": "src/lib/block/des/des.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_gost_28147.o",
+      "src": "src/lib/block/gost_28147/gost_28147.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_idea.o",
+      "src": "src/lib/block/idea/idea.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_idea_sse2.o",
+      "src": "src/lib/block/idea/idea_sse2/idea_sse2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_lion.o",
+      "src": "src/lib/block/lion/lion.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_noekeon.o",
+      "src": "src/lib/block/noekeon/noekeon.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_noekeon_simd.o",
+      "src": "src/lib/block/noekeon/noekeon_simd/noekeon_simd.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_seed.o",
+      "src": "src/lib/block/seed/seed.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_serpent.o",
+      "src": "src/lib/block/serpent/serpent.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/block_serpent_avx2.o",
+      "src": "src/lib/block/serpent/serpent_avx2/serpent_avx2.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_serpent_simd.o",
+      "src": "src/lib/block/serpent/serpent_simd/serpent_simd.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_shacal2.o",
+      "src": "src/lib/block/shacal2/shacal2.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/block_shacal2_avx2.o",
+      "src": "src/lib/block/shacal2/shacal2_avx2/shacal2_avx2.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/block_shacal2_simd.o",
+      "src": "src/lib/block/shacal2/shacal2_simd/shacal2_simd.cpp"
+    },
+    {
+      "isa_flags": "-msha -msse2 -mssse3",
+      "obj": "build/obj/lib/block_shacal2_x86.o",
+      "src": "src/lib/block/shacal2/shacal2_x86/shacal2_x86.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_sm4.o",
+      "src": "src/lib/block/sm4/sm4.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_threefish_512.o",
+      "src": "src/lib/block/threefish_512/threefish_512.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/block_threefish_512_threefish_512_avx2.o",
+      "src": "src/lib/block/threefish_512/threefish_512_avx2/threefish_512_avx2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_twofish.o",
+      "src": "src/lib/block/twofish/twofish.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/block_twofish_tab.o",
+      "src": "src/lib/block/twofish/twofish_tab.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/codec_base32.o",
+      "src": "src/lib/codec/base32/base32.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/codec_base58.o",
+      "src": "src/lib/codec/base58/base58.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/codec_base64.o",
+      "src": "src/lib/codec/base64/base64.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/codec_hex.o",
+      "src": "src/lib/codec/hex/hex.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_25519.o",
+      "src": "src/lib/compat/sodium/sodium_25519.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_aead.o",
+      "src": "src/lib/compat/sodium/sodium_aead.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_auth.o",
+      "src": "src/lib/compat/sodium/sodium_auth.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_box.o",
+      "src": "src/lib/compat/sodium/sodium_box.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_chacha.o",
+      "src": "src/lib/compat/sodium/sodium_chacha.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_salsa.o",
+      "src": "src/lib/compat/sodium/sodium_salsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_secretbox.o",
+      "src": "src/lib/compat/sodium/sodium_secretbox.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/compat_sodium_utils.o",
+      "src": "src/lib/compat/sodium/sodium_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/entropy_srcs.o",
+      "src": "src/lib/entropy/entropy_srcs.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/entropy_getentropy.o",
+      "src": "src/lib/entropy/getentropy/getentropy.cpp"
+    },
+    {
+      "isa_flags": "-mrdseed -msse2",
+      "obj": "build/obj/lib/entropy_rdseed.o",
+      "src": "src/lib/entropy/rdseed/rdseed.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi.o",
+      "src": "src/lib/ffi/ffi.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_block.o",
+      "src": "src/lib/ffi/ffi_block.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_cert.o",
+      "src": "src/lib/ffi/ffi_cert.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_cipher.o",
+      "src": "src/lib/ffi/ffi_cipher.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_fpe.o",
+      "src": "src/lib/ffi/ffi_fpe.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_hash.o",
+      "src": "src/lib/ffi/ffi_hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_hotp.o",
+      "src": "src/lib/ffi/ffi_hotp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_kdf.o",
+      "src": "src/lib/ffi/ffi_kdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_keywrap.o",
+      "src": "src/lib/ffi/ffi_keywrap.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_mac.o",
+      "src": "src/lib/ffi/ffi_mac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_mp.o",
+      "src": "src/lib/ffi/ffi_mp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_pk_op.o",
+      "src": "src/lib/ffi/ffi_pk_op.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_pkey.o",
+      "src": "src/lib/ffi/ffi_pkey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_pkey_algs.o",
+      "src": "src/lib/ffi/ffi_pkey_algs.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_rng.o",
+      "src": "src/lib/ffi/ffi_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/ffi_totp.o",
+      "src": "src/lib/ffi/ffi_totp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_algo_filt.o",
+      "src": "src/lib/filters/algo_filt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_b64_filt.o",
+      "src": "src/lib/filters/b64_filt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_basefilt.o",
+      "src": "src/lib/filters/basefilt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_buf_filt.o",
+      "src": "src/lib/filters/buf_filt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_cipher_filter.o",
+      "src": "src/lib/filters/cipher_filter.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_comp_filter.o",
+      "src": "src/lib/filters/comp_filter.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_data_snk.o",
+      "src": "src/lib/filters/data_snk.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_fd_unix.o",
+      "src": "src/lib/filters/fd_unix/fd_unix.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_filter.o",
+      "src": "src/lib/filters/filter.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_hex_filt.o",
+      "src": "src/lib/filters/hex_filt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_out_buf.o",
+      "src": "src/lib/filters/out_buf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_pipe.o",
+      "src": "src/lib/filters/pipe.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_pipe_io.o",
+      "src": "src/lib/filters/pipe_io.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_pipe_rw.o",
+      "src": "src/lib/filters/pipe_rw.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_secqueue.o",
+      "src": "src/lib/filters/secqueue.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/filters_threaded_fork.o",
+      "src": "src/lib/filters/threaded_fork.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_blake2_blake2b.o",
+      "src": "src/lib/hash/blake2/blake2b.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_checksum_adler32.o",
+      "src": "src/lib/hash/checksum/adler32/adler32.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_checksum_crc24.o",
+      "src": "src/lib/hash/checksum/crc24/crc24.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_checksum_crc32.o",
+      "src": "src/lib/hash/checksum/crc32/crc32.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_comb4p.o",
+      "src": "src/lib/hash/comb4p/comb4p.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_gost_3411.o",
+      "src": "src/lib/hash/gost_3411/gost_3411.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash.o",
+      "src": "src/lib/hash/hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_keccak.o",
+      "src": "src/lib/hash/keccak/keccak.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_md4.o",
+      "src": "src/lib/hash/md4/md4.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_md5.o",
+      "src": "src/lib/hash/md5/md5.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_mdx_hash.o",
+      "src": "src/lib/hash/mdx_hash/mdx_hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_par_hash.o",
+      "src": "src/lib/hash/par_hash/par_hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_rmd160.o",
+      "src": "src/lib/hash/rmd160/rmd160.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_sha1_sha160.o",
+      "src": "src/lib/hash/sha1/sha160.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/hash_sha1_sse2.o",
+      "src": "src/lib/hash/sha1/sha1_sse2/sha1_sse2.cpp"
+    },
+    {
+      "isa_flags": "-msha -msse2 -msse4.1 -mssse3",
+      "obj": "build/obj/lib/hash_sha1_x86.o",
+      "src": "src/lib/hash/sha1/sha1_x86/sha1_x86.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_sha2_32.o",
+      "src": "src/lib/hash/sha2_32/sha2_32.cpp"
+    },
+    {
+      "isa_flags": "-mbmi -mbmi2",
+      "obj": "build/obj/lib/hash_sha2_32_sha2_32_bmi2.o",
+      "src": "src/lib/hash/sha2_32/sha2_32_bmi2/sha2_32_bmi2.cpp"
+    },
+    {
+      "isa_flags": "-msha -msse2 -msse4.1 -mssse3",
+      "obj": "build/obj/lib/hash_sha2_32_sha2_32_x86.o",
+      "src": "src/lib/hash/sha2_32/sha2_32_x86/sha2_32_x86.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_sha2_64.o",
+      "src": "src/lib/hash/sha2_64/sha2_64.cpp"
+    },
+    {
+      "isa_flags": "-mbmi -mbmi2",
+      "obj": "build/obj/lib/hash_sha2_64_sha2_64_bmi2.o",
+      "src": "src/lib/hash/sha2_64/sha2_64_bmi2/sha2_64_bmi2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_sha3.o",
+      "src": "src/lib/hash/sha3/sha3.cpp"
+    },
+    {
+      "isa_flags": "-mbmi -mbmi2",
+      "obj": "build/obj/lib/hash_sha3_bmi2.o",
+      "src": "src/lib/hash/sha3/sha3_bmi2/sha3_bmi2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_shake.o",
+      "src": "src/lib/hash/shake/shake.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_skein_512.o",
+      "src": "src/lib/hash/skein/skein_512.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_sm3.o",
+      "src": "src/lib/hash/sm3/sm3.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_streebog.o",
+      "src": "src/lib/hash/streebog/streebog.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_streebog_precalc.o",
+      "src": "src/lib/hash/streebog/streebog_precalc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/hash_whirlpool.o",
+      "src": "src/lib/hash/whirlpool/whirlpool.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_hkdf.o",
+      "src": "src/lib/kdf/hkdf/hkdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf.o",
+      "src": "src/lib/kdf/kdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_kdf1.o",
+      "src": "src/lib/kdf/kdf1/kdf1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_kdf1_iso18033.o",
+      "src": "src/lib/kdf/kdf1_iso18033/kdf1_iso18033.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_kdf2.o",
+      "src": "src/lib/kdf/kdf2/kdf2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_prf_tls.o",
+      "src": "src/lib/kdf/prf_tls/prf_tls.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_prf_x942.o",
+      "src": "src/lib/kdf/prf_x942/prf_x942.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_sp800_108.o",
+      "src": "src/lib/kdf/sp800_108/sp800_108.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_sp800_56a.o",
+      "src": "src/lib/kdf/sp800_56a/sp800_56a.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/kdf_sp800_56c.o",
+      "src": "src/lib/kdf/sp800_56c/sp800_56c.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac_blake2mac_blake2bmac.o",
+      "src": "src/lib/mac/blake2mac/blake2bmac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac_cmac.o",
+      "src": "src/lib/mac/cmac/cmac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac_gmac.o",
+      "src": "src/lib/mac/gmac/gmac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac_hmac.o",
+      "src": "src/lib/mac/hmac/hmac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac.o",
+      "src": "src/lib/mac/mac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac_poly1305.o",
+      "src": "src/lib/mac/poly1305/poly1305.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac_siphash.o",
+      "src": "src/lib/mac/siphash/siphash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/mac_x919_mac.o",
+      "src": "src/lib/mac/x919_mac/x919_mac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_bigint_big_code.o",
+      "src": "src/lib/math/bigint/big_code.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_bigint_big_io.o",
+      "src": "src/lib/math/bigint/big_io.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_bigint_big_ops2.o",
+      "src": "src/lib/math/bigint/big_ops2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_bigint_big_ops3.o",
+      "src": "src/lib/math/bigint/big_ops3.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_bigint_big_rand.o",
+      "src": "src/lib/math/bigint/big_rand.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_bigint.o",
+      "src": "src/lib/math/bigint/bigint.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_bigint_divide.o",
+      "src": "src/lib/math/bigint/divide.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_mp_comba.o",
+      "src": "src/lib/math/mp/mp_comba.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_mp_karat.o",
+      "src": "src/lib/math/mp/mp_karat.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_mp_monty.o",
+      "src": "src/lib/math/mp/mp_monty.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_mp_monty_n.o",
+      "src": "src/lib/math/mp/mp_monty_n.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_dsa_gen.o",
+      "src": "src/lib/math/numbertheory/dsa_gen.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_make_prm.o",
+      "src": "src/lib/math/numbertheory/make_prm.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_mod_inv.o",
+      "src": "src/lib/math/numbertheory/mod_inv.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_monty.o",
+      "src": "src/lib/math/numbertheory/monty.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_monty_exp.o",
+      "src": "src/lib/math/numbertheory/monty_exp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_nistp_redc.o",
+      "src": "src/lib/math/numbertheory/nistp_redc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_numthry.o",
+      "src": "src/lib/math/numbertheory/numthry.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_primality.o",
+      "src": "src/lib/math/numbertheory/primality.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_primes.o",
+      "src": "src/lib/math/numbertheory/primes.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/math_numbertheory_reducer.o",
+      "src": "src/lib/math/numbertheory/reducer.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_cryptobox.o",
+      "src": "src/lib/misc/cryptobox/cryptobox.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_fpe_fe1.o",
+      "src": "src/lib/misc/fpe_fe1/fpe_fe1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_hotp.o",
+      "src": "src/lib/misc/hotp/hotp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_hotp_totp.o",
+      "src": "src/lib/misc/hotp/totp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_nist_keywrap.o",
+      "src": "src/lib/misc/nist_keywrap/nist_keywrap.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_rfc3394.o",
+      "src": "src/lib/misc/rfc3394/rfc3394.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_roughtime.o",
+      "src": "src/lib/misc/roughtime/roughtime.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_srp6.o",
+      "src": "src/lib/misc/srp6/srp6.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/misc_tss.o",
+      "src": "src/lib/misc/tss/tss.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_aead.o",
+      "src": "src/lib/modes/aead/aead.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_aead_ccm.o",
+      "src": "src/lib/modes/aead/ccm/ccm.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_aead_chacha20poly1305.o",
+      "src": "src/lib/modes/aead/chacha20poly1305/chacha20poly1305.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_aead_eax.o",
+      "src": "src/lib/modes/aead/eax/eax.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_aead_gcm.o",
+      "src": "src/lib/modes/aead/gcm/gcm.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_aead_ocb.o",
+      "src": "src/lib/modes/aead/ocb/ocb.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_aead_siv.o",
+      "src": "src/lib/modes/aead/siv/siv.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_cbc.o",
+      "src": "src/lib/modes/cbc/cbc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_cfb.o",
+      "src": "src/lib/modes/cfb/cfb.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_cipher_mode.o",
+      "src": "src/lib/modes/cipher_mode.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_mode_pad.o",
+      "src": "src/lib/modes/mode_pad/mode_pad.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/modes_xts.o",
+      "src": "src/lib/modes/xts/xts.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/passhash_bcrypt.o",
+      "src": "src/lib/passhash/bcrypt/bcrypt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/passhash_passhash9.o",
+      "src": "src/lib/passhash/passhash9/passhash9.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_argon2.o",
+      "src": "src/lib/pbkdf/argon2/argon2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_argon2_argon2fmt.o",
+      "src": "src/lib/pbkdf/argon2/argon2fmt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_argon2_argon2pwhash.o",
+      "src": "src/lib/pbkdf/argon2/argon2pwhash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_bcrypt_pbkdf.o",
+      "src": "src/lib/pbkdf/bcrypt_pbkdf/bcrypt_pbkdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf.o",
+      "src": "src/lib/pbkdf/pbkdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_pbkdf2.o",
+      "src": "src/lib/pbkdf/pbkdf2/pbkdf2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_pgp_s2k.o",
+      "src": "src/lib/pbkdf/pgp_s2k/pgp_s2k.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_pwdhash.o",
+      "src": "src/lib/pbkdf/pwdhash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pbkdf_scrypt.o",
+      "src": "src/lib/pbkdf/scrypt/scrypt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_eme.o",
+      "src": "src/lib/pk_pad/eme.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_eme_oaep_oaep.o",
+      "src": "src/lib/pk_pad/eme_oaep/oaep.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_eme_pkcs1_eme_pkcs.o",
+      "src": "src/lib/pk_pad/eme_pkcs1/eme_pkcs.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_eme_raw.o",
+      "src": "src/lib/pk_pad/eme_raw/eme_raw.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_emsa.o",
+      "src": "src/lib/pk_pad/emsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_emsa1.o",
+      "src": "src/lib/pk_pad/emsa1/emsa1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_emsa_pkcs1.o",
+      "src": "src/lib/pk_pad/emsa_pkcs1/emsa_pkcs1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_emsa_pssr_pssr.o",
+      "src": "src/lib/pk_pad/emsa_pssr/pssr.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_emsa_raw.o",
+      "src": "src/lib/pk_pad/emsa_raw/emsa_raw.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_emsa_x931.o",
+      "src": "src/lib/pk_pad/emsa_x931/emsa_x931.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_hash_id.o",
+      "src": "src/lib/pk_pad/hash_id/hash_id.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_iso9796.o",
+      "src": "src/lib/pk_pad/iso9796/iso9796.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_mgf1.o",
+      "src": "src/lib/pk_pad/mgf1/mgf1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pk_pad_padding.o",
+      "src": "src/lib/pk_pad/padding.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11.o",
+      "src": "src/lib/prov/pkcs11/p11.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_ecc_key.o",
+      "src": "src/lib/prov/pkcs11/p11_ecc_key.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_ecdh.o",
+      "src": "src/lib/prov/pkcs11/p11_ecdh.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_ecdsa.o",
+      "src": "src/lib/prov/pkcs11/p11_ecdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_mechanism.o",
+      "src": "src/lib/prov/pkcs11/p11_mechanism.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_module.o",
+      "src": "src/lib/prov/pkcs11/p11_module.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_object.o",
+      "src": "src/lib/prov/pkcs11/p11_object.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_randomgenerator.o",
+      "src": "src/lib/prov/pkcs11/p11_randomgenerator.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_rsa.o",
+      "src": "src/lib/prov/pkcs11/p11_rsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_session.o",
+      "src": "src/lib/prov/pkcs11/p11_session.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_slot.o",
+      "src": "src/lib/prov/pkcs11/p11_slot.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/prov_pkcs11_p11_x509.o",
+      "src": "src/lib/prov/pkcs11/p11_x509.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/psk_db.o",
+      "src": "src/lib/psk_db/psk_db.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/psk_db_psk_db_sql.o",
+      "src": "src/lib/psk_db/psk_db_sql.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_blinding.o",
+      "src": "src/lib/pubkey/blinding.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_cecpq1.o",
+      "src": "src/lib/pubkey/cecpq1/cecpq1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_curve25519.o",
+      "src": "src/lib/pubkey/curve25519/curve25519.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_curve25519_donna.o",
+      "src": "src/lib/pubkey/curve25519/donna.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_dh.o",
+      "src": "src/lib/pubkey/dh/dh.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_dl_algo.o",
+      "src": "src/lib/pubkey/dl_algo/dl_algo.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_dl_group.o",
+      "src": "src/lib/pubkey/dl_group/dl_group.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_dl_group_dl_named.o",
+      "src": "src/lib/pubkey/dl_group/dl_named.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_dlies.o",
+      "src": "src/lib/pubkey/dlies/dlies.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_dsa.o",
+      "src": "src/lib/pubkey/dsa/dsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ec_group_curve_gfp.o",
+      "src": "src/lib/pubkey/ec_group/curve_gfp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ec_group.o",
+      "src": "src/lib/pubkey/ec_group/ec_group.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ec_group_ec_named.o",
+      "src": "src/lib/pubkey/ec_group/ec_named.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ec_group_point_gfp.o",
+      "src": "src/lib/pubkey/ec_group/point_gfp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ec_group_point_mul.o",
+      "src": "src/lib/pubkey/ec_group/point_mul.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ecc_key.o",
+      "src": "src/lib/pubkey/ecc_key/ecc_key.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ecdh.o",
+      "src": "src/lib/pubkey/ecdh/ecdh.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ecdsa.o",
+      "src": "src/lib/pubkey/ecdsa/ecdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ecgdsa.o",
+      "src": "src/lib/pubkey/ecgdsa/ecgdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ecies.o",
+      "src": "src/lib/pubkey/ecies/ecies.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_eckcdsa.o",
+      "src": "src/lib/pubkey/eckcdsa/eckcdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ed25519.o",
+      "src": "src/lib/pubkey/ed25519/ed25519.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ed25519_fe.o",
+      "src": "src/lib/pubkey/ed25519/ed25519_fe.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ed25519_key.o",
+      "src": "src/lib/pubkey/ed25519/ed25519_key.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ed25519_ge.o",
+      "src": "src/lib/pubkey/ed25519/ge.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ed25519_sc_muladd.o",
+      "src": "src/lib/pubkey/ed25519/sc_muladd.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_ed25519_sc_reduce.o",
+      "src": "src/lib/pubkey/ed25519/sc_reduce.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_elgamal.o",
+      "src": "src/lib/pubkey/elgamal/elgamal.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_gost_3410.o",
+      "src": "src/lib/pubkey/gost_3410/gost_3410.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_keypair.o",
+      "src": "src/lib/pubkey/keypair/keypair.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_code_based_key_gen.o",
+      "src": "src/lib/pubkey/mce/code_based_key_gen.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_gf2m_rootfind_dcmp.o",
+      "src": "src/lib/pubkey/mce/gf2m_rootfind_dcmp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_gf2m_small_m.o",
+      "src": "src/lib/pubkey/mce/gf2m_small_m.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_goppa_code.o",
+      "src": "src/lib/pubkey/mce/goppa_code.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_workfactor.o",
+      "src": "src/lib/pubkey/mce/mce_workfactor.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_mceliece.o",
+      "src": "src/lib/pubkey/mce/mceliece.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_mceliece_key.o",
+      "src": "src/lib/pubkey/mce/mceliece_key.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_mce_polyn_gf2m.o",
+      "src": "src/lib/pubkey/mce/polyn_gf2m.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_newhope.o",
+      "src": "src/lib/pubkey/newhope/newhope.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_pbes2.o",
+      "src": "src/lib/pubkey/pbes2/pbes2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_pem.o",
+      "src": "src/lib/pubkey/pem/pem.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_pk_algs.o",
+      "src": "src/lib/pubkey/pk_algs.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_pk_keys.o",
+      "src": "src/lib/pubkey/pk_keys.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_pk_ops.o",
+      "src": "src/lib/pubkey/pk_ops.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_pkcs8.o",
+      "src": "src/lib/pubkey/pkcs8.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey.o",
+      "src": "src/lib/pubkey/pubkey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_rfc6979.o",
+      "src": "src/lib/pubkey/rfc6979/rfc6979.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_rsa.o",
+      "src": "src/lib/pubkey/rsa/rsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_sm2.o",
+      "src": "src/lib/pubkey/sm2/sm2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_sm2_enc.o",
+      "src": "src/lib/pubkey/sm2/sm2_enc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_workfactor.o",
+      "src": "src/lib/pubkey/workfactor.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_x509_key.o",
+      "src": "src/lib/pubkey/x509_key.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_common_ops.o",
+      "src": "src/lib/pubkey/xmss/xmss_common_ops.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_hash.o",
+      "src": "src/lib/pubkey/xmss/xmss_hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_index_registry.o",
+      "src": "src/lib/pubkey/xmss/xmss_index_registry.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_parameters.o",
+      "src": "src/lib/pubkey/xmss/xmss_parameters.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_privatekey.o",
+      "src": "src/lib/pubkey/xmss/xmss_privatekey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_publickey.o",
+      "src": "src/lib/pubkey/xmss/xmss_publickey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_signature.o",
+      "src": "src/lib/pubkey/xmss/xmss_signature.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_signature_operation.o",
+      "src": "src/lib/pubkey/xmss/xmss_signature_operation.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_verification_operation.o",
+      "src": "src/lib/pubkey/xmss/xmss_verification_operation.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_wots_parameters.o",
+      "src": "src/lib/pubkey/xmss/xmss_wots_parameters.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_wots_privatekey.o",
+      "src": "src/lib/pubkey/xmss/xmss_wots_privatekey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/pubkey_xmss_wots_publickey.o",
+      "src": "src/lib/pubkey/xmss/xmss_wots_publickey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/rng_auto_rng.o",
+      "src": "src/lib/rng/auto_rng/auto_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/rng_chacha_rng.o",
+      "src": "src/lib/rng/chacha_rng/chacha_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/rng_hmac_drbg.o",
+      "src": "src/lib/rng/hmac_drbg/hmac_drbg.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/rng_processor_rng.o",
+      "src": "src/lib/rng/processor_rng/processor_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/rng.o",
+      "src": "src/lib/rng/rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/rng_stateful_rng.o",
+      "src": "src/lib/rng/stateful_rng/stateful_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/rng_system_rng.o",
+      "src": "src/lib/rng/system_rng/system_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/stream_chacha.o",
+      "src": "src/lib/stream/chacha/chacha.cpp"
+    },
+    {
+      "isa_flags": "-mavx2",
+      "obj": "build/obj/lib/stream_chacha_avx2.o",
+      "src": "src/lib/stream/chacha/chacha_avx2/chacha_avx2.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/lib/stream_chacha_simd32.o",
+      "src": "src/lib/stream/chacha/chacha_simd32/chacha_simd32.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/stream_ctr.o",
+      "src": "src/lib/stream/ctr/ctr.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/stream_ofb.o",
+      "src": "src/lib/stream/ofb/ofb.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/stream_rc4.o",
+      "src": "src/lib/stream/rc4/rc4.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/stream_salsa20.o",
+      "src": "src/lib/stream/salsa20/salsa20.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/stream_shake_cipher.o",
+      "src": "src/lib/stream/shake_cipher/shake_cipher.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/stream_cipher.o",
+      "src": "src/lib/stream/stream_cipher.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_credentials_manager.o",
+      "src": "src/lib/tls/credentials_manager.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_cert_req.o",
+      "src": "src/lib/tls/msg_cert_req.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_cert_status.o",
+      "src": "src/lib/tls/msg_cert_status.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_cert_verify.o",
+      "src": "src/lib/tls/msg_cert_verify.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_certificate.o",
+      "src": "src/lib/tls/msg_certificate.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_client_hello.o",
+      "src": "src/lib/tls/msg_client_hello.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_client_kex.o",
+      "src": "src/lib/tls/msg_client_kex.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_finished.o",
+      "src": "src/lib/tls/msg_finished.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_hello_verify.o",
+      "src": "src/lib/tls/msg_hello_verify.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_server_hello.o",
+      "src": "src/lib/tls/msg_server_hello.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_server_kex.o",
+      "src": "src/lib/tls/msg_server_kex.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_msg_session_ticket.o",
+      "src": "src/lib/tls/msg_session_ticket.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_sessions_sql_tls_session_manager_sql.o",
+      "src": "src/lib/tls/sessions_sql/tls_session_manager_sql.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_alert.o",
+      "src": "src/lib/tls/tls_alert.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_algos.o",
+      "src": "src/lib/tls/tls_algos.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_callbacks.o",
+      "src": "src/lib/tls/tls_callbacks.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_cbc.o",
+      "src": "src/lib/tls/tls_cbc/tls_cbc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_channel.o",
+      "src": "src/lib/tls/tls_channel.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_ciphersuite.o",
+      "src": "src/lib/tls/tls_ciphersuite.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_client.o",
+      "src": "src/lib/tls/tls_client.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_extensions.o",
+      "src": "src/lib/tls/tls_extensions.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_handshake_hash.o",
+      "src": "src/lib/tls/tls_handshake_hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_handshake_io.o",
+      "src": "src/lib/tls/tls_handshake_io.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_handshake_state.o",
+      "src": "src/lib/tls/tls_handshake_state.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_policy.o",
+      "src": "src/lib/tls/tls_policy.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_record.o",
+      "src": "src/lib/tls/tls_record.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_server.o",
+      "src": "src/lib/tls/tls_server.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_session.o",
+      "src": "src/lib/tls/tls_session.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_session_key.o",
+      "src": "src/lib/tls/tls_session_key.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_session_manager_memory.o",
+      "src": "src/lib/tls/tls_session_manager_memory.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_suite_info.o",
+      "src": "src/lib/tls/tls_suite_info.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_text_policy.o",
+      "src": "src/lib/tls/tls_text_policy.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/tls_version.o",
+      "src": "src/lib/tls/tls_version.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_assert.o",
+      "src": "src/lib/utils/assert.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_calendar.o",
+      "src": "src/lib/utils/calendar.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_charset.o",
+      "src": "src/lib/utils/charset.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_cpuid.o",
+      "src": "src/lib/utils/cpuid/cpuid.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_cpuid_aarch64.o",
+      "src": "src/lib/utils/cpuid/cpuid_aarch64.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_cpuid_arm32.o",
+      "src": "src/lib/utils/cpuid/cpuid_arm32.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_cpuid_ppc.o",
+      "src": "src/lib/utils/cpuid/cpuid_ppc.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_cpuid_x86.o",
+      "src": "src/lib/utils/cpuid/cpuid_x86.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_ct_utils.o",
+      "src": "src/lib/utils/ct_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_data_src.o",
+      "src": "src/lib/utils/data_src.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_dyn_load.o",
+      "src": "src/lib/utils/dyn_load/dyn_load.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_exceptn.o",
+      "src": "src/lib/utils/exceptn.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_filesystem.o",
+      "src": "src/lib/utils/filesystem.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_ghash.o",
+      "src": "src/lib/utils/ghash/ghash.cpp"
+    },
+    {
+      "isa_flags": "-maes -mpclmul -msse2 -mssse3",
+      "obj": "build/obj/lib/utils_ghash_cpu.o",
+      "src": "src/lib/utils/ghash/ghash_cpu/ghash_cpu.cpp"
+    },
+    {
+      "isa_flags": "-msse2 -mssse3",
+      "obj": "build/obj/lib/utils_ghash_vperm.o",
+      "src": "src/lib/utils/ghash/ghash_vperm/ghash_vperm.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_http_util.o",
+      "src": "src/lib/utils/http_util/http_util.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_locking_allocator.o",
+      "src": "src/lib/utils/locking_allocator/locking_allocator.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_mem_ops.o",
+      "src": "src/lib/utils/mem_ops.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_mem_pool.o",
+      "src": "src/lib/utils/mem_pool/mem_pool.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_os_utils.o",
+      "src": "src/lib/utils/os_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_parsing.o",
+      "src": "src/lib/utils/parsing.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_poly_dbl.o",
+      "src": "src/lib/utils/poly_dbl/poly_dbl.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_read_cfg.o",
+      "src": "src/lib/utils/read_cfg.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_read_kv.o",
+      "src": "src/lib/utils/read_kv.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_scan_name.o",
+      "src": "src/lib/utils/scan_name.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_socket.o",
+      "src": "src/lib/utils/socket/socket.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_socket_udp.o",
+      "src": "src/lib/utils/socket/socket_udp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_socket_uri.o",
+      "src": "src/lib/utils/socket/uri.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_thread_utils_barrier.o",
+      "src": "src/lib/utils/thread_utils/barrier.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_thread_utils_rwlock.o",
+      "src": "src/lib/utils/thread_utils/rwlock.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_thread_utils_semaphore.o",
+      "src": "src/lib/utils/thread_utils/semaphore.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_thread_utils_thread_pool.o",
+      "src": "src/lib/utils/thread_utils/thread_pool.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_timer.o",
+      "src": "src/lib/utils/timer.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_uuid.o",
+      "src": "src/lib/utils/uuid/uuid.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/utils_version.o",
+      "src": "src/lib/utils/version.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_asn1_alt_name.o",
+      "src": "src/lib/x509/asn1_alt_name.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_cert_status.o",
+      "src": "src/lib/x509/cert_status.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_certstor.o",
+      "src": "src/lib/x509/certstor.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_certstor_flatfile.o",
+      "src": "src/lib/x509/certstor_flatfile/certstor_flatfile.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_certstor_sql.o",
+      "src": "src/lib/x509/certstor_sql/certstor_sql.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_certstor_system.o",
+      "src": "src/lib/x509/certstor_system/certstor_system.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_certstor_system_macos_certstor_macos.o",
+      "src": "src/lib/x509/certstor_system_macos/certstor_macos.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_crl_ent.o",
+      "src": "src/lib/x509/crl_ent.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_key_constraint.o",
+      "src": "src/lib/x509/key_constraint.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_name_constraint.o",
+      "src": "src/lib/x509/name_constraint.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_ocsp.o",
+      "src": "src/lib/x509/ocsp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_ocsp_types.o",
+      "src": "src/lib/x509/ocsp_types.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_pkcs10.o",
+      "src": "src/lib/x509/pkcs10.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_attribute.o",
+      "src": "src/lib/x509/x509_attribute.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_ca.o",
+      "src": "src/lib/x509/x509_ca.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_crl.o",
+      "src": "src/lib/x509/x509_crl.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_dn.o",
+      "src": "src/lib/x509/x509_dn.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_dn_ub.o",
+      "src": "src/lib/x509/x509_dn_ub.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_ext.o",
+      "src": "src/lib/x509/x509_ext.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_obj.o",
+      "src": "src/lib/x509/x509_obj.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_x509cert.o",
+      "src": "src/lib/x509/x509cert.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_x509opt.o",
+      "src": "src/lib/x509/x509opt.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_x509path.o",
+      "src": "src/lib/x509/x509path.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/lib/x509_x509self.o",
+      "src": "src/lib/x509/x509self.cpp"
+    }
+  ],
+  "lib_flags": "-fPIC -fvisibility=hidden",
+  "lib_link_cmd": "$(CXX) -dynamiclib -fPIC -install_name $(INSTALLED_LIB_DIR)/libbotan-3.0.dylib -current_version 3000.0.0 -compatibility_version 3000.0.0",
+  "lib_objs": [
+    "build/obj/lib/asn1_alg_id.o",
+    "build/obj/lib/asn1_obj.o",
+    "build/obj/lib/asn1_oid.o",
+    "build/obj/lib/asn1_print.o",
+    "build/obj/lib/asn1_str.o",
+    "build/obj/lib/asn1_time.o",
+    "build/obj/lib/asn1_ber_dec.o",
+    "build/obj/lib/asn1_der_enc.o",
+    "build/obj/lib/asn1_oid_maps.o",
+    "build/obj/lib/asn1_oids.o",
+    "build/obj/lib/base_buf_comp.o",
+    "build/obj/lib/base_sym_algo.o",
+    "build/obj/lib/base_symkey.o",
+    "build/obj/lib/block_aes.o",
+    "build/obj/lib/block_aes_ni.o",
+    "build/obj/lib/block_aes_vperm.o",
+    "build/obj/lib/block_aria.o",
+    "build/obj/lib/block_cipher.o",
+    "build/obj/lib/block_blowfish.o",
+    "build/obj/lib/block_camellia.o",
+    "build/obj/lib/block_cascade.o",
+    "build/obj/lib/block_cast128.o",
+    "build/obj/lib/block_des.o",
+    "build/obj/lib/block_gost_28147.o",
+    "build/obj/lib/block_idea.o",
+    "build/obj/lib/block_idea_sse2.o",
+    "build/obj/lib/block_lion.o",
+    "build/obj/lib/block_noekeon.o",
+    "build/obj/lib/block_noekeon_simd.o",
+    "build/obj/lib/block_seed.o",
+    "build/obj/lib/block_serpent.o",
+    "build/obj/lib/block_serpent_avx2.o",
+    "build/obj/lib/block_serpent_simd.o",
+    "build/obj/lib/block_shacal2.o",
+    "build/obj/lib/block_shacal2_avx2.o",
+    "build/obj/lib/block_shacal2_simd.o",
+    "build/obj/lib/block_shacal2_x86.o",
+    "build/obj/lib/block_sm4.o",
+    "build/obj/lib/block_threefish_512.o",
+    "build/obj/lib/block_threefish_512_threefish_512_avx2.o",
+    "build/obj/lib/block_twofish.o",
+    "build/obj/lib/block_twofish_tab.o",
+    "build/obj/lib/codec_base32.o",
+    "build/obj/lib/codec_base58.o",
+    "build/obj/lib/codec_base64.o",
+    "build/obj/lib/codec_hex.o",
+    "build/obj/lib/compat_sodium_25519.o",
+    "build/obj/lib/compat_sodium_aead.o",
+    "build/obj/lib/compat_sodium_auth.o",
+    "build/obj/lib/compat_sodium_box.o",
+    "build/obj/lib/compat_sodium_chacha.o",
+    "build/obj/lib/compat_sodium_salsa.o",
+    "build/obj/lib/compat_sodium_secretbox.o",
+    "build/obj/lib/compat_sodium_utils.o",
+    "build/obj/lib/entropy_srcs.o",
+    "build/obj/lib/entropy_getentropy.o",
+    "build/obj/lib/entropy_rdseed.o",
+    "build/obj/lib/ffi.o",
+    "build/obj/lib/ffi_block.o",
+    "build/obj/lib/ffi_cert.o",
+    "build/obj/lib/ffi_cipher.o",
+    "build/obj/lib/ffi_fpe.o",
+    "build/obj/lib/ffi_hash.o",
+    "build/obj/lib/ffi_hotp.o",
+    "build/obj/lib/ffi_kdf.o",
+    "build/obj/lib/ffi_keywrap.o",
+    "build/obj/lib/ffi_mac.o",
+    "build/obj/lib/ffi_mp.o",
+    "build/obj/lib/ffi_pk_op.o",
+    "build/obj/lib/ffi_pkey.o",
+    "build/obj/lib/ffi_pkey_algs.o",
+    "build/obj/lib/ffi_rng.o",
+    "build/obj/lib/ffi_totp.o",
+    "build/obj/lib/filters_algo_filt.o",
+    "build/obj/lib/filters_b64_filt.o",
+    "build/obj/lib/filters_basefilt.o",
+    "build/obj/lib/filters_buf_filt.o",
+    "build/obj/lib/filters_cipher_filter.o",
+    "build/obj/lib/filters_comp_filter.o",
+    "build/obj/lib/filters_data_snk.o",
+    "build/obj/lib/filters_fd_unix.o",
+    "build/obj/lib/filters_filter.o",
+    "build/obj/lib/filters_hex_filt.o",
+    "build/obj/lib/filters_out_buf.o",
+    "build/obj/lib/filters_pipe.o",
+    "build/obj/lib/filters_pipe_io.o",
+    "build/obj/lib/filters_pipe_rw.o",
+    "build/obj/lib/filters_secqueue.o",
+    "build/obj/lib/filters_threaded_fork.o",
+    "build/obj/lib/hash_blake2_blake2b.o",
+    "build/obj/lib/hash_checksum_adler32.o",
+    "build/obj/lib/hash_checksum_crc24.o",
+    "build/obj/lib/hash_checksum_crc32.o",
+    "build/obj/lib/hash_comb4p.o",
+    "build/obj/lib/hash_gost_3411.o",
+    "build/obj/lib/hash.o",
+    "build/obj/lib/hash_keccak.o",
+    "build/obj/lib/hash_md4.o",
+    "build/obj/lib/hash_md5.o",
+    "build/obj/lib/hash_mdx_hash.o",
+    "build/obj/lib/hash_par_hash.o",
+    "build/obj/lib/hash_rmd160.o",
+    "build/obj/lib/hash_sha1_sha160.o",
+    "build/obj/lib/hash_sha1_sse2.o",
+    "build/obj/lib/hash_sha1_x86.o",
+    "build/obj/lib/hash_sha2_32.o",
+    "build/obj/lib/hash_sha2_32_sha2_32_bmi2.o",
+    "build/obj/lib/hash_sha2_32_sha2_32_x86.o",
+    "build/obj/lib/hash_sha2_64.o",
+    "build/obj/lib/hash_sha2_64_sha2_64_bmi2.o",
+    "build/obj/lib/hash_sha3.o",
+    "build/obj/lib/hash_sha3_bmi2.o",
+    "build/obj/lib/hash_shake.o",
+    "build/obj/lib/hash_skein_512.o",
+    "build/obj/lib/hash_sm3.o",
+    "build/obj/lib/hash_streebog.o",
+    "build/obj/lib/hash_streebog_precalc.o",
+    "build/obj/lib/hash_whirlpool.o",
+    "build/obj/lib/kdf_hkdf.o",
+    "build/obj/lib/kdf.o",
+    "build/obj/lib/kdf_kdf1.o",
+    "build/obj/lib/kdf_kdf1_iso18033.o",
+    "build/obj/lib/kdf_kdf2.o",
+    "build/obj/lib/kdf_prf_tls.o",
+    "build/obj/lib/kdf_prf_x942.o",
+    "build/obj/lib/kdf_sp800_108.o",
+    "build/obj/lib/kdf_sp800_56a.o",
+    "build/obj/lib/kdf_sp800_56c.o",
+    "build/obj/lib/mac_blake2mac_blake2bmac.o",
+    "build/obj/lib/mac_cmac.o",
+    "build/obj/lib/mac_gmac.o",
+    "build/obj/lib/mac_hmac.o",
+    "build/obj/lib/mac.o",
+    "build/obj/lib/mac_poly1305.o",
+    "build/obj/lib/mac_siphash.o",
+    "build/obj/lib/mac_x919_mac.o",
+    "build/obj/lib/math_bigint_big_code.o",
+    "build/obj/lib/math_bigint_big_io.o",
+    "build/obj/lib/math_bigint_big_ops2.o",
+    "build/obj/lib/math_bigint_big_ops3.o",
+    "build/obj/lib/math_bigint_big_rand.o",
+    "build/obj/lib/math_bigint.o",
+    "build/obj/lib/math_bigint_divide.o",
+    "build/obj/lib/math_mp_comba.o",
+    "build/obj/lib/math_mp_karat.o",
+    "build/obj/lib/math_mp_monty.o",
+    "build/obj/lib/math_mp_monty_n.o",
+    "build/obj/lib/math_numbertheory_dsa_gen.o",
+    "build/obj/lib/math_numbertheory_make_prm.o",
+    "build/obj/lib/math_numbertheory_mod_inv.o",
+    "build/obj/lib/math_numbertheory_monty.o",
+    "build/obj/lib/math_numbertheory_monty_exp.o",
+    "build/obj/lib/math_numbertheory_nistp_redc.o",
+    "build/obj/lib/math_numbertheory_numthry.o",
+    "build/obj/lib/math_numbertheory_primality.o",
+    "build/obj/lib/math_numbertheory_primes.o",
+    "build/obj/lib/math_numbertheory_reducer.o",
+    "build/obj/lib/misc_cryptobox.o",
+    "build/obj/lib/misc_fpe_fe1.o",
+    "build/obj/lib/misc_hotp.o",
+    "build/obj/lib/misc_hotp_totp.o",
+    "build/obj/lib/misc_nist_keywrap.o",
+    "build/obj/lib/misc_rfc3394.o",
+    "build/obj/lib/misc_roughtime.o",
+    "build/obj/lib/misc_srp6.o",
+    "build/obj/lib/misc_tss.o",
+    "build/obj/lib/modes_aead.o",
+    "build/obj/lib/modes_aead_ccm.o",
+    "build/obj/lib/modes_aead_chacha20poly1305.o",
+    "build/obj/lib/modes_aead_eax.o",
+    "build/obj/lib/modes_aead_gcm.o",
+    "build/obj/lib/modes_aead_ocb.o",
+    "build/obj/lib/modes_aead_siv.o",
+    "build/obj/lib/modes_cbc.o",
+    "build/obj/lib/modes_cfb.o",
+    "build/obj/lib/modes_cipher_mode.o",
+    "build/obj/lib/modes_mode_pad.o",
+    "build/obj/lib/modes_xts.o",
+    "build/obj/lib/passhash_bcrypt.o",
+    "build/obj/lib/passhash_passhash9.o",
+    "build/obj/lib/pbkdf_argon2.o",
+    "build/obj/lib/pbkdf_argon2_argon2fmt.o",
+    "build/obj/lib/pbkdf_argon2_argon2pwhash.o",
+    "build/obj/lib/pbkdf_bcrypt_pbkdf.o",
+    "build/obj/lib/pbkdf.o",
+    "build/obj/lib/pbkdf_pbkdf2.o",
+    "build/obj/lib/pbkdf_pgp_s2k.o",
+    "build/obj/lib/pbkdf_pwdhash.o",
+    "build/obj/lib/pbkdf_scrypt.o",
+    "build/obj/lib/pk_pad_eme.o",
+    "build/obj/lib/pk_pad_eme_oaep_oaep.o",
+    "build/obj/lib/pk_pad_eme_pkcs1_eme_pkcs.o",
+    "build/obj/lib/pk_pad_eme_raw.o",
+    "build/obj/lib/pk_pad_emsa.o",
+    "build/obj/lib/pk_pad_emsa1.o",
+    "build/obj/lib/pk_pad_emsa_pkcs1.o",
+    "build/obj/lib/pk_pad_emsa_pssr_pssr.o",
+    "build/obj/lib/pk_pad_emsa_raw.o",
+    "build/obj/lib/pk_pad_emsa_x931.o",
+    "build/obj/lib/pk_pad_hash_id.o",
+    "build/obj/lib/pk_pad_iso9796.o",
+    "build/obj/lib/pk_pad_mgf1.o",
+    "build/obj/lib/pk_pad_padding.o",
+    "build/obj/lib/prov_pkcs11_p11.o",
+    "build/obj/lib/prov_pkcs11_p11_ecc_key.o",
+    "build/obj/lib/prov_pkcs11_p11_ecdh.o",
+    "build/obj/lib/prov_pkcs11_p11_ecdsa.o",
+    "build/obj/lib/prov_pkcs11_p11_mechanism.o",
+    "build/obj/lib/prov_pkcs11_p11_module.o",
+    "build/obj/lib/prov_pkcs11_p11_object.o",
+    "build/obj/lib/prov_pkcs11_p11_randomgenerator.o",
+    "build/obj/lib/prov_pkcs11_p11_rsa.o",
+    "build/obj/lib/prov_pkcs11_p11_session.o",
+    "build/obj/lib/prov_pkcs11_p11_slot.o",
+    "build/obj/lib/prov_pkcs11_p11_x509.o",
+    "build/obj/lib/psk_db.o",
+    "build/obj/lib/psk_db_psk_db_sql.o",
+    "build/obj/lib/pubkey_blinding.o",
+    "build/obj/lib/pubkey_cecpq1.o",
+    "build/obj/lib/pubkey_curve25519.o",
+    "build/obj/lib/pubkey_curve25519_donna.o",
+    "build/obj/lib/pubkey_dh.o",
+    "build/obj/lib/pubkey_dl_algo.o",
+    "build/obj/lib/pubkey_dl_group.o",
+    "build/obj/lib/pubkey_dl_group_dl_named.o",
+    "build/obj/lib/pubkey_dlies.o",
+    "build/obj/lib/pubkey_dsa.o",
+    "build/obj/lib/pubkey_ec_group_curve_gfp.o",
+    "build/obj/lib/pubkey_ec_group.o",
+    "build/obj/lib/pubkey_ec_group_ec_named.o",
+    "build/obj/lib/pubkey_ec_group_point_gfp.o",
+    "build/obj/lib/pubkey_ec_group_point_mul.o",
+    "build/obj/lib/pubkey_ecc_key.o",
+    "build/obj/lib/pubkey_ecdh.o",
+    "build/obj/lib/pubkey_ecdsa.o",
+    "build/obj/lib/pubkey_ecgdsa.o",
+    "build/obj/lib/pubkey_ecies.o",
+    "build/obj/lib/pubkey_eckcdsa.o",
+    "build/obj/lib/pubkey_ed25519.o",
+    "build/obj/lib/pubkey_ed25519_fe.o",
+    "build/obj/lib/pubkey_ed25519_key.o",
+    "build/obj/lib/pubkey_ed25519_ge.o",
+    "build/obj/lib/pubkey_ed25519_sc_muladd.o",
+    "build/obj/lib/pubkey_ed25519_sc_reduce.o",
+    "build/obj/lib/pubkey_elgamal.o",
+    "build/obj/lib/pubkey_gost_3410.o",
+    "build/obj/lib/pubkey_keypair.o",
+    "build/obj/lib/pubkey_mce_code_based_key_gen.o",
+    "build/obj/lib/pubkey_mce_gf2m_rootfind_dcmp.o",
+    "build/obj/lib/pubkey_mce_gf2m_small_m.o",
+    "build/obj/lib/pubkey_mce_goppa_code.o",
+    "build/obj/lib/pubkey_mce_workfactor.o",
+    "build/obj/lib/pubkey_mce_mceliece.o",
+    "build/obj/lib/pubkey_mce_mceliece_key.o",
+    "build/obj/lib/pubkey_mce_polyn_gf2m.o",
+    "build/obj/lib/pubkey_newhope.o",
+    "build/obj/lib/pubkey_pbes2.o",
+    "build/obj/lib/pubkey_pem.o",
+    "build/obj/lib/pubkey_pk_algs.o",
+    "build/obj/lib/pubkey_pk_keys.o",
+    "build/obj/lib/pubkey_pk_ops.o",
+    "build/obj/lib/pubkey_pkcs8.o",
+    "build/obj/lib/pubkey.o",
+    "build/obj/lib/pubkey_rfc6979.o",
+    "build/obj/lib/pubkey_rsa.o",
+    "build/obj/lib/pubkey_sm2.o",
+    "build/obj/lib/pubkey_sm2_enc.o",
+    "build/obj/lib/pubkey_workfactor.o",
+    "build/obj/lib/pubkey_x509_key.o",
+    "build/obj/lib/pubkey_xmss_common_ops.o",
+    "build/obj/lib/pubkey_xmss_hash.o",
+    "build/obj/lib/pubkey_xmss_index_registry.o",
+    "build/obj/lib/pubkey_xmss_parameters.o",
+    "build/obj/lib/pubkey_xmss_privatekey.o",
+    "build/obj/lib/pubkey_xmss_publickey.o",
+    "build/obj/lib/pubkey_xmss_signature.o",
+    "build/obj/lib/pubkey_xmss_signature_operation.o",
+    "build/obj/lib/pubkey_xmss_verification_operation.o",
+    "build/obj/lib/pubkey_xmss_wots_parameters.o",
+    "build/obj/lib/pubkey_xmss_wots_privatekey.o",
+    "build/obj/lib/pubkey_xmss_wots_publickey.o",
+    "build/obj/lib/rng_auto_rng.o",
+    "build/obj/lib/rng_chacha_rng.o",
+    "build/obj/lib/rng_hmac_drbg.o",
+    "build/obj/lib/rng_processor_rng.o",
+    "build/obj/lib/rng.o",
+    "build/obj/lib/rng_stateful_rng.o",
+    "build/obj/lib/rng_system_rng.o",
+    "build/obj/lib/stream_chacha.o",
+    "build/obj/lib/stream_chacha_avx2.o",
+    "build/obj/lib/stream_chacha_simd32.o",
+    "build/obj/lib/stream_ctr.o",
+    "build/obj/lib/stream_ofb.o",
+    "build/obj/lib/stream_rc4.o",
+    "build/obj/lib/stream_salsa20.o",
+    "build/obj/lib/stream_shake_cipher.o",
+    "build/obj/lib/stream_cipher.o",
+    "build/obj/lib/tls_credentials_manager.o",
+    "build/obj/lib/tls_msg_cert_req.o",
+    "build/obj/lib/tls_msg_cert_status.o",
+    "build/obj/lib/tls_msg_cert_verify.o",
+    "build/obj/lib/tls_msg_certificate.o",
+    "build/obj/lib/tls_msg_client_hello.o",
+    "build/obj/lib/tls_msg_client_kex.o",
+    "build/obj/lib/tls_msg_finished.o",
+    "build/obj/lib/tls_msg_hello_verify.o",
+    "build/obj/lib/tls_msg_server_hello.o",
+    "build/obj/lib/tls_msg_server_kex.o",
+    "build/obj/lib/tls_msg_session_ticket.o",
+    "build/obj/lib/tls_sessions_sql_tls_session_manager_sql.o",
+    "build/obj/lib/tls_alert.o",
+    "build/obj/lib/tls_algos.o",
+    "build/obj/lib/tls_callbacks.o",
+    "build/obj/lib/tls_cbc.o",
+    "build/obj/lib/tls_channel.o",
+    "build/obj/lib/tls_ciphersuite.o",
+    "build/obj/lib/tls_client.o",
+    "build/obj/lib/tls_extensions.o",
+    "build/obj/lib/tls_handshake_hash.o",
+    "build/obj/lib/tls_handshake_io.o",
+    "build/obj/lib/tls_handshake_state.o",
+    "build/obj/lib/tls_policy.o",
+    "build/obj/lib/tls_record.o",
+    "build/obj/lib/tls_server.o",
+    "build/obj/lib/tls_session.o",
+    "build/obj/lib/tls_session_key.o",
+    "build/obj/lib/tls_session_manager_memory.o",
+    "build/obj/lib/tls_suite_info.o",
+    "build/obj/lib/tls_text_policy.o",
+    "build/obj/lib/tls_version.o",
+    "build/obj/lib/utils_assert.o",
+    "build/obj/lib/utils_calendar.o",
+    "build/obj/lib/utils_charset.o",
+    "build/obj/lib/utils_cpuid.o",
+    "build/obj/lib/utils_cpuid_aarch64.o",
+    "build/obj/lib/utils_cpuid_arm32.o",
+    "build/obj/lib/utils_cpuid_ppc.o",
+    "build/obj/lib/utils_cpuid_x86.o",
+    "build/obj/lib/utils_ct_utils.o",
+    "build/obj/lib/utils_data_src.o",
+    "build/obj/lib/utils_dyn_load.o",
+    "build/obj/lib/utils_exceptn.o",
+    "build/obj/lib/utils_filesystem.o",
+    "build/obj/lib/utils_ghash.o",
+    "build/obj/lib/utils_ghash_cpu.o",
+    "build/obj/lib/utils_ghash_vperm.o",
+    "build/obj/lib/utils_http_util.o",
+    "build/obj/lib/utils_locking_allocator.o",
+    "build/obj/lib/utils_mem_ops.o",
+    "build/obj/lib/utils_mem_pool.o",
+    "build/obj/lib/utils_os_utils.o",
+    "build/obj/lib/utils_parsing.o",
+    "build/obj/lib/utils_poly_dbl.o",
+    "build/obj/lib/utils_read_cfg.o",
+    "build/obj/lib/utils_read_kv.o",
+    "build/obj/lib/utils_scan_name.o",
+    "build/obj/lib/utils_socket.o",
+    "build/obj/lib/utils_socket_udp.o",
+    "build/obj/lib/utils_socket_uri.o",
+    "build/obj/lib/utils_thread_utils_barrier.o",
+    "build/obj/lib/utils_thread_utils_rwlock.o",
+    "build/obj/lib/utils_thread_utils_semaphore.o",
+    "build/obj/lib/utils_thread_utils_thread_pool.o",
+    "build/obj/lib/utils_timer.o",
+    "build/obj/lib/utils_uuid.o",
+    "build/obj/lib/utils_version.o",
+    "build/obj/lib/x509_asn1_alt_name.o",
+    "build/obj/lib/x509_cert_status.o",
+    "build/obj/lib/x509_certstor.o",
+    "build/obj/lib/x509_certstor_flatfile.o",
+    "build/obj/lib/x509_certstor_sql.o",
+    "build/obj/lib/x509_certstor_system.o",
+    "build/obj/lib/x509_certstor_system_macos_certstor_macos.o",
+    "build/obj/lib/x509_crl_ent.o",
+    "build/obj/lib/x509_key_constraint.o",
+    "build/obj/lib/x509_name_constraint.o",
+    "build/obj/lib/x509_ocsp.o",
+    "build/obj/lib/x509_ocsp_types.o",
+    "build/obj/lib/x509_pkcs10.o",
+    "build/obj/lib/x509_attribute.o",
+    "build/obj/lib/x509_ca.o",
+    "build/obj/lib/x509_crl.o",
+    "build/obj/lib/x509_dn.o",
+    "build/obj/lib/x509_dn_ub.o",
+    "build/obj/lib/x509_ext.o",
+    "build/obj/lib/x509_obj.o",
+    "build/obj/lib/x509_x509cert.o",
+    "build/obj/lib/x509_x509opt.o",
+    "build/obj/lib/x509_x509path.o",
+    "build/obj/lib/x509_x509self.o"
+  ],
+  "lib_prefix": "lib",
+  "lib_srcs": [
+    "src/lib/asn1/alg_id.cpp",
+    "src/lib/asn1/asn1_obj.cpp",
+    "src/lib/asn1/asn1_oid.cpp",
+    "src/lib/asn1/asn1_print.cpp",
+    "src/lib/asn1/asn1_str.cpp",
+    "src/lib/asn1/asn1_time.cpp",
+    "src/lib/asn1/ber_dec.cpp",
+    "src/lib/asn1/der_enc.cpp",
+    "src/lib/asn1/oid_maps.cpp",
+    "src/lib/asn1/oids.cpp",
+    "src/lib/base/buf_comp.cpp",
+    "src/lib/base/sym_algo.cpp",
+    "src/lib/base/symkey.cpp",
+    "src/lib/block/aes/aes.cpp",
+    "src/lib/block/aes/aes_ni/aes_ni.cpp",
+    "src/lib/block/aes/aes_vperm/aes_vperm.cpp",
+    "src/lib/block/aria/aria.cpp",
+    "src/lib/block/block_cipher.cpp",
+    "src/lib/block/blowfish/blowfish.cpp",
+    "src/lib/block/camellia/camellia.cpp",
+    "src/lib/block/cascade/cascade.cpp",
+    "src/lib/block/cast128/cast128.cpp",
+    "src/lib/block/des/des.cpp",
+    "src/lib/block/gost_28147/gost_28147.cpp",
+    "src/lib/block/idea/idea.cpp",
+    "src/lib/block/idea/idea_sse2/idea_sse2.cpp",
+    "src/lib/block/lion/lion.cpp",
+    "src/lib/block/noekeon/noekeon.cpp",
+    "src/lib/block/noekeon/noekeon_simd/noekeon_simd.cpp",
+    "src/lib/block/seed/seed.cpp",
+    "src/lib/block/serpent/serpent.cpp",
+    "src/lib/block/serpent/serpent_avx2/serpent_avx2.cpp",
+    "src/lib/block/serpent/serpent_simd/serpent_simd.cpp",
+    "src/lib/block/shacal2/shacal2.cpp",
+    "src/lib/block/shacal2/shacal2_avx2/shacal2_avx2.cpp",
+    "src/lib/block/shacal2/shacal2_simd/shacal2_simd.cpp",
+    "src/lib/block/shacal2/shacal2_x86/shacal2_x86.cpp",
+    "src/lib/block/sm4/sm4.cpp",
+    "src/lib/block/threefish_512/threefish_512.cpp",
+    "src/lib/block/threefish_512/threefish_512_avx2/threefish_512_avx2.cpp",
+    "src/lib/block/twofish/twofish.cpp",
+    "src/lib/block/twofish/twofish_tab.cpp",
+    "src/lib/codec/base32/base32.cpp",
+    "src/lib/codec/base58/base58.cpp",
+    "src/lib/codec/base64/base64.cpp",
+    "src/lib/codec/hex/hex.cpp",
+    "src/lib/compat/sodium/sodium_25519.cpp",
+    "src/lib/compat/sodium/sodium_aead.cpp",
+    "src/lib/compat/sodium/sodium_auth.cpp",
+    "src/lib/compat/sodium/sodium_box.cpp",
+    "src/lib/compat/sodium/sodium_chacha.cpp",
+    "src/lib/compat/sodium/sodium_salsa.cpp",
+    "src/lib/compat/sodium/sodium_secretbox.cpp",
+    "src/lib/compat/sodium/sodium_utils.cpp",
+    "src/lib/entropy/entropy_srcs.cpp",
+    "src/lib/entropy/getentropy/getentropy.cpp",
+    "src/lib/entropy/rdseed/rdseed.cpp",
+    "src/lib/ffi/ffi.cpp",
+    "src/lib/ffi/ffi_block.cpp",
+    "src/lib/ffi/ffi_cert.cpp",
+    "src/lib/ffi/ffi_cipher.cpp",
+    "src/lib/ffi/ffi_fpe.cpp",
+    "src/lib/ffi/ffi_hash.cpp",
+    "src/lib/ffi/ffi_hotp.cpp",
+    "src/lib/ffi/ffi_kdf.cpp",
+    "src/lib/ffi/ffi_keywrap.cpp",
+    "src/lib/ffi/ffi_mac.cpp",
+    "src/lib/ffi/ffi_mp.cpp",
+    "src/lib/ffi/ffi_pk_op.cpp",
+    "src/lib/ffi/ffi_pkey.cpp",
+    "src/lib/ffi/ffi_pkey_algs.cpp",
+    "src/lib/ffi/ffi_rng.cpp",
+    "src/lib/ffi/ffi_totp.cpp",
+    "src/lib/filters/algo_filt.cpp",
+    "src/lib/filters/b64_filt.cpp",
+    "src/lib/filters/basefilt.cpp",
+    "src/lib/filters/buf_filt.cpp",
+    "src/lib/filters/cipher_filter.cpp",
+    "src/lib/filters/comp_filter.cpp",
+    "src/lib/filters/data_snk.cpp",
+    "src/lib/filters/fd_unix/fd_unix.cpp",
+    "src/lib/filters/filter.cpp",
+    "src/lib/filters/hex_filt.cpp",
+    "src/lib/filters/out_buf.cpp",
+    "src/lib/filters/pipe.cpp",
+    "src/lib/filters/pipe_io.cpp",
+    "src/lib/filters/pipe_rw.cpp",
+    "src/lib/filters/secqueue.cpp",
+    "src/lib/filters/threaded_fork.cpp",
+    "src/lib/hash/blake2/blake2b.cpp",
+    "src/lib/hash/checksum/adler32/adler32.cpp",
+    "src/lib/hash/checksum/crc24/crc24.cpp",
+    "src/lib/hash/checksum/crc32/crc32.cpp",
+    "src/lib/hash/comb4p/comb4p.cpp",
+    "src/lib/hash/gost_3411/gost_3411.cpp",
+    "src/lib/hash/hash.cpp",
+    "src/lib/hash/keccak/keccak.cpp",
+    "src/lib/hash/md4/md4.cpp",
+    "src/lib/hash/md5/md5.cpp",
+    "src/lib/hash/mdx_hash/mdx_hash.cpp",
+    "src/lib/hash/par_hash/par_hash.cpp",
+    "src/lib/hash/rmd160/rmd160.cpp",
+    "src/lib/hash/sha1/sha160.cpp",
+    "src/lib/hash/sha1/sha1_sse2/sha1_sse2.cpp",
+    "src/lib/hash/sha1/sha1_x86/sha1_x86.cpp",
+    "src/lib/hash/sha2_32/sha2_32.cpp",
+    "src/lib/hash/sha2_32/sha2_32_bmi2/sha2_32_bmi2.cpp",
+    "src/lib/hash/sha2_32/sha2_32_x86/sha2_32_x86.cpp",
+    "src/lib/hash/sha2_64/sha2_64.cpp",
+    "src/lib/hash/sha2_64/sha2_64_bmi2/sha2_64_bmi2.cpp",
+    "src/lib/hash/sha3/sha3.cpp",
+    "src/lib/hash/sha3/sha3_bmi2/sha3_bmi2.cpp",
+    "src/lib/hash/shake/shake.cpp",
+    "src/lib/hash/skein/skein_512.cpp",
+    "src/lib/hash/sm3/sm3.cpp",
+    "src/lib/hash/streebog/streebog.cpp",
+    "src/lib/hash/streebog/streebog_precalc.cpp",
+    "src/lib/hash/whirlpool/whirlpool.cpp",
+    "src/lib/kdf/hkdf/hkdf.cpp",
+    "src/lib/kdf/kdf.cpp",
+    "src/lib/kdf/kdf1/kdf1.cpp",
+    "src/lib/kdf/kdf1_iso18033/kdf1_iso18033.cpp",
+    "src/lib/kdf/kdf2/kdf2.cpp",
+    "src/lib/kdf/prf_tls/prf_tls.cpp",
+    "src/lib/kdf/prf_x942/prf_x942.cpp",
+    "src/lib/kdf/sp800_108/sp800_108.cpp",
+    "src/lib/kdf/sp800_56a/sp800_56a.cpp",
+    "src/lib/kdf/sp800_56c/sp800_56c.cpp",
+    "src/lib/mac/blake2mac/blake2bmac.cpp",
+    "src/lib/mac/cmac/cmac.cpp",
+    "src/lib/mac/gmac/gmac.cpp",
+    "src/lib/mac/hmac/hmac.cpp",
+    "src/lib/mac/mac.cpp",
+    "src/lib/mac/poly1305/poly1305.cpp",
+    "src/lib/mac/siphash/siphash.cpp",
+    "src/lib/mac/x919_mac/x919_mac.cpp",
+    "src/lib/math/bigint/big_code.cpp",
+    "src/lib/math/bigint/big_io.cpp",
+    "src/lib/math/bigint/big_ops2.cpp",
+    "src/lib/math/bigint/big_ops3.cpp",
+    "src/lib/math/bigint/big_rand.cpp",
+    "src/lib/math/bigint/bigint.cpp",
+    "src/lib/math/bigint/divide.cpp",
+    "src/lib/math/mp/mp_comba.cpp",
+    "src/lib/math/mp/mp_karat.cpp",
+    "src/lib/math/mp/mp_monty.cpp",
+    "src/lib/math/mp/mp_monty_n.cpp",
+    "src/lib/math/numbertheory/dsa_gen.cpp",
+    "src/lib/math/numbertheory/make_prm.cpp",
+    "src/lib/math/numbertheory/mod_inv.cpp",
+    "src/lib/math/numbertheory/monty.cpp",
+    "src/lib/math/numbertheory/monty_exp.cpp",
+    "src/lib/math/numbertheory/nistp_redc.cpp",
+    "src/lib/math/numbertheory/numthry.cpp",
+    "src/lib/math/numbertheory/primality.cpp",
+    "src/lib/math/numbertheory/primes.cpp",
+    "src/lib/math/numbertheory/reducer.cpp",
+    "src/lib/misc/cryptobox/cryptobox.cpp",
+    "src/lib/misc/fpe_fe1/fpe_fe1.cpp",
+    "src/lib/misc/hotp/hotp.cpp",
+    "src/lib/misc/hotp/totp.cpp",
+    "src/lib/misc/nist_keywrap/nist_keywrap.cpp",
+    "src/lib/misc/rfc3394/rfc3394.cpp",
+    "src/lib/misc/roughtime/roughtime.cpp",
+    "src/lib/misc/srp6/srp6.cpp",
+    "src/lib/misc/tss/tss.cpp",
+    "src/lib/modes/aead/aead.cpp",
+    "src/lib/modes/aead/ccm/ccm.cpp",
+    "src/lib/modes/aead/chacha20poly1305/chacha20poly1305.cpp",
+    "src/lib/modes/aead/eax/eax.cpp",
+    "src/lib/modes/aead/gcm/gcm.cpp",
+    "src/lib/modes/aead/ocb/ocb.cpp",
+    "src/lib/modes/aead/siv/siv.cpp",
+    "src/lib/modes/cbc/cbc.cpp",
+    "src/lib/modes/cfb/cfb.cpp",
+    "src/lib/modes/cipher_mode.cpp",
+    "src/lib/modes/mode_pad/mode_pad.cpp",
+    "src/lib/modes/xts/xts.cpp",
+    "src/lib/passhash/bcrypt/bcrypt.cpp",
+    "src/lib/passhash/passhash9/passhash9.cpp",
+    "src/lib/pbkdf/argon2/argon2.cpp",
+    "src/lib/pbkdf/argon2/argon2fmt.cpp",
+    "src/lib/pbkdf/argon2/argon2pwhash.cpp",
+    "src/lib/pbkdf/bcrypt_pbkdf/bcrypt_pbkdf.cpp",
+    "src/lib/pbkdf/pbkdf.cpp",
+    "src/lib/pbkdf/pbkdf2/pbkdf2.cpp",
+    "src/lib/pbkdf/pgp_s2k/pgp_s2k.cpp",
+    "src/lib/pbkdf/pwdhash.cpp",
+    "src/lib/pbkdf/scrypt/scrypt.cpp",
+    "src/lib/pk_pad/eme.cpp",
+    "src/lib/pk_pad/eme_oaep/oaep.cpp",
+    "src/lib/pk_pad/eme_pkcs1/eme_pkcs.cpp",
+    "src/lib/pk_pad/eme_raw/eme_raw.cpp",
+    "src/lib/pk_pad/emsa.cpp",
+    "src/lib/pk_pad/emsa1/emsa1.cpp",
+    "src/lib/pk_pad/emsa_pkcs1/emsa_pkcs1.cpp",
+    "src/lib/pk_pad/emsa_pssr/pssr.cpp",
+    "src/lib/pk_pad/emsa_raw/emsa_raw.cpp",
+    "src/lib/pk_pad/emsa_x931/emsa_x931.cpp",
+    "src/lib/pk_pad/hash_id/hash_id.cpp",
+    "src/lib/pk_pad/iso9796/iso9796.cpp",
+    "src/lib/pk_pad/mgf1/mgf1.cpp",
+    "src/lib/pk_pad/padding.cpp",
+    "src/lib/prov/pkcs11/p11.cpp",
+    "src/lib/prov/pkcs11/p11_ecc_key.cpp",
+    "src/lib/prov/pkcs11/p11_ecdh.cpp",
+    "src/lib/prov/pkcs11/p11_ecdsa.cpp",
+    "src/lib/prov/pkcs11/p11_mechanism.cpp",
+    "src/lib/prov/pkcs11/p11_module.cpp",
+    "src/lib/prov/pkcs11/p11_object.cpp",
+    "src/lib/prov/pkcs11/p11_randomgenerator.cpp",
+    "src/lib/prov/pkcs11/p11_rsa.cpp",
+    "src/lib/prov/pkcs11/p11_session.cpp",
+    "src/lib/prov/pkcs11/p11_slot.cpp",
+    "src/lib/prov/pkcs11/p11_x509.cpp",
+    "src/lib/psk_db/psk_db.cpp",
+    "src/lib/psk_db/psk_db_sql.cpp",
+    "src/lib/pubkey/blinding.cpp",
+    "src/lib/pubkey/cecpq1/cecpq1.cpp",
+    "src/lib/pubkey/curve25519/curve25519.cpp",
+    "src/lib/pubkey/curve25519/donna.cpp",
+    "src/lib/pubkey/dh/dh.cpp",
+    "src/lib/pubkey/dl_algo/dl_algo.cpp",
+    "src/lib/pubkey/dl_group/dl_group.cpp",
+    "src/lib/pubkey/dl_group/dl_named.cpp",
+    "src/lib/pubkey/dlies/dlies.cpp",
+    "src/lib/pubkey/dsa/dsa.cpp",
+    "src/lib/pubkey/ec_group/curve_gfp.cpp",
+    "src/lib/pubkey/ec_group/ec_group.cpp",
+    "src/lib/pubkey/ec_group/ec_named.cpp",
+    "src/lib/pubkey/ec_group/point_gfp.cpp",
+    "src/lib/pubkey/ec_group/point_mul.cpp",
+    "src/lib/pubkey/ecc_key/ecc_key.cpp",
+    "src/lib/pubkey/ecdh/ecdh.cpp",
+    "src/lib/pubkey/ecdsa/ecdsa.cpp",
+    "src/lib/pubkey/ecgdsa/ecgdsa.cpp",
+    "src/lib/pubkey/ecies/ecies.cpp",
+    "src/lib/pubkey/eckcdsa/eckcdsa.cpp",
+    "src/lib/pubkey/ed25519/ed25519.cpp",
+    "src/lib/pubkey/ed25519/ed25519_fe.cpp",
+    "src/lib/pubkey/ed25519/ed25519_key.cpp",
+    "src/lib/pubkey/ed25519/ge.cpp",
+    "src/lib/pubkey/ed25519/sc_muladd.cpp",
+    "src/lib/pubkey/ed25519/sc_reduce.cpp",
+    "src/lib/pubkey/elgamal/elgamal.cpp",
+    "src/lib/pubkey/gost_3410/gost_3410.cpp",
+    "src/lib/pubkey/keypair/keypair.cpp",
+    "src/lib/pubkey/mce/code_based_key_gen.cpp",
+    "src/lib/pubkey/mce/gf2m_rootfind_dcmp.cpp",
+    "src/lib/pubkey/mce/gf2m_small_m.cpp",
+    "src/lib/pubkey/mce/goppa_code.cpp",
+    "src/lib/pubkey/mce/mce_workfactor.cpp",
+    "src/lib/pubkey/mce/mceliece.cpp",
+    "src/lib/pubkey/mce/mceliece_key.cpp",
+    "src/lib/pubkey/mce/polyn_gf2m.cpp",
+    "src/lib/pubkey/newhope/newhope.cpp",
+    "src/lib/pubkey/pbes2/pbes2.cpp",
+    "src/lib/pubkey/pem/pem.cpp",
+    "src/lib/pubkey/pk_algs.cpp",
+    "src/lib/pubkey/pk_keys.cpp",
+    "src/lib/pubkey/pk_ops.cpp",
+    "src/lib/pubkey/pkcs8.cpp",
+    "src/lib/pubkey/pubkey.cpp",
+    "src/lib/pubkey/rfc6979/rfc6979.cpp",
+    "src/lib/pubkey/rsa/rsa.cpp",
+    "src/lib/pubkey/sm2/sm2.cpp",
+    "src/lib/pubkey/sm2/sm2_enc.cpp",
+    "src/lib/pubkey/workfactor.cpp",
+    "src/lib/pubkey/x509_key.cpp",
+    "src/lib/pubkey/xmss/xmss_common_ops.cpp",
+    "src/lib/pubkey/xmss/xmss_hash.cpp",
+    "src/lib/pubkey/xmss/xmss_index_registry.cpp",
+    "src/lib/pubkey/xmss/xmss_parameters.cpp",
+    "src/lib/pubkey/xmss/xmss_privatekey.cpp",
+    "src/lib/pubkey/xmss/xmss_publickey.cpp",
+    "src/lib/pubkey/xmss/xmss_signature.cpp",
+    "src/lib/pubkey/xmss/xmss_signature_operation.cpp",
+    "src/lib/pubkey/xmss/xmss_verification_operation.cpp",
+    "src/lib/pubkey/xmss/xmss_wots_parameters.cpp",
+    "src/lib/pubkey/xmss/xmss_wots_privatekey.cpp",
+    "src/lib/pubkey/xmss/xmss_wots_publickey.cpp",
+    "src/lib/rng/auto_rng/auto_rng.cpp",
+    "src/lib/rng/chacha_rng/chacha_rng.cpp",
+    "src/lib/rng/hmac_drbg/hmac_drbg.cpp",
+    "src/lib/rng/processor_rng/processor_rng.cpp",
+    "src/lib/rng/rng.cpp",
+    "src/lib/rng/stateful_rng/stateful_rng.cpp",
+    "src/lib/rng/system_rng/system_rng.cpp",
+    "src/lib/stream/chacha/chacha.cpp",
+    "src/lib/stream/chacha/chacha_avx2/chacha_avx2.cpp",
+    "src/lib/stream/chacha/chacha_simd32/chacha_simd32.cpp",
+    "src/lib/stream/ctr/ctr.cpp",
+    "src/lib/stream/ofb/ofb.cpp",
+    "src/lib/stream/rc4/rc4.cpp",
+    "src/lib/stream/salsa20/salsa20.cpp",
+    "src/lib/stream/shake_cipher/shake_cipher.cpp",
+    "src/lib/stream/stream_cipher.cpp",
+    "src/lib/tls/credentials_manager.cpp",
+    "src/lib/tls/msg_cert_req.cpp",
+    "src/lib/tls/msg_cert_status.cpp",
+    "src/lib/tls/msg_cert_verify.cpp",
+    "src/lib/tls/msg_certificate.cpp",
+    "src/lib/tls/msg_client_hello.cpp",
+    "src/lib/tls/msg_client_kex.cpp",
+    "src/lib/tls/msg_finished.cpp",
+    "src/lib/tls/msg_hello_verify.cpp",
+    "src/lib/tls/msg_server_hello.cpp",
+    "src/lib/tls/msg_server_kex.cpp",
+    "src/lib/tls/msg_session_ticket.cpp",
+    "src/lib/tls/sessions_sql/tls_session_manager_sql.cpp",
+    "src/lib/tls/tls_alert.cpp",
+    "src/lib/tls/tls_algos.cpp",
+    "src/lib/tls/tls_callbacks.cpp",
+    "src/lib/tls/tls_cbc/tls_cbc.cpp",
+    "src/lib/tls/tls_channel.cpp",
+    "src/lib/tls/tls_ciphersuite.cpp",
+    "src/lib/tls/tls_client.cpp",
+    "src/lib/tls/tls_extensions.cpp",
+    "src/lib/tls/tls_handshake_hash.cpp",
+    "src/lib/tls/tls_handshake_io.cpp",
+    "src/lib/tls/tls_handshake_state.cpp",
+    "src/lib/tls/tls_policy.cpp",
+    "src/lib/tls/tls_record.cpp",
+    "src/lib/tls/tls_server.cpp",
+    "src/lib/tls/tls_session.cpp",
+    "src/lib/tls/tls_session_key.cpp",
+    "src/lib/tls/tls_session_manager_memory.cpp",
+    "src/lib/tls/tls_suite_info.cpp",
+    "src/lib/tls/tls_text_policy.cpp",
+    "src/lib/tls/tls_version.cpp",
+    "src/lib/utils/assert.cpp",
+    "src/lib/utils/calendar.cpp",
+    "src/lib/utils/charset.cpp",
+    "src/lib/utils/cpuid/cpuid.cpp",
+    "src/lib/utils/cpuid/cpuid_aarch64.cpp",
+    "src/lib/utils/cpuid/cpuid_arm32.cpp",
+    "src/lib/utils/cpuid/cpuid_ppc.cpp",
+    "src/lib/utils/cpuid/cpuid_x86.cpp",
+    "src/lib/utils/ct_utils.cpp",
+    "src/lib/utils/data_src.cpp",
+    "src/lib/utils/dyn_load/dyn_load.cpp",
+    "src/lib/utils/exceptn.cpp",
+    "src/lib/utils/filesystem.cpp",
+    "src/lib/utils/ghash/ghash.cpp",
+    "src/lib/utils/ghash/ghash_cpu/ghash_cpu.cpp",
+    "src/lib/utils/ghash/ghash_vperm/ghash_vperm.cpp",
+    "src/lib/utils/http_util/http_util.cpp",
+    "src/lib/utils/locking_allocator/locking_allocator.cpp",
+    "src/lib/utils/mem_ops.cpp",
+    "src/lib/utils/mem_pool/mem_pool.cpp",
+    "src/lib/utils/os_utils.cpp",
+    "src/lib/utils/parsing.cpp",
+    "src/lib/utils/poly_dbl/poly_dbl.cpp",
+    "src/lib/utils/read_cfg.cpp",
+    "src/lib/utils/read_kv.cpp",
+    "src/lib/utils/scan_name.cpp",
+    "src/lib/utils/socket/socket.cpp",
+    "src/lib/utils/socket/socket_udp.cpp",
+    "src/lib/utils/socket/uri.cpp",
+    "src/lib/utils/thread_utils/barrier.cpp",
+    "src/lib/utils/thread_utils/rwlock.cpp",
+    "src/lib/utils/thread_utils/semaphore.cpp",
+    "src/lib/utils/thread_utils/thread_pool.cpp",
+    "src/lib/utils/timer.cpp",
+    "src/lib/utils/uuid/uuid.cpp",
+    "src/lib/utils/version.cpp",
+    "src/lib/x509/asn1_alt_name.cpp",
+    "src/lib/x509/cert_status.cpp",
+    "src/lib/x509/certstor.cpp",
+    "src/lib/x509/certstor_flatfile/certstor_flatfile.cpp",
+    "src/lib/x509/certstor_sql/certstor_sql.cpp",
+    "src/lib/x509/certstor_system/certstor_system.cpp",
+    "src/lib/x509/certstor_system_macos/certstor_macos.cpp",
+    "src/lib/x509/crl_ent.cpp",
+    "src/lib/x509/key_constraint.cpp",
+    "src/lib/x509/name_constraint.cpp",
+    "src/lib/x509/ocsp.cpp",
+    "src/lib/x509/ocsp_types.cpp",
+    "src/lib/x509/pkcs10.cpp",
+    "src/lib/x509/x509_attribute.cpp",
+    "src/lib/x509/x509_ca.cpp",
+    "src/lib/x509/x509_crl.cpp",
+    "src/lib/x509/x509_dn.cpp",
+    "src/lib/x509/x509_dn_ub.cpp",
+    "src/lib/x509/x509_ext.cpp",
+    "src/lib/x509/x509_obj.cpp",
+    "src/lib/x509/x509cert.cpp",
+    "src/lib/x509/x509opt.cpp",
+    "src/lib/x509/x509path.cpp",
+    "src/lib/x509/x509self.cpp"
+  ],
+  "lib_suffix": "",
+  "libdir": "/usr/local/lib",
+  "libname": "botan-3",
+  "libobj_dir": "build/obj/lib",
+  "library_targets": "./libbotan-3.a ./libbotan-3.0.dylib",
+  "libs_used": [
+    "dl"
+  ],
+  "link_to": "-ldl -framework CoreFoundation -framework Security",
+  "link_to_botan": "-L. -lbotan-3",
+  "linker": "$(CXX)",
+  "local_config": "",
+  "macos_so_compat_ver": "3000.0.0",
+  "macos_so_current_ver": "3000.0.0",
+  "maintainer_mode": false,
+  "make_supports_phony": true,
+  "makefile_path": "build/../Makefile",
+  "mandir": "share/man",
+  "mod_list": [
+    "adler32",
+    "aead",
+    "aes",
+    "aes_ni",
+    "aes_vperm",
+    "argon2",
+    "aria",
+    "asn1",
+    "auto_rng",
+    "base",
+    "base32",
+    "base58",
+    "base64",
+    "bcrypt",
+    "bcrypt_pbkdf",
+    "bigint",
+    "blake2",
+    "blake2mac",
+    "block",
+    "blowfish",
+    "camellia",
+    "cascade",
+    "cast128",
+    "cbc",
+    "ccm",
+    "cecpq1",
+    "certstor_flatfile",
+    "certstor_sql",
+    "certstor_system",
+    "certstor_system_macos",
+    "cfb",
+    "chacha",
+    "chacha20poly1305",
+    "chacha_avx2",
+    "chacha_rng",
+    "chacha_simd32",
+    "checksum",
+    "cmac",
+    "comb4p",
+    "cpuid",
+    "crc24",
+    "crc32",
+    "cryptobox",
+    "ctr",
+    "curve25519",
+    "des",
+    "dh",
+    "dl_algo",
+    "dl_group",
+    "dlies",
+    "dsa",
+    "dyn_load",
+    "eax",
+    "ec_group",
+    "ecc_key",
+    "ecdh",
+    "ecdsa",
+    "ecgdsa",
+    "ecies",
+    "eckcdsa",
+    "ed25519",
+    "elgamal",
+    "eme_oaep",
+    "eme_pkcs1",
+    "eme_raw",
+    "emsa1",
+    "emsa_pkcs1",
+    "emsa_pssr",
+    "emsa_raw",
+    "emsa_x931",
+    "entropy",
+    "fd_unix",
+    "ffi",
+    "filters",
+    "fpe_fe1",
+    "gcm",
+    "getentropy",
+    "ghash",
+    "ghash_cpu",
+    "ghash_vperm",
+    "gmac",
+    "gost_28147",
+    "gost_3410",
+    "gost_3411",
+    "hash",
+    "hash_id",
+    "hex",
+    "hkdf",
+    "hmac",
+    "hmac_drbg",
+    "hotp",
+    "http_util",
+    "idea",
+    "idea_sse2",
+    "iso9796",
+    "kdf",
+    "kdf1",
+    "kdf1_iso18033",
+    "kdf2",
+    "keccak",
+    "keypair",
+    "lion",
+    "locking_allocator",
+    "mac",
+    "mce",
+    "md4",
+    "md5",
+    "mdx_hash",
+    "mem_pool",
+    "mgf1",
+    "mode_pad",
+    "modes",
+    "mp",
+    "newhope",
+    "nist_keywrap",
+    "noekeon",
+    "noekeon_simd",
+    "numbertheory",
+    "ocb",
+    "ofb",
+    "par_hash",
+    "passhash9",
+    "pbes2",
+    "pbkdf",
+    "pbkdf2",
+    "pem",
+    "pgp_s2k",
+    "pk_pad",
+    "pkcs11",
+    "poly1305",
+    "poly_dbl",
+    "prf_tls",
+    "prf_x942",
+    "processor_rng",
+    "psk_db",
+    "pubkey",
+    "rc4",
+    "rdseed",
+    "rfc3394",
+    "rfc6979",
+    "rmd160",
+    "rng",
+    "roughtime",
+    "rsa",
+    "salsa20",
+    "scrypt",
+    "seed",
+    "serpent",
+    "serpent_avx2",
+    "serpent_simd",
+    "sessions_sql",
+    "sha1",
+    "sha1_sse2",
+    "sha1_x86",
+    "sha2_32",
+    "sha2_32_bmi2",
+    "sha2_32_x86",
+    "sha2_64",
+    "sha2_64_bmi2",
+    "sha3",
+    "sha3_bmi2",
+    "shacal2",
+    "shacal2_avx2",
+    "shacal2_simd",
+    "shacal2_x86",
+    "shake",
+    "shake_cipher",
+    "simd",
+    "simd_avx2",
+    "siphash",
+    "siv",
+    "skein",
+    "sm2",
+    "sm3",
+    "sm4",
+    "socket",
+    "sodium",
+    "sp800_108",
+    "sp800_56a",
+    "sp800_56c",
+    "srp6",
+    "stateful_rng",
+    "stream",
+    "streebog",
+    "system_rng",
+    "thread_utils",
+    "threefish_512",
+    "threefish_512_avx2",
+    "tls",
+    "tls_cbc",
+    "tss",
+    "twofish",
+    "utils",
+    "uuid",
+    "whirlpool",
+    "x509",
+    "x919_mac",
+    "xmss",
+    "xts"
+  ],
+  "module_defines": [
+    "ADLER32 20131128",
+    "AEAD_CCM 20131128",
+    "AEAD_CHACHA20_POLY1305 20180807",
+    "AEAD_EAX 20131128",
+    "AEAD_GCM 20131128",
+    "AEAD_MODES 20131128",
+    "AEAD_OCB 20131128",
+    "AEAD_SIV 20131202",
+    "AES 20131128",
+    "AES_NI 20131128",
+    "AES_VPERM 20190901",
+    "ANSI_X919_MAC 20131128",
+    "ARGON2 20190824",
+    "ARIA 20170415",
+    "ASN1 20201106",
+    "AUTO_RNG 20161126",
+    "AUTO_SEEDING_RNG 20160821",
+    "BASE32_CODEC 20180418",
+    "BASE58_CODEC 20181209",
+    "BASE64_CODEC 20131128",
+    "BCRYPT 20131128",
+    "BIGINT 20131128",
+    "BIGINT_MP 20151225",
+    "BLAKE2B 20130131",
+    "BLAKE2BMAC 20201123",
+    "BLOCK_CIPHER 20131128",
+    "BLOWFISH 20180718",
+    "CAMELLIA 20150922",
+    "CASCADE 20131128",
+    "CAST 20131128",
+    "CAST_128 20171203",
+    "CECPQ1 20161116",
+    "CERTSTOR_FLATFILE 20190410",
+    "CERTSTOR_MACOS 20190207",
+    "CERTSTOR_SQL 20160818",
+    "CERTSTOR_SYSTEM 20190411",
+    "CHACHA 20180807",
+    "CHACHA_AVX2 20180418",
+    "CHACHA_RNG 20170728",
+    "CHACHA_SIMD32 20181104",
+    "CIPHER_MODES 20180124",
+    "CIPHER_MODE_PADDING 20131128",
+    "CMAC 20131128",
+    "CODEC_FILTERS 20131128",
+    "COMB4P 20131128",
+    "CPUID 20170917",
+    "CRC24 20131128",
+    "CRC32 20131128",
+    "CRYPTO_BOX 20131128",
+    "CTR_BE 20131128",
+    "CURVE_25519 20170621",
+    "DES 20200926",
+    "DIFFIE_HELLMAN 20131128",
+    "DLIES 20160713",
+    "DL_GROUP 20131128",
+    "DL_PUBLIC_KEY_FAMILY 20131128",
+    "DSA 20131128",
+    "DYNAMIC_LOADER 20160310",
+    "ECC_GROUP 20170225",
+    "ECC_KEY 20190801",
+    "ECC_PUBLIC_KEY_CRYPTO 20131128",
+    "ECDH 20131128",
+    "ECDSA 20131128",
+    "ECGDSA 20160301",
+    "ECIES 20160128",
+    "ECKCDSA 20160413",
+    "EC_CURVE_GFP 20131128",
+    "ED25519 20170607",
+    "ELGAMAL 20131128",
+    "EME_OAEP 20180305",
+    "EME_PKCS1 20190426",
+    "EME_PKCS1v15 20131128",
+    "EME_RAW 20150313",
+    "EMSA1 20131128",
+    "EMSA_PKCS1 20140118",
+    "EMSA_PSSR 20131128",
+    "EMSA_RAW 20131128",
+    "EMSA_X931 20140118",
+    "ENTROPY_SOURCE 20151120",
+    "ENTROPY_SRC_GETENTROPY 20170327",
+    "ENTROPY_SRC_RDSEED 20151218",
+    "FFI 20210220",
+    "FILTERS 20160415",
+    "FPE_FE1 20131128",
+    "GHASH 20201002",
+    "GHASH_CLMUL_CPU 20201002",
+    "GHASH_CLMUL_VPERM 20201002",
+    "GMAC 20160207",
+    "GOST_28147_89 20131128",
+    "GOST_34_10_2001 20131128",
+    "GOST_34_10_2012 20190801",
+    "GOST_34_11 20131128",
+    "HASH 20180112",
+    "HASH_ID 20131128",
+    "HEX_CODEC 20131128",
+    "HKDF 20170927",
+    "HMAC 20131128",
+    "HMAC_DRBG 20140319",
+    "HOTP 20180816",
+    "HTTP_UTIL 20171003",
+    "IDEA 20131128",
+    "IDEA_SSE2 20131128",
+    "ISO_9796 20161121",
+    "KDF1 20131128",
+    "KDF1_18033 20160128",
+    "KDF2 20131128",
+    "KDF_BASE 20131128",
+    "KECCAK 20131128",
+    "LION 20131128",
+    "LOCKING_ALLOCATOR 20131128",
+    "MAC 20150626",
+    "MCELIECE 20150922",
+    "MD4 20131128",
+    "MD5 20131128",
+    "MDX_HASH_FUNCTION 20131128",
+    "MEM_POOL 20180309",
+    "MGF1 20140118",
+    "MODES 20150626",
+    "MODE_CBC 20131128",
+    "MODE_CFB 20131128",
+    "MODE_XTS 20131128",
+    "NEWHOPE 20161018",
+    "NIST_KEYWRAP 20171119",
+    "NOEKEON 20131128",
+    "NOEKEON_SIMD 20160903",
+    "NUMBERTHEORY 20201108",
+    "OCSP 20201106",
+    "OFB 20131128",
+    "PARALLEL_HASH 20131128",
+    "PASSHASH9 20131128",
+    "PBKDF 20180902",
+    "PBKDF2 20180902",
+    "PBKDF_BCRYPT 20190531",
+    "PEM_CODEC 20131128",
+    "PGP_S2K 20170527",
+    "PIPE_UNIXFD_IO 20131128",
+    "PKCS11 20160219",
+    "PKCS5_PBES2 20141119",
+    "PK_PADDING 20131128",
+    "POLY1305 20141227",
+    "POLY_DBL 20170927",
+    "PROCESSOR_RNG 20200508",
+    "PSK_DB 20171119",
+    "PUBLIC_KEY_CRYPTO 20131128",
+    "RC4 20131128",
+    "RFC3394_KEYWRAP 20131128",
+    "RFC6979_GENERATOR 20140321",
+    "RIPEMD_160 20131128",
+    "ROUGHTIME 20190220",
+    "RSA 20160730",
+    "SALSA20 20171114",
+    "SCRYPT 20180902",
+    "SEED 20131128",
+    "SERPENT 20131128",
+    "SERPENT_AVX2 20180824",
+    "SERPENT_SIMD 20160903",
+    "SHA1 20131128",
+    "SHA1_SSE2 20160803",
+    "SHA1_X86_SHA_NI 20170518",
+    "SHA2_32 20131128",
+    "SHA2_32_X86 20170518",
+    "SHA2_32_X86_BMI2 20180526",
+    "SHA2_64 20131128",
+    "SHA2_64_BMI2 20190117",
+    "SHA3 20161018",
+    "SHA3_BMI2 20190117",
+    "SHACAL2 20170813",
+    "SHACAL2_AVX2 20180826",
+    "SHACAL2_SIMD 20170813",
+    "SHACAL2_X86 20170814",
+    "SHAKE 20161009",
+    "SHAKE_CIPHER 20161018",
+    "SIMD_32 20131128",
+    "SIMD_AVX2 20180824",
+    "SIPHASH 20150110",
+    "SKEIN_512 20131128",
+    "SM2 20180801",
+    "SM3 20170402",
+    "SM4 20170716",
+    "SOCKETS 20171216",
+    "SODIUM_API 20190615",
+    "SP800_108 20160128",
+    "SP800_56A 20170501",
+    "SP800_56C 20160211",
+    "SRP6 20161017",
+    "STATEFUL_RNG 20160819",
+    "STREAM_CIPHER 20131128",
+    "STREEBOG 20170623",
+    "SYSTEM_RNG 20141202",
+    "THREAD_UTILS 20190922",
+    "THREEFISH_512 20131224",
+    "THREEFISH_512_AVX2 20160903",
+    "THRESHOLD_SECRET_SHARING 20131128",
+    "TLS 20201128",
+    "TLS_CBC 20161008",
+    "TLS_SESSION_MANAGER_SQL_DB 20141219",
+    "TLS_V12_PRF 20131128",
+    "TOTP 20180816",
+    "TWOFISH 20131128",
+    "UTIL_FUNCTIONS 20180903",
+    "UUID 20180930",
+    "WHIRLPOOL 20131128",
+    "X25519 20180910",
+    "X509 20201106",
+    "X509_CERTIFICATES 20201106",
+    "X942_PRF 20131128",
+    "XMSS_RFC8391 20201101"
+  ],
+  "mp_bits": 64,
+  "optimize_for_size": false,
+  "os": "macos",
+  "os_feature_macros": "",
+  "os_features": [
+    "apple_keychain",
+    "arc4random",
+    "atomics",
+    "clock_gettime",
+    "commoncrypto",
+    "dev_random",
+    "filesystem",
+    "getentropy",
+    "posix1",
+    "posix_mlock",
+    "sandbox_proc",
+    "sockets",
+    "thread_local",
+    "threads"
+  ],
+  "os_name": "macos",
+  "out_dir": ".",
+  "output_to_exe": "-o ",
+  "prefix": "/usr/local",
+  "program_suffix": "",
+  "public_headers": [
+    "aead.h",
+    "argon2.h",
+    "asn1_obj.h",
+    "asn1_print.h",
+    "assert.h",
+    "auto_rng.h",
+    "base32.h",
+    "base58.h",
+    "base64.h",
+    "bcrypt.h",
+    "bcrypt_pbkdf.h",
+    "ber_dec.h",
+    "bigint.h",
+    "block_cipher.h",
+    "buf_comp.h",
+    "build.h",
+    "cecpq1.h",
+    "certstor.h",
+    "certstor_flatfile.h",
+    "certstor_macos.h",
+    "certstor_sql.h",
+    "certstor_system.h",
+    "chacha_rng.h",
+    "cipher_mode.h",
+    "compiler.h",
+    "credentials_manager.h",
+    "cryptobox.h",
+    "curve25519.h",
+    "curve_gfp.h",
+    "data_snk.h",
+    "data_src.h",
+    "database.h",
+    "der_enc.h",
+    "dh.h",
+    "dl_algo.h",
+    "dl_group.h",
+    "dlies.h",
+    "dsa.h",
+    "ec_group.h",
+    "ecc_key.h",
+    "ecdh.h",
+    "ecdsa.h",
+    "ecgdsa.h",
+    "ecies.h",
+    "eckcdsa.h",
+    "ed25519.h",
+    "elgamal.h",
+    "entropy_src.h",
+    "exceptn.h",
+    "fd_unix.h",
+    "ffi.h",
+    "filter.h",
+    "filters.h",
+    "fpe_fe1.h",
+    "gost_3410.h",
+    "hash.h",
+    "hex.h",
+    "hmac_drbg.h",
+    "kdf.h",
+    "mac.h",
+    "mceliece.h",
+    "mem_ops.h",
+    "mutex.h",
+    "newhope.h",
+    "nist_keywrap.h",
+    "numthry.h",
+    "ocsp.h",
+    "oids.h",
+    "otp.h",
+    "p11.h",
+    "p11_ecc_key.h",
+    "p11_ecdh.h",
+    "p11_ecdsa.h",
+    "p11_object.h",
+    "p11_randomgenerator.h",
+    "p11_rsa.h",
+    "p11_types.h",
+    "p11_x509.h",
+    "passhash9.h",
+    "pbkdf.h",
+    "pbkdf2.h",
+    "pem.h",
+    "pgp_s2k.h",
+    "pipe.h",
+    "pk_algs.h",
+    "pk_keys.h",
+    "pk_ops_fwd.h",
+    "pkcs10.h",
+    "pkcs8.h",
+    "pkix_enums.h",
+    "pkix_types.h",
+    "point_gfp.h",
+    "processor_rng.h",
+    "psk_db.h",
+    "pubkey.h",
+    "pwdhash.h",
+    "reducer.h",
+    "rfc3394.h",
+    "rng.h",
+    "roughtime.h",
+    "rsa.h",
+    "scrypt.h",
+    "secmem.h",
+    "sm2.h",
+    "sodium.h",
+    "srp6.h",
+    "stateful_rng.h",
+    "stream_cipher.h",
+    "sym_algo.h",
+    "symkey.h",
+    "system_rng.h",
+    "tls_alert.h",
+    "tls_algos.h",
+    "tls_callbacks.h",
+    "tls_channel.h",
+    "tls_ciphersuite.h",
+    "tls_client.h",
+    "tls_exceptn.h",
+    "tls_extensions.h",
+    "tls_handshake_msg.h",
+    "tls_magic.h",
+    "tls_messages.h",
+    "tls_policy.h",
+    "tls_server.h",
+    "tls_server_info.h",
+    "tls_session.h",
+    "tls_session_manager.h",
+    "tls_session_manager_sql.h",
+    "tls_version.h",
+    "tss.h",
+    "types.h",
+    "uuid.h",
+    "version.h",
+    "x509_ca.h",
+    "x509_crl.h",
+    "x509_ext.h",
+    "x509_key.h",
+    "x509_obj.h",
+    "x509cert.h",
+    "x509path.h",
+    "x509self.h",
+    "xmss.h",
+    "xmss_hash.h",
+    "xmss_parameters.h",
+    "xmss_wots.h"
+  ],
+  "python_dir": "src/python",
+  "python_exe": "/Users/adamspindler/anaconda3/envs/python39/bin/python",
+  "python_version": "3.9",
+  "release_type": "unreleased",
+  "sanitizer_types": [],
+  "scripts_dir": "src/scripts",
+  "shared_lib_name": "libbotan-3.0.dylib",
+  "soname_abi": "libbotan-3.0.dylib",
+  "soname_base": "libbotan-3.dylib",
+  "soname_patch": "libbotan-3.0.0.0.dylib",
+  "sphinx_config_dir": "src/configs/sphinx",
+  "src_dir": "src",
+  "static_lib_name": "libbotan-3.a",
+  "static_suffix": "a",
+  "symlink_shared_lib": true,
+  "system_cert_bundle": "/etc/ssl/cert.pem",
+  "test_build_info": [
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/main.o",
+      "src": "src/tests/main.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_aead.o",
+      "src": "src/tests/test_aead.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_asn1.o",
+      "src": "src/tests/test_asn1.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_bigint.o",
+      "src": "src/tests/test_bigint.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_block.o",
+      "src": "src/tests/test_block.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_blowfish.o",
+      "src": "src/tests/test_blowfish.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_c25519.o",
+      "src": "src/tests/test_c25519.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_certstor.o",
+      "src": "src/tests/test_certstor.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_certstor_flatfile.o",
+      "src": "src/tests/test_certstor_flatfile.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_certstor_system.o",
+      "src": "src/tests/test_certstor_system.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_certstor_utils.o",
+      "src": "src/tests/test_certstor_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_clang_bug.o",
+      "src": "src/tests/test_clang_bug.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_compression.o",
+      "src": "src/tests/test_compression.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_cryptobox.o",
+      "src": "src/tests/test_cryptobox.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_dh.o",
+      "src": "src/tests/test_dh.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_dl_group.o",
+      "src": "src/tests/test_dl_group.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_dlies.o",
+      "src": "src/tests/test_dlies.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_dsa.o",
+      "src": "src/tests/test_dsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ec_group.o",
+      "src": "src/tests/test_ec_group.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ecc_pointmul.o",
+      "src": "src/tests/test_ecc_pointmul.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ecdh.o",
+      "src": "src/tests/test_ecdh.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ecdsa.o",
+      "src": "src/tests/test_ecdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ecgdsa.o",
+      "src": "src/tests/test_ecgdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ecies.o",
+      "src": "src/tests/test_ecies.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_eckcdsa.o",
+      "src": "src/tests/test_eckcdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ed25519.o",
+      "src": "src/tests/test_ed25519.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_elgamal.o",
+      "src": "src/tests/test_elgamal.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_entropy.o",
+      "src": "src/tests/test_entropy.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ffi.o",
+      "src": "src/tests/test_ffi.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_filters.o",
+      "src": "src/tests/test_filters.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_fpe.o",
+      "src": "src/tests/test_fpe.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_gf2m.o",
+      "src": "src/tests/test_gf2m.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_gost_3410.o",
+      "src": "src/tests/test_gost_3410.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_hash.o",
+      "src": "src/tests/test_hash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_hash_id.o",
+      "src": "src/tests/test_hash_id.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_kdf.o",
+      "src": "src/tests/test_kdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_keywrap.o",
+      "src": "src/tests/test_keywrap.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_mac.o",
+      "src": "src/tests/test_mac.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_mceliece.o",
+      "src": "src/tests/test_mceliece.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_modes.o",
+      "src": "src/tests/test_modes.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_mp.o",
+      "src": "src/tests/test_mp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_name_constraint.o",
+      "src": "src/tests/test_name_constraint.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_newhope.o",
+      "src": "src/tests/test_newhope.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ocb.o",
+      "src": "src/tests/test_ocb.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_ocsp.o",
+      "src": "src/tests/test_ocsp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_octetstring.o",
+      "src": "src/tests/test_octetstring.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_oid.o",
+      "src": "src/tests/test_oid.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_os_utils.o",
+      "src": "src/tests/test_os_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_otp.o",
+      "src": "src/tests/test_otp.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_pad.o",
+      "src": "src/tests/test_pad.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_passhash.o",
+      "src": "src/tests/test_passhash.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_pbkdf.o",
+      "src": "src/tests/test_pbkdf.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_pem.o",
+      "src": "src/tests/test_pem.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_pk_pad.o",
+      "src": "src/tests/test_pk_pad.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_pkcs11_high_level.o",
+      "src": "src/tests/test_pkcs11_high_level.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_pkcs11_low_level.o",
+      "src": "src/tests/test_pkcs11_low_level.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_psk_db.o",
+      "src": "src/tests/test_psk_db.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_pubkey.o",
+      "src": "src/tests/test_pubkey.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_rfc6979.o",
+      "src": "src/tests/test_rfc6979.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_rng.o",
+      "src": "src/tests/test_rng.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_rng_kat.o",
+      "src": "src/tests/test_rng_kat.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_roughtime.o",
+      "src": "src/tests/test_roughtime.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_rsa.o",
+      "src": "src/tests/test_rsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_runner.o",
+      "src": "src/tests/test_runner.cpp"
+    },
+    {
+      "isa_flags": "-msse2",
+      "obj": "build/obj/test/test_simd.o",
+      "src": "src/tests/test_simd.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_siv.o",
+      "src": "src/tests/test_siv.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_sm2.o",
+      "src": "src/tests/test_sm2.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_sodium.o",
+      "src": "src/tests/test_sodium.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_srp6.o",
+      "src": "src/tests/test_srp6.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_stream.o",
+      "src": "src/tests/test_stream.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_tests.o",
+      "src": "src/tests/test_tests.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_thread_utils.o",
+      "src": "src/tests/test_thread_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_tls.o",
+      "src": "src/tests/test_tls.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_tls_messages.o",
+      "src": "src/tests/test_tls_messages.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_tls_stream_integration.o",
+      "src": "src/tests/test_tls_stream_integration.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_tpm.o",
+      "src": "src/tests/test_tpm.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_tss.o",
+      "src": "src/tests/test_tss.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_uri.o",
+      "src": "src/tests/test_uri.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_utils.o",
+      "src": "src/tests/test_utils.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_workfactor.o",
+      "src": "src/tests/test_workfactor.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_x509_dn.o",
+      "src": "src/tests/test_x509_dn.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_x509_path.o",
+      "src": "src/tests/test_x509_path.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/test_xmss.o",
+      "src": "src/tests/test_xmss.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/tests.o",
+      "src": "src/tests/tests.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/unit_asio_stream.o",
+      "src": "src/tests/unit_asio_stream.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/unit_ecdh.o",
+      "src": "src/tests/unit_ecdh.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/unit_ecdsa.o",
+      "src": "src/tests/unit_ecdsa.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/unit_tls.o",
+      "src": "src/tests/unit_tls.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/unit_tls_policy.o",
+      "src": "src/tests/unit_tls_policy.cpp"
+    },
+    {
+      "isa_flags": "",
+      "obj": "build/obj/test/unit_x509.o",
+      "src": "src/tests/unit_x509.cpp"
+    }
+  ],
+  "test_data_dir": "src/tests/data",
+  "test_exe": "./botan-test",
+  "test_mode": false,
+  "test_objs": [
+    "build/obj/test/main.o",
+    "build/obj/test/test_aead.o",
+    "build/obj/test/test_asn1.o",
+    "build/obj/test/test_bigint.o",
+    "build/obj/test/test_block.o",
+    "build/obj/test/test_blowfish.o",
+    "build/obj/test/test_c25519.o",
+    "build/obj/test/test_certstor.o",
+    "build/obj/test/test_certstor_flatfile.o",
+    "build/obj/test/test_certstor_system.o",
+    "build/obj/test/test_certstor_utils.o",
+    "build/obj/test/test_clang_bug.o",
+    "build/obj/test/test_compression.o",
+    "build/obj/test/test_cryptobox.o",
+    "build/obj/test/test_dh.o",
+    "build/obj/test/test_dl_group.o",
+    "build/obj/test/test_dlies.o",
+    "build/obj/test/test_dsa.o",
+    "build/obj/test/test_ec_group.o",
+    "build/obj/test/test_ecc_pointmul.o",
+    "build/obj/test/test_ecdh.o",
+    "build/obj/test/test_ecdsa.o",
+    "build/obj/test/test_ecgdsa.o",
+    "build/obj/test/test_ecies.o",
+    "build/obj/test/test_eckcdsa.o",
+    "build/obj/test/test_ed25519.o",
+    "build/obj/test/test_elgamal.o",
+    "build/obj/test/test_entropy.o",
+    "build/obj/test/test_ffi.o",
+    "build/obj/test/test_filters.o",
+    "build/obj/test/test_fpe.o",
+    "build/obj/test/test_gf2m.o",
+    "build/obj/test/test_gost_3410.o",
+    "build/obj/test/test_hash.o",
+    "build/obj/test/test_hash_id.o",
+    "build/obj/test/test_kdf.o",
+    "build/obj/test/test_keywrap.o",
+    "build/obj/test/test_mac.o",
+    "build/obj/test/test_mceliece.o",
+    "build/obj/test/test_modes.o",
+    "build/obj/test/test_mp.o",
+    "build/obj/test/test_name_constraint.o",
+    "build/obj/test/test_newhope.o",
+    "build/obj/test/test_ocb.o",
+    "build/obj/test/test_ocsp.o",
+    "build/obj/test/test_octetstring.o",
+    "build/obj/test/test_oid.o",
+    "build/obj/test/test_os_utils.o",
+    "build/obj/test/test_otp.o",
+    "build/obj/test/test_pad.o",
+    "build/obj/test/test_passhash.o",
+    "build/obj/test/test_pbkdf.o",
+    "build/obj/test/test_pem.o",
+    "build/obj/test/test_pk_pad.o",
+    "build/obj/test/test_pkcs11_high_level.o",
+    "build/obj/test/test_pkcs11_low_level.o",
+    "build/obj/test/test_psk_db.o",
+    "build/obj/test/test_pubkey.o",
+    "build/obj/test/test_rfc6979.o",
+    "build/obj/test/test_rng.o",
+    "build/obj/test/test_rng_kat.o",
+    "build/obj/test/test_roughtime.o",
+    "build/obj/test/test_rsa.o",
+    "build/obj/test/test_runner.o",
+    "build/obj/test/test_simd.o",
+    "build/obj/test/test_siv.o",
+    "build/obj/test/test_sm2.o",
+    "build/obj/test/test_sodium.o",
+    "build/obj/test/test_srp6.o",
+    "build/obj/test/test_stream.o",
+    "build/obj/test/test_tests.o",
+    "build/obj/test/test_thread_utils.o",
+    "build/obj/test/test_tls.o",
+    "build/obj/test/test_tls_messages.o",
+    "build/obj/test/test_tls_stream_integration.o",
+    "build/obj/test/test_tpm.o",
+    "build/obj/test/test_tss.o",
+    "build/obj/test/test_uri.o",
+    "build/obj/test/test_utils.o",
+    "build/obj/test/test_workfactor.o",
+    "build/obj/test/test_x509_dn.o",
+    "build/obj/test/test_x509_path.o",
+    "build/obj/test/test_xmss.o",
+    "build/obj/test/tests.o",
+    "build/obj/test/unit_asio_stream.o",
+    "build/obj/test/unit_ecdh.o",
+    "build/obj/test/unit_ecdsa.o",
+    "build/obj/test/unit_tls.o",
+    "build/obj/test/unit_tls_policy.o",
+    "build/obj/test/unit_x509.o"
+  ],
+  "test_srcs": [
+    "src/tests/main.cpp",
+    "src/tests/test_aead.cpp",
+    "src/tests/test_asn1.cpp",
+    "src/tests/test_bigint.cpp",
+    "src/tests/test_block.cpp",
+    "src/tests/test_blowfish.cpp",
+    "src/tests/test_c25519.cpp",
+    "src/tests/test_certstor.cpp",
+    "src/tests/test_certstor_flatfile.cpp",
+    "src/tests/test_certstor_system.cpp",
+    "src/tests/test_certstor_utils.cpp",
+    "src/tests/test_clang_bug.cpp",
+    "src/tests/test_compression.cpp",
+    "src/tests/test_cryptobox.cpp",
+    "src/tests/test_dh.cpp",
+    "src/tests/test_dl_group.cpp",
+    "src/tests/test_dlies.cpp",
+    "src/tests/test_dsa.cpp",
+    "src/tests/test_ec_group.cpp",
+    "src/tests/test_ecc_pointmul.cpp",
+    "src/tests/test_ecdh.cpp",
+    "src/tests/test_ecdsa.cpp",
+    "src/tests/test_ecgdsa.cpp",
+    "src/tests/test_ecies.cpp",
+    "src/tests/test_eckcdsa.cpp",
+    "src/tests/test_ed25519.cpp",
+    "src/tests/test_elgamal.cpp",
+    "src/tests/test_entropy.cpp",
+    "src/tests/test_ffi.cpp",
+    "src/tests/test_filters.cpp",
+    "src/tests/test_fpe.cpp",
+    "src/tests/test_gf2m.cpp",
+    "src/tests/test_gost_3410.cpp",
+    "src/tests/test_hash.cpp",
+    "src/tests/test_hash_id.cpp",
+    "src/tests/test_kdf.cpp",
+    "src/tests/test_keywrap.cpp",
+    "src/tests/test_mac.cpp",
+    "src/tests/test_mceliece.cpp",
+    "src/tests/test_modes.cpp",
+    "src/tests/test_mp.cpp",
+    "src/tests/test_name_constraint.cpp",
+    "src/tests/test_newhope.cpp",
+    "src/tests/test_ocb.cpp",
+    "src/tests/test_ocsp.cpp",
+    "src/tests/test_octetstring.cpp",
+    "src/tests/test_oid.cpp",
+    "src/tests/test_os_utils.cpp",
+    "src/tests/test_otp.cpp",
+    "src/tests/test_pad.cpp",
+    "src/tests/test_passhash.cpp",
+    "src/tests/test_pbkdf.cpp",
+    "src/tests/test_pem.cpp",
+    "src/tests/test_pk_pad.cpp",
+    "src/tests/test_pkcs11_high_level.cpp",
+    "src/tests/test_pkcs11_low_level.cpp",
+    "src/tests/test_psk_db.cpp",
+    "src/tests/test_pubkey.cpp",
+    "src/tests/test_rfc6979.cpp",
+    "src/tests/test_rng.cpp",
+    "src/tests/test_rng_kat.cpp",
+    "src/tests/test_roughtime.cpp",
+    "src/tests/test_rsa.cpp",
+    "src/tests/test_runner.cpp",
+    "src/tests/test_simd.cpp",
+    "src/tests/test_siv.cpp",
+    "src/tests/test_sm2.cpp",
+    "src/tests/test_sodium.cpp",
+    "src/tests/test_srp6.cpp",
+    "src/tests/test_stream.cpp",
+    "src/tests/test_tests.cpp",
+    "src/tests/test_thread_utils.cpp",
+    "src/tests/test_tls.cpp",
+    "src/tests/test_tls_messages.cpp",
+    "src/tests/test_tls_stream_integration.cpp",
+    "src/tests/test_tpm.cpp",
+    "src/tests/test_tss.cpp",
+    "src/tests/test_uri.cpp",
+    "src/tests/test_utils.cpp",
+    "src/tests/test_workfactor.cpp",
+    "src/tests/test_x509_dn.cpp",
+    "src/tests/test_x509_path.cpp",
+    "src/tests/test_xmss.cpp",
+    "src/tests/tests.cpp",
+    "src/tests/unit_asio_stream.cpp",
+    "src/tests/unit_ecdh.cpp",
+    "src/tests/unit_ecdsa.cpp",
+    "src/tests/unit_tls.cpp",
+    "src/tests/unit_tls_policy.cpp",
+    "src/tests/unit_x509.cpp"
+  ],
+  "testobj_dir": "build/obj/test",
+  "version": "3.0.0-alpha0",
+  "version_datestamp": 0,
+  "version_major": 3,
+  "version_minor": 0,
+  "version_patch": 0,
+  "version_suffix": "-alpha0",
+  "version_vc_rev": "git:631e22b44ec9d3cf7880182c965843022f75bd0a",
+  "visibility_attribute": "__attribute__((visibility(\"default\")))",
+  "with_debug_asserts": false,
+  "with_documentation": true,
+  "with_doxygen": false,
+  "with_openmp": false,
+  "with_pdf": false,
+  "with_rst2man": null,
+  "with_sphinx": null,
+  "with_valgrind": false
+}

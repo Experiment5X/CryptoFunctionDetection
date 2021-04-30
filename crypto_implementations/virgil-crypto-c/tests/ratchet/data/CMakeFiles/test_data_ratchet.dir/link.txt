@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libtest_data_ratchet.a  CMakeFiles/test_data_ratchet.dir/src/test_data_ratchet_key_utils.c.o CMakeFiles/test_data_ratchet.dir/src/test_data_ratchet_cipher.c.o CMakeFiles/test_data_ratchet.dir/src/test_data_ratchet_message.c.o CMakeFiles/test_data_ratchet.dir/src/test_data_ratchet_xxdh.c.o CMakeFiles/test_data_ratchet.dir/src/test_data_ratchet_keys.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libtest_data_ratchet.a

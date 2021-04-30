@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/CMakeFiles/falcon-ext"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/CMakeFiles/falcon-ext.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/CMakeFiles/falcon-ext-complete.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/falcon-ext-prefix/src/falcon-ext-stamp/falcon-ext-install.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/falcon-ext-prefix/src/falcon-ext-stamp/falcon-ext-mkdir.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/falcon-ext-prefix/src/falcon-ext-stamp/falcon-ext-download.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/falcon-ext-prefix/src/falcon-ext-stamp/falcon-ext-update.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/falcon-ext-prefix/src/falcon-ext-stamp/falcon-ext-patch.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/falcon-ext-prefix/src/falcon-ext-stamp/falcon-ext-configure.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/falcon/falcon-ext-prefix/src/falcon-ext-stamp/falcon-ext-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"falcon-ext"
+		],
+		"name" : "falcon-ext"
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/CMakeFiles/relic-ext"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/CMakeFiles/relic-ext.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/CMakeFiles/relic-ext-complete.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-install.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-mkdir.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-download.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-update.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-patch.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-configure.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/relic/relic-ext-prefix/src/relic-ext-stamp/relic-ext-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"relic-ext"
+		],
+		"name" : "relic-ext"
+	}
+}

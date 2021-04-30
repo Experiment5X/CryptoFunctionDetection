@@ -1,0 +1,7 @@
+<defines>
+HTTP_UTIL -> 20171003
+</defines>
+
+<requires>
+socket
+</requires>

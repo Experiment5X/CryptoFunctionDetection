@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=/usr/local/lib
+includedir=${prefix}/include/botan-3
+
+Name: Botan
+Description: Crypto and TLS for Modern C++
+Version: 3.0.0-alpha0
+
+Libs: -L${libdir} -lbotan-3 -fstack-protector -m64 -pthread -stdlib=libc++
+Libs.private: -ldl -framework CoreFoundation -framework Security
+Cflags: -I${includedir}
+

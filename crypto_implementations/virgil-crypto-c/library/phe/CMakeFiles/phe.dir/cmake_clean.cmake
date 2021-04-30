@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/phe.dir/src/vsce_assert.c.o"
+  "CMakeFiles/phe.dir/src/vsce_library.c.o"
+  "CMakeFiles/phe.dir/src/vsce_memory.c.o"
+  "CMakeFiles/phe.dir/src/vsce_const.c.o"
+  "CMakeFiles/phe.dir/src/vsce_error.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_cipher.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_cipher_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_client.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_client_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_common.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_hash.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_hash_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_proof_generator.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_proof_generator_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_proof_verifier.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_proof_verifier_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_server.c.o"
+  "CMakeFiles/phe.dir/src/vsce_phe_server_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_proof_generator.c.o"
+  "CMakeFiles/phe.dir/src/vsce_proof_generator_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_proof_verifier.c.o"
+  "CMakeFiles/phe.dir/src/vsce_proof_verifier_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_client.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_client_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_proof_generator.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_proof_generator_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_proof_verifier.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_proof_verifier_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_server.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_server_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_wrap_rotation.c.o"
+  "CMakeFiles/phe.dir/src/vsce_uokms_wrap_rotation_defs.c.o"
+  "CMakeFiles/phe.dir/src/vsce_status.c.o"
+  "libvsc_phe.pdb"
+  "libvsc_phe.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/phe.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

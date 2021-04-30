@@ -1,0 +1,1954 @@
+[
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/alg_id.cpp -o build/obj/lib/asn1_alg_id.o",
+      "file": src/lib/asn1/alg_id.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/asn1_obj.cpp -o build/obj/lib/asn1_obj.o",
+      "file": src/lib/asn1/asn1_obj.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/asn1_oid.cpp -o build/obj/lib/asn1_oid.o",
+      "file": src/lib/asn1/asn1_oid.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/asn1_print.cpp -o build/obj/lib/asn1_print.o",
+      "file": src/lib/asn1/asn1_print.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/asn1_str.cpp -o build/obj/lib/asn1_str.o",
+      "file": src/lib/asn1/asn1_str.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/asn1_time.cpp -o build/obj/lib/asn1_time.o",
+      "file": src/lib/asn1/asn1_time.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/ber_dec.cpp -o build/obj/lib/asn1_ber_dec.o",
+      "file": src/lib/asn1/ber_dec.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/der_enc.cpp -o build/obj/lib/asn1_der_enc.o",
+      "file": src/lib/asn1/der_enc.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/oid_maps.cpp -o build/obj/lib/asn1_oid_maps.o",
+      "file": src/lib/asn1/oid_maps.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/asn1/oids.cpp -o build/obj/lib/asn1_oids.o",
+      "file": src/lib/asn1/oids.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/base/buf_comp.cpp -o build/obj/lib/base_buf_comp.o",
+      "file": src/lib/base/buf_comp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/base/sym_algo.cpp -o build/obj/lib/base_sym_algo.o",
+      "file": src/lib/base/sym_algo.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/base/symkey.cpp -o build/obj/lib/base_symkey.o",
+      "file": src/lib/base/symkey.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/aes/aes.cpp -o build/obj/lib/block_aes.o",
+      "file": src/lib/block/aes/aes.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -maes -mpclmul -msse2 -mssse3 -Ibuild/include -Ibuild/include/external -c src/lib/block/aes/aes_ni/aes_ni.cpp -o build/obj/lib/block_aes_ni.o",
+      "file": src/lib/block/aes/aes_ni/aes_ni.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -mssse3 -Ibuild/include -Ibuild/include/external -c src/lib/block/aes/aes_vperm/aes_vperm.cpp -o build/obj/lib/block_aes_vperm.o",
+      "file": src/lib/block/aes/aes_vperm/aes_vperm.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/aria/aria.cpp -o build/obj/lib/block_aria.o",
+      "file": src/lib/block/aria/aria.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/block_cipher.cpp -o build/obj/lib/block_cipher.o",
+      "file": src/lib/block/block_cipher.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/blowfish/blowfish.cpp -o build/obj/lib/block_blowfish.o",
+      "file": src/lib/block/blowfish/blowfish.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/camellia/camellia.cpp -o build/obj/lib/block_camellia.o",
+      "file": src/lib/block/camellia/camellia.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/cascade/cascade.cpp -o build/obj/lib/block_cascade.o",
+      "file": src/lib/block/cascade/cascade.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/cast128/cast128.cpp -o build/obj/lib/block_cast128.o",
+      "file": src/lib/block/cast128/cast128.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/des/des.cpp -o build/obj/lib/block_des.o",
+      "file": src/lib/block/des/des.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/gost_28147/gost_28147.cpp -o build/obj/lib/block_gost_28147.o",
+      "file": src/lib/block/gost_28147/gost_28147.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/idea/idea.cpp -o build/obj/lib/block_idea.o",
+      "file": src/lib/block/idea/idea.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -Ibuild/include -Ibuild/include/external -c src/lib/block/idea/idea_sse2/idea_sse2.cpp -o build/obj/lib/block_idea_sse2.o",
+      "file": src/lib/block/idea/idea_sse2/idea_sse2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/lion/lion.cpp -o build/obj/lib/block_lion.o",
+      "file": src/lib/block/lion/lion.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/noekeon/noekeon.cpp -o build/obj/lib/block_noekeon.o",
+      "file": src/lib/block/noekeon/noekeon.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -Ibuild/include -Ibuild/include/external -c src/lib/block/noekeon/noekeon_simd/noekeon_simd.cpp -o build/obj/lib/block_noekeon_simd.o",
+      "file": src/lib/block/noekeon/noekeon_simd/noekeon_simd.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/seed/seed.cpp -o build/obj/lib/block_seed.o",
+      "file": src/lib/block/seed/seed.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/serpent/serpent.cpp -o build/obj/lib/block_serpent.o",
+      "file": src/lib/block/serpent/serpent.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mavx2 -Ibuild/include -Ibuild/include/external -c src/lib/block/serpent/serpent_avx2/serpent_avx2.cpp -o build/obj/lib/block_serpent_avx2.o",
+      "file": src/lib/block/serpent/serpent_avx2/serpent_avx2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -Ibuild/include -Ibuild/include/external -c src/lib/block/serpent/serpent_simd/serpent_simd.cpp -o build/obj/lib/block_serpent_simd.o",
+      "file": src/lib/block/serpent/serpent_simd/serpent_simd.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/shacal2/shacal2.cpp -o build/obj/lib/block_shacal2.o",
+      "file": src/lib/block/shacal2/shacal2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mavx2 -Ibuild/include -Ibuild/include/external -c src/lib/block/shacal2/shacal2_avx2/shacal2_avx2.cpp -o build/obj/lib/block_shacal2_avx2.o",
+      "file": src/lib/block/shacal2/shacal2_avx2/shacal2_avx2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -Ibuild/include -Ibuild/include/external -c src/lib/block/shacal2/shacal2_simd/shacal2_simd.cpp -o build/obj/lib/block_shacal2_simd.o",
+      "file": src/lib/block/shacal2/shacal2_simd/shacal2_simd.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msha -msse2 -mssse3 -Ibuild/include -Ibuild/include/external -c src/lib/block/shacal2/shacal2_x86/shacal2_x86.cpp -o build/obj/lib/block_shacal2_x86.o",
+      "file": src/lib/block/shacal2/shacal2_x86/shacal2_x86.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/sm4/sm4.cpp -o build/obj/lib/block_sm4.o",
+      "file": src/lib/block/sm4/sm4.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/threefish_512/threefish_512.cpp -o build/obj/lib/block_threefish_512.o",
+      "file": src/lib/block/threefish_512/threefish_512.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mavx2 -Ibuild/include -Ibuild/include/external -c src/lib/block/threefish_512/threefish_512_avx2/threefish_512_avx2.cpp -o build/obj/lib/block_threefish_512_threefish_512_avx2.o",
+      "file": src/lib/block/threefish_512/threefish_512_avx2/threefish_512_avx2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/twofish/twofish.cpp -o build/obj/lib/block_twofish.o",
+      "file": src/lib/block/twofish/twofish.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/block/twofish/twofish_tab.cpp -o build/obj/lib/block_twofish_tab.o",
+      "file": src/lib/block/twofish/twofish_tab.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/codec/base32/base32.cpp -o build/obj/lib/codec_base32.o",
+      "file": src/lib/codec/base32/base32.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/codec/base58/base58.cpp -o build/obj/lib/codec_base58.o",
+      "file": src/lib/codec/base58/base58.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/codec/base64/base64.cpp -o build/obj/lib/codec_base64.o",
+      "file": src/lib/codec/base64/base64.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/codec/hex/hex.cpp -o build/obj/lib/codec_hex.o",
+      "file": src/lib/codec/hex/hex.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_25519.cpp -o build/obj/lib/compat_sodium_25519.o",
+      "file": src/lib/compat/sodium/sodium_25519.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_aead.cpp -o build/obj/lib/compat_sodium_aead.o",
+      "file": src/lib/compat/sodium/sodium_aead.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_auth.cpp -o build/obj/lib/compat_sodium_auth.o",
+      "file": src/lib/compat/sodium/sodium_auth.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_box.cpp -o build/obj/lib/compat_sodium_box.o",
+      "file": src/lib/compat/sodium/sodium_box.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_chacha.cpp -o build/obj/lib/compat_sodium_chacha.o",
+      "file": src/lib/compat/sodium/sodium_chacha.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_salsa.cpp -o build/obj/lib/compat_sodium_salsa.o",
+      "file": src/lib/compat/sodium/sodium_salsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_secretbox.cpp -o build/obj/lib/compat_sodium_secretbox.o",
+      "file": src/lib/compat/sodium/sodium_secretbox.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/compat/sodium/sodium_utils.cpp -o build/obj/lib/compat_sodium_utils.o",
+      "file": src/lib/compat/sodium/sodium_utils.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/entropy/entropy_srcs.cpp -o build/obj/lib/entropy_srcs.o",
+      "file": src/lib/entropy/entropy_srcs.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/entropy/getentropy/getentropy.cpp -o build/obj/lib/entropy_getentropy.o",
+      "file": src/lib/entropy/getentropy/getentropy.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mrdseed -msse2 -Ibuild/include -Ibuild/include/external -c src/lib/entropy/rdseed/rdseed.cpp -o build/obj/lib/entropy_rdseed.o",
+      "file": src/lib/entropy/rdseed/rdseed.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi.cpp -o build/obj/lib/ffi.o",
+      "file": src/lib/ffi/ffi.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_block.cpp -o build/obj/lib/ffi_block.o",
+      "file": src/lib/ffi/ffi_block.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_cert.cpp -o build/obj/lib/ffi_cert.o",
+      "file": src/lib/ffi/ffi_cert.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_cipher.cpp -o build/obj/lib/ffi_cipher.o",
+      "file": src/lib/ffi/ffi_cipher.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_fpe.cpp -o build/obj/lib/ffi_fpe.o",
+      "file": src/lib/ffi/ffi_fpe.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_hash.cpp -o build/obj/lib/ffi_hash.o",
+      "file": src/lib/ffi/ffi_hash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_hotp.cpp -o build/obj/lib/ffi_hotp.o",
+      "file": src/lib/ffi/ffi_hotp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_kdf.cpp -o build/obj/lib/ffi_kdf.o",
+      "file": src/lib/ffi/ffi_kdf.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_keywrap.cpp -o build/obj/lib/ffi_keywrap.o",
+      "file": src/lib/ffi/ffi_keywrap.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_mac.cpp -o build/obj/lib/ffi_mac.o",
+      "file": src/lib/ffi/ffi_mac.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_mp.cpp -o build/obj/lib/ffi_mp.o",
+      "file": src/lib/ffi/ffi_mp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_pk_op.cpp -o build/obj/lib/ffi_pk_op.o",
+      "file": src/lib/ffi/ffi_pk_op.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_pkey.cpp -o build/obj/lib/ffi_pkey.o",
+      "file": src/lib/ffi/ffi_pkey.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_pkey_algs.cpp -o build/obj/lib/ffi_pkey_algs.o",
+      "file": src/lib/ffi/ffi_pkey_algs.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_rng.cpp -o build/obj/lib/ffi_rng.o",
+      "file": src/lib/ffi/ffi_rng.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/ffi/ffi_totp.cpp -o build/obj/lib/ffi_totp.o",
+      "file": src/lib/ffi/ffi_totp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/algo_filt.cpp -o build/obj/lib/filters_algo_filt.o",
+      "file": src/lib/filters/algo_filt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/b64_filt.cpp -o build/obj/lib/filters_b64_filt.o",
+      "file": src/lib/filters/b64_filt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/basefilt.cpp -o build/obj/lib/filters_basefilt.o",
+      "file": src/lib/filters/basefilt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/buf_filt.cpp -o build/obj/lib/filters_buf_filt.o",
+      "file": src/lib/filters/buf_filt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/cipher_filter.cpp -o build/obj/lib/filters_cipher_filter.o",
+      "file": src/lib/filters/cipher_filter.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/comp_filter.cpp -o build/obj/lib/filters_comp_filter.o",
+      "file": src/lib/filters/comp_filter.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/data_snk.cpp -o build/obj/lib/filters_data_snk.o",
+      "file": src/lib/filters/data_snk.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/fd_unix/fd_unix.cpp -o build/obj/lib/filters_fd_unix.o",
+      "file": src/lib/filters/fd_unix/fd_unix.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/filter.cpp -o build/obj/lib/filters_filter.o",
+      "file": src/lib/filters/filter.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/hex_filt.cpp -o build/obj/lib/filters_hex_filt.o",
+      "file": src/lib/filters/hex_filt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/out_buf.cpp -o build/obj/lib/filters_out_buf.o",
+      "file": src/lib/filters/out_buf.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/pipe.cpp -o build/obj/lib/filters_pipe.o",
+      "file": src/lib/filters/pipe.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/pipe_io.cpp -o build/obj/lib/filters_pipe_io.o",
+      "file": src/lib/filters/pipe_io.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/pipe_rw.cpp -o build/obj/lib/filters_pipe_rw.o",
+      "file": src/lib/filters/pipe_rw.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/secqueue.cpp -o build/obj/lib/filters_secqueue.o",
+      "file": src/lib/filters/secqueue.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/filters/threaded_fork.cpp -o build/obj/lib/filters_threaded_fork.o",
+      "file": src/lib/filters/threaded_fork.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/blake2/blake2b.cpp -o build/obj/lib/hash_blake2_blake2b.o",
+      "file": src/lib/hash/blake2/blake2b.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/checksum/adler32/adler32.cpp -o build/obj/lib/hash_checksum_adler32.o",
+      "file": src/lib/hash/checksum/adler32/adler32.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/checksum/crc24/crc24.cpp -o build/obj/lib/hash_checksum_crc24.o",
+      "file": src/lib/hash/checksum/crc24/crc24.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/checksum/crc32/crc32.cpp -o build/obj/lib/hash_checksum_crc32.o",
+      "file": src/lib/hash/checksum/crc32/crc32.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/comb4p/comb4p.cpp -o build/obj/lib/hash_comb4p.o",
+      "file": src/lib/hash/comb4p/comb4p.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/gost_3411/gost_3411.cpp -o build/obj/lib/hash_gost_3411.o",
+      "file": src/lib/hash/gost_3411/gost_3411.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/hash.cpp -o build/obj/lib/hash.o",
+      "file": src/lib/hash/hash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/keccak/keccak.cpp -o build/obj/lib/hash_keccak.o",
+      "file": src/lib/hash/keccak/keccak.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/md4/md4.cpp -o build/obj/lib/hash_md4.o",
+      "file": src/lib/hash/md4/md4.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/md5/md5.cpp -o build/obj/lib/hash_md5.o",
+      "file": src/lib/hash/md5/md5.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/mdx_hash/mdx_hash.cpp -o build/obj/lib/hash_mdx_hash.o",
+      "file": src/lib/hash/mdx_hash/mdx_hash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/par_hash/par_hash.cpp -o build/obj/lib/hash_par_hash.o",
+      "file": src/lib/hash/par_hash/par_hash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/rmd160/rmd160.cpp -o build/obj/lib/hash_rmd160.o",
+      "file": src/lib/hash/rmd160/rmd160.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha1/sha160.cpp -o build/obj/lib/hash_sha1_sha160.o",
+      "file": src/lib/hash/sha1/sha160.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha1/sha1_sse2/sha1_sse2.cpp -o build/obj/lib/hash_sha1_sse2.o",
+      "file": src/lib/hash/sha1/sha1_sse2/sha1_sse2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msha -msse2 -msse4.1 -mssse3 -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha1/sha1_x86/sha1_x86.cpp -o build/obj/lib/hash_sha1_x86.o",
+      "file": src/lib/hash/sha1/sha1_x86/sha1_x86.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha2_32/sha2_32.cpp -o build/obj/lib/hash_sha2_32.o",
+      "file": src/lib/hash/sha2_32/sha2_32.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mbmi -mbmi2 -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha2_32/sha2_32_bmi2/sha2_32_bmi2.cpp -o build/obj/lib/hash_sha2_32_sha2_32_bmi2.o",
+      "file": src/lib/hash/sha2_32/sha2_32_bmi2/sha2_32_bmi2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msha -msse2 -msse4.1 -mssse3 -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha2_32/sha2_32_x86/sha2_32_x86.cpp -o build/obj/lib/hash_sha2_32_sha2_32_x86.o",
+      "file": src/lib/hash/sha2_32/sha2_32_x86/sha2_32_x86.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha2_64/sha2_64.cpp -o build/obj/lib/hash_sha2_64.o",
+      "file": src/lib/hash/sha2_64/sha2_64.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mbmi -mbmi2 -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha2_64/sha2_64_bmi2/sha2_64_bmi2.cpp -o build/obj/lib/hash_sha2_64_sha2_64_bmi2.o",
+      "file": src/lib/hash/sha2_64/sha2_64_bmi2/sha2_64_bmi2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha3/sha3.cpp -o build/obj/lib/hash_sha3.o",
+      "file": src/lib/hash/sha3/sha3.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mbmi -mbmi2 -Ibuild/include -Ibuild/include/external -c src/lib/hash/sha3/sha3_bmi2/sha3_bmi2.cpp -o build/obj/lib/hash_sha3_bmi2.o",
+      "file": src/lib/hash/sha3/sha3_bmi2/sha3_bmi2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/shake/shake.cpp -o build/obj/lib/hash_shake.o",
+      "file": src/lib/hash/shake/shake.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/skein/skein_512.cpp -o build/obj/lib/hash_skein_512.o",
+      "file": src/lib/hash/skein/skein_512.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/sm3/sm3.cpp -o build/obj/lib/hash_sm3.o",
+      "file": src/lib/hash/sm3/sm3.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/streebog/streebog.cpp -o build/obj/lib/hash_streebog.o",
+      "file": src/lib/hash/streebog/streebog.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/streebog/streebog_precalc.cpp -o build/obj/lib/hash_streebog_precalc.o",
+      "file": src/lib/hash/streebog/streebog_precalc.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/hash/whirlpool/whirlpool.cpp -o build/obj/lib/hash_whirlpool.o",
+      "file": src/lib/hash/whirlpool/whirlpool.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/hkdf/hkdf.cpp -o build/obj/lib/kdf_hkdf.o",
+      "file": src/lib/kdf/hkdf/hkdf.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/kdf.cpp -o build/obj/lib/kdf.o",
+      "file": src/lib/kdf/kdf.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/kdf1/kdf1.cpp -o build/obj/lib/kdf_kdf1.o",
+      "file": src/lib/kdf/kdf1/kdf1.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/kdf1_iso18033/kdf1_iso18033.cpp -o build/obj/lib/kdf_kdf1_iso18033.o",
+      "file": src/lib/kdf/kdf1_iso18033/kdf1_iso18033.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/kdf2/kdf2.cpp -o build/obj/lib/kdf_kdf2.o",
+      "file": src/lib/kdf/kdf2/kdf2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/prf_tls/prf_tls.cpp -o build/obj/lib/kdf_prf_tls.o",
+      "file": src/lib/kdf/prf_tls/prf_tls.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/prf_x942/prf_x942.cpp -o build/obj/lib/kdf_prf_x942.o",
+      "file": src/lib/kdf/prf_x942/prf_x942.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/sp800_108/sp800_108.cpp -o build/obj/lib/kdf_sp800_108.o",
+      "file": src/lib/kdf/sp800_108/sp800_108.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/sp800_56a/sp800_56a.cpp -o build/obj/lib/kdf_sp800_56a.o",
+      "file": src/lib/kdf/sp800_56a/sp800_56a.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/kdf/sp800_56c/sp800_56c.cpp -o build/obj/lib/kdf_sp800_56c.o",
+      "file": src/lib/kdf/sp800_56c/sp800_56c.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/blake2mac/blake2bmac.cpp -o build/obj/lib/mac_blake2mac_blake2bmac.o",
+      "file": src/lib/mac/blake2mac/blake2bmac.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/cmac/cmac.cpp -o build/obj/lib/mac_cmac.o",
+      "file": src/lib/mac/cmac/cmac.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/gmac/gmac.cpp -o build/obj/lib/mac_gmac.o",
+      "file": src/lib/mac/gmac/gmac.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/hmac/hmac.cpp -o build/obj/lib/mac_hmac.o",
+      "file": src/lib/mac/hmac/hmac.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/mac.cpp -o build/obj/lib/mac.o",
+      "file": src/lib/mac/mac.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/poly1305/poly1305.cpp -o build/obj/lib/mac_poly1305.o",
+      "file": src/lib/mac/poly1305/poly1305.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/siphash/siphash.cpp -o build/obj/lib/mac_siphash.o",
+      "file": src/lib/mac/siphash/siphash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/mac/x919_mac/x919_mac.cpp -o build/obj/lib/mac_x919_mac.o",
+      "file": src/lib/mac/x919_mac/x919_mac.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/bigint/big_code.cpp -o build/obj/lib/math_bigint_big_code.o",
+      "file": src/lib/math/bigint/big_code.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/bigint/big_io.cpp -o build/obj/lib/math_bigint_big_io.o",
+      "file": src/lib/math/bigint/big_io.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/bigint/big_ops2.cpp -o build/obj/lib/math_bigint_big_ops2.o",
+      "file": src/lib/math/bigint/big_ops2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/bigint/big_ops3.cpp -o build/obj/lib/math_bigint_big_ops3.o",
+      "file": src/lib/math/bigint/big_ops3.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/bigint/big_rand.cpp -o build/obj/lib/math_bigint_big_rand.o",
+      "file": src/lib/math/bigint/big_rand.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/bigint/bigint.cpp -o build/obj/lib/math_bigint.o",
+      "file": src/lib/math/bigint/bigint.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/bigint/divide.cpp -o build/obj/lib/math_bigint_divide.o",
+      "file": src/lib/math/bigint/divide.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/mp/mp_comba.cpp -o build/obj/lib/math_mp_comba.o",
+      "file": src/lib/math/mp/mp_comba.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/mp/mp_karat.cpp -o build/obj/lib/math_mp_karat.o",
+      "file": src/lib/math/mp/mp_karat.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/mp/mp_monty.cpp -o build/obj/lib/math_mp_monty.o",
+      "file": src/lib/math/mp/mp_monty.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/mp/mp_monty_n.cpp -o build/obj/lib/math_mp_monty_n.o",
+      "file": src/lib/math/mp/mp_monty_n.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/dsa_gen.cpp -o build/obj/lib/math_numbertheory_dsa_gen.o",
+      "file": src/lib/math/numbertheory/dsa_gen.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/make_prm.cpp -o build/obj/lib/math_numbertheory_make_prm.o",
+      "file": src/lib/math/numbertheory/make_prm.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/mod_inv.cpp -o build/obj/lib/math_numbertheory_mod_inv.o",
+      "file": src/lib/math/numbertheory/mod_inv.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/monty.cpp -o build/obj/lib/math_numbertheory_monty.o",
+      "file": src/lib/math/numbertheory/monty.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/monty_exp.cpp -o build/obj/lib/math_numbertheory_monty_exp.o",
+      "file": src/lib/math/numbertheory/monty_exp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/nistp_redc.cpp -o build/obj/lib/math_numbertheory_nistp_redc.o",
+      "file": src/lib/math/numbertheory/nistp_redc.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/numthry.cpp -o build/obj/lib/math_numbertheory_numthry.o",
+      "file": src/lib/math/numbertheory/numthry.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/primality.cpp -o build/obj/lib/math_numbertheory_primality.o",
+      "file": src/lib/math/numbertheory/primality.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/primes.cpp -o build/obj/lib/math_numbertheory_primes.o",
+      "file": src/lib/math/numbertheory/primes.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/math/numbertheory/reducer.cpp -o build/obj/lib/math_numbertheory_reducer.o",
+      "file": src/lib/math/numbertheory/reducer.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/cryptobox/cryptobox.cpp -o build/obj/lib/misc_cryptobox.o",
+      "file": src/lib/misc/cryptobox/cryptobox.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/fpe_fe1/fpe_fe1.cpp -o build/obj/lib/misc_fpe_fe1.o",
+      "file": src/lib/misc/fpe_fe1/fpe_fe1.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/hotp/hotp.cpp -o build/obj/lib/misc_hotp.o",
+      "file": src/lib/misc/hotp/hotp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/hotp/totp.cpp -o build/obj/lib/misc_hotp_totp.o",
+      "file": src/lib/misc/hotp/totp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/nist_keywrap/nist_keywrap.cpp -o build/obj/lib/misc_nist_keywrap.o",
+      "file": src/lib/misc/nist_keywrap/nist_keywrap.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/rfc3394/rfc3394.cpp -o build/obj/lib/misc_rfc3394.o",
+      "file": src/lib/misc/rfc3394/rfc3394.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/roughtime/roughtime.cpp -o build/obj/lib/misc_roughtime.o",
+      "file": src/lib/misc/roughtime/roughtime.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/srp6/srp6.cpp -o build/obj/lib/misc_srp6.o",
+      "file": src/lib/misc/srp6/srp6.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/misc/tss/tss.cpp -o build/obj/lib/misc_tss.o",
+      "file": src/lib/misc/tss/tss.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/aead/aead.cpp -o build/obj/lib/modes_aead.o",
+      "file": src/lib/modes/aead/aead.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/aead/ccm/ccm.cpp -o build/obj/lib/modes_aead_ccm.o",
+      "file": src/lib/modes/aead/ccm/ccm.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/aead/chacha20poly1305/chacha20poly1305.cpp -o build/obj/lib/modes_aead_chacha20poly1305.o",
+      "file": src/lib/modes/aead/chacha20poly1305/chacha20poly1305.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/aead/eax/eax.cpp -o build/obj/lib/modes_aead_eax.o",
+      "file": src/lib/modes/aead/eax/eax.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/aead/gcm/gcm.cpp -o build/obj/lib/modes_aead_gcm.o",
+      "file": src/lib/modes/aead/gcm/gcm.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/aead/ocb/ocb.cpp -o build/obj/lib/modes_aead_ocb.o",
+      "file": src/lib/modes/aead/ocb/ocb.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/aead/siv/siv.cpp -o build/obj/lib/modes_aead_siv.o",
+      "file": src/lib/modes/aead/siv/siv.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/cbc/cbc.cpp -o build/obj/lib/modes_cbc.o",
+      "file": src/lib/modes/cbc/cbc.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/cfb/cfb.cpp -o build/obj/lib/modes_cfb.o",
+      "file": src/lib/modes/cfb/cfb.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/cipher_mode.cpp -o build/obj/lib/modes_cipher_mode.o",
+      "file": src/lib/modes/cipher_mode.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/mode_pad/mode_pad.cpp -o build/obj/lib/modes_mode_pad.o",
+      "file": src/lib/modes/mode_pad/mode_pad.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/modes/xts/xts.cpp -o build/obj/lib/modes_xts.o",
+      "file": src/lib/modes/xts/xts.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/passhash/bcrypt/bcrypt.cpp -o build/obj/lib/passhash_bcrypt.o",
+      "file": src/lib/passhash/bcrypt/bcrypt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/passhash/passhash9/passhash9.cpp -o build/obj/lib/passhash_passhash9.o",
+      "file": src/lib/passhash/passhash9/passhash9.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/argon2/argon2.cpp -o build/obj/lib/pbkdf_argon2.o",
+      "file": src/lib/pbkdf/argon2/argon2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/argon2/argon2fmt.cpp -o build/obj/lib/pbkdf_argon2_argon2fmt.o",
+      "file": src/lib/pbkdf/argon2/argon2fmt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/argon2/argon2pwhash.cpp -o build/obj/lib/pbkdf_argon2_argon2pwhash.o",
+      "file": src/lib/pbkdf/argon2/argon2pwhash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/bcrypt_pbkdf/bcrypt_pbkdf.cpp -o build/obj/lib/pbkdf_bcrypt_pbkdf.o",
+      "file": src/lib/pbkdf/bcrypt_pbkdf/bcrypt_pbkdf.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/pbkdf.cpp -o build/obj/lib/pbkdf.o",
+      "file": src/lib/pbkdf/pbkdf.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/pbkdf2/pbkdf2.cpp -o build/obj/lib/pbkdf_pbkdf2.o",
+      "file": src/lib/pbkdf/pbkdf2/pbkdf2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/pgp_s2k/pgp_s2k.cpp -o build/obj/lib/pbkdf_pgp_s2k.o",
+      "file": src/lib/pbkdf/pgp_s2k/pgp_s2k.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/pwdhash.cpp -o build/obj/lib/pbkdf_pwdhash.o",
+      "file": src/lib/pbkdf/pwdhash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pbkdf/scrypt/scrypt.cpp -o build/obj/lib/pbkdf_scrypt.o",
+      "file": src/lib/pbkdf/scrypt/scrypt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/eme.cpp -o build/obj/lib/pk_pad_eme.o",
+      "file": src/lib/pk_pad/eme.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/eme_oaep/oaep.cpp -o build/obj/lib/pk_pad_eme_oaep_oaep.o",
+      "file": src/lib/pk_pad/eme_oaep/oaep.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/eme_pkcs1/eme_pkcs.cpp -o build/obj/lib/pk_pad_eme_pkcs1_eme_pkcs.o",
+      "file": src/lib/pk_pad/eme_pkcs1/eme_pkcs.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/eme_raw/eme_raw.cpp -o build/obj/lib/pk_pad_eme_raw.o",
+      "file": src/lib/pk_pad/eme_raw/eme_raw.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/emsa.cpp -o build/obj/lib/pk_pad_emsa.o",
+      "file": src/lib/pk_pad/emsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/emsa1/emsa1.cpp -o build/obj/lib/pk_pad_emsa1.o",
+      "file": src/lib/pk_pad/emsa1/emsa1.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/emsa_pkcs1/emsa_pkcs1.cpp -o build/obj/lib/pk_pad_emsa_pkcs1.o",
+      "file": src/lib/pk_pad/emsa_pkcs1/emsa_pkcs1.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/emsa_pssr/pssr.cpp -o build/obj/lib/pk_pad_emsa_pssr_pssr.o",
+      "file": src/lib/pk_pad/emsa_pssr/pssr.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/emsa_raw/emsa_raw.cpp -o build/obj/lib/pk_pad_emsa_raw.o",
+      "file": src/lib/pk_pad/emsa_raw/emsa_raw.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/emsa_x931/emsa_x931.cpp -o build/obj/lib/pk_pad_emsa_x931.o",
+      "file": src/lib/pk_pad/emsa_x931/emsa_x931.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/hash_id/hash_id.cpp -o build/obj/lib/pk_pad_hash_id.o",
+      "file": src/lib/pk_pad/hash_id/hash_id.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/iso9796/iso9796.cpp -o build/obj/lib/pk_pad_iso9796.o",
+      "file": src/lib/pk_pad/iso9796/iso9796.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/mgf1/mgf1.cpp -o build/obj/lib/pk_pad_mgf1.o",
+      "file": src/lib/pk_pad/mgf1/mgf1.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pk_pad/padding.cpp -o build/obj/lib/pk_pad_padding.o",
+      "file": src/lib/pk_pad/padding.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11.cpp -o build/obj/lib/prov_pkcs11_p11.o",
+      "file": src/lib/prov/pkcs11/p11.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_ecc_key.cpp -o build/obj/lib/prov_pkcs11_p11_ecc_key.o",
+      "file": src/lib/prov/pkcs11/p11_ecc_key.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_ecdh.cpp -o build/obj/lib/prov_pkcs11_p11_ecdh.o",
+      "file": src/lib/prov/pkcs11/p11_ecdh.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_ecdsa.cpp -o build/obj/lib/prov_pkcs11_p11_ecdsa.o",
+      "file": src/lib/prov/pkcs11/p11_ecdsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_mechanism.cpp -o build/obj/lib/prov_pkcs11_p11_mechanism.o",
+      "file": src/lib/prov/pkcs11/p11_mechanism.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_module.cpp -o build/obj/lib/prov_pkcs11_p11_module.o",
+      "file": src/lib/prov/pkcs11/p11_module.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_object.cpp -o build/obj/lib/prov_pkcs11_p11_object.o",
+      "file": src/lib/prov/pkcs11/p11_object.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_randomgenerator.cpp -o build/obj/lib/prov_pkcs11_p11_randomgenerator.o",
+      "file": src/lib/prov/pkcs11/p11_randomgenerator.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_rsa.cpp -o build/obj/lib/prov_pkcs11_p11_rsa.o",
+      "file": src/lib/prov/pkcs11/p11_rsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_session.cpp -o build/obj/lib/prov_pkcs11_p11_session.o",
+      "file": src/lib/prov/pkcs11/p11_session.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_slot.cpp -o build/obj/lib/prov_pkcs11_p11_slot.o",
+      "file": src/lib/prov/pkcs11/p11_slot.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/prov/pkcs11/p11_x509.cpp -o build/obj/lib/prov_pkcs11_p11_x509.o",
+      "file": src/lib/prov/pkcs11/p11_x509.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/psk_db/psk_db.cpp -o build/obj/lib/psk_db.o",
+      "file": src/lib/psk_db/psk_db.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/psk_db/psk_db_sql.cpp -o build/obj/lib/psk_db_psk_db_sql.o",
+      "file": src/lib/psk_db/psk_db_sql.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/blinding.cpp -o build/obj/lib/pubkey_blinding.o",
+      "file": src/lib/pubkey/blinding.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/cecpq1/cecpq1.cpp -o build/obj/lib/pubkey_cecpq1.o",
+      "file": src/lib/pubkey/cecpq1/cecpq1.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/curve25519/curve25519.cpp -o build/obj/lib/pubkey_curve25519.o",
+      "file": src/lib/pubkey/curve25519/curve25519.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/curve25519/donna.cpp -o build/obj/lib/pubkey_curve25519_donna.o",
+      "file": src/lib/pubkey/curve25519/donna.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/dh/dh.cpp -o build/obj/lib/pubkey_dh.o",
+      "file": src/lib/pubkey/dh/dh.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/dl_algo/dl_algo.cpp -o build/obj/lib/pubkey_dl_algo.o",
+      "file": src/lib/pubkey/dl_algo/dl_algo.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/dl_group/dl_group.cpp -o build/obj/lib/pubkey_dl_group.o",
+      "file": src/lib/pubkey/dl_group/dl_group.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/dl_group/dl_named.cpp -o build/obj/lib/pubkey_dl_group_dl_named.o",
+      "file": src/lib/pubkey/dl_group/dl_named.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/dlies/dlies.cpp -o build/obj/lib/pubkey_dlies.o",
+      "file": src/lib/pubkey/dlies/dlies.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/dsa/dsa.cpp -o build/obj/lib/pubkey_dsa.o",
+      "file": src/lib/pubkey/dsa/dsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ec_group/curve_gfp.cpp -o build/obj/lib/pubkey_ec_group_curve_gfp.o",
+      "file": src/lib/pubkey/ec_group/curve_gfp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ec_group/ec_group.cpp -o build/obj/lib/pubkey_ec_group.o",
+      "file": src/lib/pubkey/ec_group/ec_group.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ec_group/ec_named.cpp -o build/obj/lib/pubkey_ec_group_ec_named.o",
+      "file": src/lib/pubkey/ec_group/ec_named.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ec_group/point_gfp.cpp -o build/obj/lib/pubkey_ec_group_point_gfp.o",
+      "file": src/lib/pubkey/ec_group/point_gfp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ec_group/point_mul.cpp -o build/obj/lib/pubkey_ec_group_point_mul.o",
+      "file": src/lib/pubkey/ec_group/point_mul.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ecc_key/ecc_key.cpp -o build/obj/lib/pubkey_ecc_key.o",
+      "file": src/lib/pubkey/ecc_key/ecc_key.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ecdh/ecdh.cpp -o build/obj/lib/pubkey_ecdh.o",
+      "file": src/lib/pubkey/ecdh/ecdh.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ecdsa/ecdsa.cpp -o build/obj/lib/pubkey_ecdsa.o",
+      "file": src/lib/pubkey/ecdsa/ecdsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ecgdsa/ecgdsa.cpp -o build/obj/lib/pubkey_ecgdsa.o",
+      "file": src/lib/pubkey/ecgdsa/ecgdsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ecies/ecies.cpp -o build/obj/lib/pubkey_ecies.o",
+      "file": src/lib/pubkey/ecies/ecies.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/eckcdsa/eckcdsa.cpp -o build/obj/lib/pubkey_eckcdsa.o",
+      "file": src/lib/pubkey/eckcdsa/eckcdsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ed25519/ed25519.cpp -o build/obj/lib/pubkey_ed25519.o",
+      "file": src/lib/pubkey/ed25519/ed25519.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ed25519/ed25519_fe.cpp -o build/obj/lib/pubkey_ed25519_fe.o",
+      "file": src/lib/pubkey/ed25519/ed25519_fe.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ed25519/ed25519_key.cpp -o build/obj/lib/pubkey_ed25519_key.o",
+      "file": src/lib/pubkey/ed25519/ed25519_key.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ed25519/ge.cpp -o build/obj/lib/pubkey_ed25519_ge.o",
+      "file": src/lib/pubkey/ed25519/ge.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ed25519/sc_muladd.cpp -o build/obj/lib/pubkey_ed25519_sc_muladd.o",
+      "file": src/lib/pubkey/ed25519/sc_muladd.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/ed25519/sc_reduce.cpp -o build/obj/lib/pubkey_ed25519_sc_reduce.o",
+      "file": src/lib/pubkey/ed25519/sc_reduce.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/elgamal/elgamal.cpp -o build/obj/lib/pubkey_elgamal.o",
+      "file": src/lib/pubkey/elgamal/elgamal.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/gost_3410/gost_3410.cpp -o build/obj/lib/pubkey_gost_3410.o",
+      "file": src/lib/pubkey/gost_3410/gost_3410.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/keypair/keypair.cpp -o build/obj/lib/pubkey_keypair.o",
+      "file": src/lib/pubkey/keypair/keypair.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/code_based_key_gen.cpp -o build/obj/lib/pubkey_mce_code_based_key_gen.o",
+      "file": src/lib/pubkey/mce/code_based_key_gen.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/gf2m_rootfind_dcmp.cpp -o build/obj/lib/pubkey_mce_gf2m_rootfind_dcmp.o",
+      "file": src/lib/pubkey/mce/gf2m_rootfind_dcmp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/gf2m_small_m.cpp -o build/obj/lib/pubkey_mce_gf2m_small_m.o",
+      "file": src/lib/pubkey/mce/gf2m_small_m.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/goppa_code.cpp -o build/obj/lib/pubkey_mce_goppa_code.o",
+      "file": src/lib/pubkey/mce/goppa_code.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/mce_workfactor.cpp -o build/obj/lib/pubkey_mce_workfactor.o",
+      "file": src/lib/pubkey/mce/mce_workfactor.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/mceliece.cpp -o build/obj/lib/pubkey_mce_mceliece.o",
+      "file": src/lib/pubkey/mce/mceliece.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/mceliece_key.cpp -o build/obj/lib/pubkey_mce_mceliece_key.o",
+      "file": src/lib/pubkey/mce/mceliece_key.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/mce/polyn_gf2m.cpp -o build/obj/lib/pubkey_mce_polyn_gf2m.o",
+      "file": src/lib/pubkey/mce/polyn_gf2m.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/newhope/newhope.cpp -o build/obj/lib/pubkey_newhope.o",
+      "file": src/lib/pubkey/newhope/newhope.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/pbes2/pbes2.cpp -o build/obj/lib/pubkey_pbes2.o",
+      "file": src/lib/pubkey/pbes2/pbes2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/pem/pem.cpp -o build/obj/lib/pubkey_pem.o",
+      "file": src/lib/pubkey/pem/pem.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/pk_algs.cpp -o build/obj/lib/pubkey_pk_algs.o",
+      "file": src/lib/pubkey/pk_algs.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/pk_keys.cpp -o build/obj/lib/pubkey_pk_keys.o",
+      "file": src/lib/pubkey/pk_keys.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/pk_ops.cpp -o build/obj/lib/pubkey_pk_ops.o",
+      "file": src/lib/pubkey/pk_ops.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/pkcs8.cpp -o build/obj/lib/pubkey_pkcs8.o",
+      "file": src/lib/pubkey/pkcs8.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/pubkey.cpp -o build/obj/lib/pubkey.o",
+      "file": src/lib/pubkey/pubkey.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/rfc6979/rfc6979.cpp -o build/obj/lib/pubkey_rfc6979.o",
+      "file": src/lib/pubkey/rfc6979/rfc6979.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/rsa/rsa.cpp -o build/obj/lib/pubkey_rsa.o",
+      "file": src/lib/pubkey/rsa/rsa.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/sm2/sm2.cpp -o build/obj/lib/pubkey_sm2.o",
+      "file": src/lib/pubkey/sm2/sm2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/sm2/sm2_enc.cpp -o build/obj/lib/pubkey_sm2_enc.o",
+      "file": src/lib/pubkey/sm2/sm2_enc.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/workfactor.cpp -o build/obj/lib/pubkey_workfactor.o",
+      "file": src/lib/pubkey/workfactor.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/x509_key.cpp -o build/obj/lib/pubkey_x509_key.o",
+      "file": src/lib/pubkey/x509_key.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_common_ops.cpp -o build/obj/lib/pubkey_xmss_common_ops.o",
+      "file": src/lib/pubkey/xmss/xmss_common_ops.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_hash.cpp -o build/obj/lib/pubkey_xmss_hash.o",
+      "file": src/lib/pubkey/xmss/xmss_hash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_index_registry.cpp -o build/obj/lib/pubkey_xmss_index_registry.o",
+      "file": src/lib/pubkey/xmss/xmss_index_registry.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_parameters.cpp -o build/obj/lib/pubkey_xmss_parameters.o",
+      "file": src/lib/pubkey/xmss/xmss_parameters.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_privatekey.cpp -o build/obj/lib/pubkey_xmss_privatekey.o",
+      "file": src/lib/pubkey/xmss/xmss_privatekey.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_publickey.cpp -o build/obj/lib/pubkey_xmss_publickey.o",
+      "file": src/lib/pubkey/xmss/xmss_publickey.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_signature.cpp -o build/obj/lib/pubkey_xmss_signature.o",
+      "file": src/lib/pubkey/xmss/xmss_signature.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_signature_operation.cpp -o build/obj/lib/pubkey_xmss_signature_operation.o",
+      "file": src/lib/pubkey/xmss/xmss_signature_operation.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_verification_operation.cpp -o build/obj/lib/pubkey_xmss_verification_operation.o",
+      "file": src/lib/pubkey/xmss/xmss_verification_operation.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_wots_parameters.cpp -o build/obj/lib/pubkey_xmss_wots_parameters.o",
+      "file": src/lib/pubkey/xmss/xmss_wots_parameters.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_wots_privatekey.cpp -o build/obj/lib/pubkey_xmss_wots_privatekey.o",
+      "file": src/lib/pubkey/xmss/xmss_wots_privatekey.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/pubkey/xmss/xmss_wots_publickey.cpp -o build/obj/lib/pubkey_xmss_wots_publickey.o",
+      "file": src/lib/pubkey/xmss/xmss_wots_publickey.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/rng/auto_rng/auto_rng.cpp -o build/obj/lib/rng_auto_rng.o",
+      "file": src/lib/rng/auto_rng/auto_rng.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/rng/chacha_rng/chacha_rng.cpp -o build/obj/lib/rng_chacha_rng.o",
+      "file": src/lib/rng/chacha_rng/chacha_rng.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/rng/hmac_drbg/hmac_drbg.cpp -o build/obj/lib/rng_hmac_drbg.o",
+      "file": src/lib/rng/hmac_drbg/hmac_drbg.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/rng/processor_rng/processor_rng.cpp -o build/obj/lib/rng_processor_rng.o",
+      "file": src/lib/rng/processor_rng/processor_rng.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/rng/rng.cpp -o build/obj/lib/rng.o",
+      "file": src/lib/rng/rng.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/rng/stateful_rng/stateful_rng.cpp -o build/obj/lib/rng_stateful_rng.o",
+      "file": src/lib/rng/stateful_rng/stateful_rng.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/rng/system_rng/system_rng.cpp -o build/obj/lib/rng_system_rng.o",
+      "file": src/lib/rng/system_rng/system_rng.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/stream/chacha/chacha.cpp -o build/obj/lib/stream_chacha.o",
+      "file": src/lib/stream/chacha/chacha.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -mavx2 -Ibuild/include -Ibuild/include/external -c src/lib/stream/chacha/chacha_avx2/chacha_avx2.cpp -o build/obj/lib/stream_chacha_avx2.o",
+      "file": src/lib/stream/chacha/chacha_avx2/chacha_avx2.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -Ibuild/include -Ibuild/include/external -c src/lib/stream/chacha/chacha_simd32/chacha_simd32.cpp -o build/obj/lib/stream_chacha_simd32.o",
+      "file": src/lib/stream/chacha/chacha_simd32/chacha_simd32.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/stream/ctr/ctr.cpp -o build/obj/lib/stream_ctr.o",
+      "file": src/lib/stream/ctr/ctr.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/stream/ofb/ofb.cpp -o build/obj/lib/stream_ofb.o",
+      "file": src/lib/stream/ofb/ofb.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/stream/rc4/rc4.cpp -o build/obj/lib/stream_rc4.o",
+      "file": src/lib/stream/rc4/rc4.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/stream/salsa20/salsa20.cpp -o build/obj/lib/stream_salsa20.o",
+      "file": src/lib/stream/salsa20/salsa20.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/stream/shake_cipher/shake_cipher.cpp -o build/obj/lib/stream_shake_cipher.o",
+      "file": src/lib/stream/shake_cipher/shake_cipher.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/stream/stream_cipher.cpp -o build/obj/lib/stream_cipher.o",
+      "file": src/lib/stream/stream_cipher.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/credentials_manager.cpp -o build/obj/lib/tls_credentials_manager.o",
+      "file": src/lib/tls/credentials_manager.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_cert_req.cpp -o build/obj/lib/tls_msg_cert_req.o",
+      "file": src/lib/tls/msg_cert_req.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_cert_status.cpp -o build/obj/lib/tls_msg_cert_status.o",
+      "file": src/lib/tls/msg_cert_status.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_cert_verify.cpp -o build/obj/lib/tls_msg_cert_verify.o",
+      "file": src/lib/tls/msg_cert_verify.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_certificate.cpp -o build/obj/lib/tls_msg_certificate.o",
+      "file": src/lib/tls/msg_certificate.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_client_hello.cpp -o build/obj/lib/tls_msg_client_hello.o",
+      "file": src/lib/tls/msg_client_hello.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_client_kex.cpp -o build/obj/lib/tls_msg_client_kex.o",
+      "file": src/lib/tls/msg_client_kex.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_finished.cpp -o build/obj/lib/tls_msg_finished.o",
+      "file": src/lib/tls/msg_finished.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_hello_verify.cpp -o build/obj/lib/tls_msg_hello_verify.o",
+      "file": src/lib/tls/msg_hello_verify.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_server_hello.cpp -o build/obj/lib/tls_msg_server_hello.o",
+      "file": src/lib/tls/msg_server_hello.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_server_kex.cpp -o build/obj/lib/tls_msg_server_kex.o",
+      "file": src/lib/tls/msg_server_kex.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/msg_session_ticket.cpp -o build/obj/lib/tls_msg_session_ticket.o",
+      "file": src/lib/tls/msg_session_ticket.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/sessions_sql/tls_session_manager_sql.cpp -o build/obj/lib/tls_sessions_sql_tls_session_manager_sql.o",
+      "file": src/lib/tls/sessions_sql/tls_session_manager_sql.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_alert.cpp -o build/obj/lib/tls_alert.o",
+      "file": src/lib/tls/tls_alert.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_algos.cpp -o build/obj/lib/tls_algos.o",
+      "file": src/lib/tls/tls_algos.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_callbacks.cpp -o build/obj/lib/tls_callbacks.o",
+      "file": src/lib/tls/tls_callbacks.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_cbc/tls_cbc.cpp -o build/obj/lib/tls_cbc.o",
+      "file": src/lib/tls/tls_cbc/tls_cbc.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_channel.cpp -o build/obj/lib/tls_channel.o",
+      "file": src/lib/tls/tls_channel.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_ciphersuite.cpp -o build/obj/lib/tls_ciphersuite.o",
+      "file": src/lib/tls/tls_ciphersuite.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_client.cpp -o build/obj/lib/tls_client.o",
+      "file": src/lib/tls/tls_client.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_extensions.cpp -o build/obj/lib/tls_extensions.o",
+      "file": src/lib/tls/tls_extensions.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_handshake_hash.cpp -o build/obj/lib/tls_handshake_hash.o",
+      "file": src/lib/tls/tls_handshake_hash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_handshake_io.cpp -o build/obj/lib/tls_handshake_io.o",
+      "file": src/lib/tls/tls_handshake_io.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_handshake_state.cpp -o build/obj/lib/tls_handshake_state.o",
+      "file": src/lib/tls/tls_handshake_state.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_policy.cpp -o build/obj/lib/tls_policy.o",
+      "file": src/lib/tls/tls_policy.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_record.cpp -o build/obj/lib/tls_record.o",
+      "file": src/lib/tls/tls_record.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_server.cpp -o build/obj/lib/tls_server.o",
+      "file": src/lib/tls/tls_server.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_session.cpp -o build/obj/lib/tls_session.o",
+      "file": src/lib/tls/tls_session.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_session_key.cpp -o build/obj/lib/tls_session_key.o",
+      "file": src/lib/tls/tls_session_key.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_session_manager_memory.cpp -o build/obj/lib/tls_session_manager_memory.o",
+      "file": src/lib/tls/tls_session_manager_memory.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_suite_info.cpp -o build/obj/lib/tls_suite_info.o",
+      "file": src/lib/tls/tls_suite_info.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_text_policy.cpp -o build/obj/lib/tls_text_policy.o",
+      "file": src/lib/tls/tls_text_policy.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/tls/tls_version.cpp -o build/obj/lib/tls_version.o",
+      "file": src/lib/tls/tls_version.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/assert.cpp -o build/obj/lib/utils_assert.o",
+      "file": src/lib/utils/assert.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/calendar.cpp -o build/obj/lib/utils_calendar.o",
+      "file": src/lib/utils/calendar.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/charset.cpp -o build/obj/lib/utils_charset.o",
+      "file": src/lib/utils/charset.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/cpuid/cpuid.cpp -o build/obj/lib/utils_cpuid.o",
+      "file": src/lib/utils/cpuid/cpuid.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/cpuid/cpuid_aarch64.cpp -o build/obj/lib/utils_cpuid_aarch64.o",
+      "file": src/lib/utils/cpuid/cpuid_aarch64.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/cpuid/cpuid_arm32.cpp -o build/obj/lib/utils_cpuid_arm32.o",
+      "file": src/lib/utils/cpuid/cpuid_arm32.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/cpuid/cpuid_ppc.cpp -o build/obj/lib/utils_cpuid_ppc.o",
+      "file": src/lib/utils/cpuid/cpuid_ppc.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/cpuid/cpuid_x86.cpp -o build/obj/lib/utils_cpuid_x86.o",
+      "file": src/lib/utils/cpuid/cpuid_x86.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/ct_utils.cpp -o build/obj/lib/utils_ct_utils.o",
+      "file": src/lib/utils/ct_utils.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/data_src.cpp -o build/obj/lib/utils_data_src.o",
+      "file": src/lib/utils/data_src.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/dyn_load/dyn_load.cpp -o build/obj/lib/utils_dyn_load.o",
+      "file": src/lib/utils/dyn_load/dyn_load.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/exceptn.cpp -o build/obj/lib/utils_exceptn.o",
+      "file": src/lib/utils/exceptn.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/filesystem.cpp -o build/obj/lib/utils_filesystem.o",
+      "file": src/lib/utils/filesystem.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/ghash/ghash.cpp -o build/obj/lib/utils_ghash.o",
+      "file": src/lib/utils/ghash/ghash.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -maes -mpclmul -msse2 -mssse3 -Ibuild/include -Ibuild/include/external -c src/lib/utils/ghash/ghash_cpu/ghash_cpu.cpp -o build/obj/lib/utils_ghash_cpu.o",
+      "file": src/lib/utils/ghash/ghash_cpu/ghash_cpu.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT  -msse2 -mssse3 -Ibuild/include -Ibuild/include/external -c src/lib/utils/ghash/ghash_vperm/ghash_vperm.cpp -o build/obj/lib/utils_ghash_vperm.o",
+      "file": src/lib/utils/ghash/ghash_vperm/ghash_vperm.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/http_util/http_util.cpp -o build/obj/lib/utils_http_util.o",
+      "file": src/lib/utils/http_util/http_util.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/locking_allocator/locking_allocator.cpp -o build/obj/lib/utils_locking_allocator.o",
+      "file": src/lib/utils/locking_allocator/locking_allocator.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/mem_ops.cpp -o build/obj/lib/utils_mem_ops.o",
+      "file": src/lib/utils/mem_ops.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/mem_pool/mem_pool.cpp -o build/obj/lib/utils_mem_pool.o",
+      "file": src/lib/utils/mem_pool/mem_pool.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/os_utils.cpp -o build/obj/lib/utils_os_utils.o",
+      "file": src/lib/utils/os_utils.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/parsing.cpp -o build/obj/lib/utils_parsing.o",
+      "file": src/lib/utils/parsing.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/poly_dbl/poly_dbl.cpp -o build/obj/lib/utils_poly_dbl.o",
+      "file": src/lib/utils/poly_dbl/poly_dbl.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/read_cfg.cpp -o build/obj/lib/utils_read_cfg.o",
+      "file": src/lib/utils/read_cfg.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/read_kv.cpp -o build/obj/lib/utils_read_kv.o",
+      "file": src/lib/utils/read_kv.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/scan_name.cpp -o build/obj/lib/utils_scan_name.o",
+      "file": src/lib/utils/scan_name.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/socket/socket.cpp -o build/obj/lib/utils_socket.o",
+      "file": src/lib/utils/socket/socket.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/socket/socket_udp.cpp -o build/obj/lib/utils_socket_udp.o",
+      "file": src/lib/utils/socket/socket_udp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/socket/uri.cpp -o build/obj/lib/utils_socket_uri.o",
+      "file": src/lib/utils/socket/uri.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/thread_utils/barrier.cpp -o build/obj/lib/utils_thread_utils_barrier.o",
+      "file": src/lib/utils/thread_utils/barrier.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/thread_utils/rwlock.cpp -o build/obj/lib/utils_thread_utils_rwlock.o",
+      "file": src/lib/utils/thread_utils/rwlock.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/thread_utils/semaphore.cpp -o build/obj/lib/utils_thread_utils_semaphore.o",
+      "file": src/lib/utils/thread_utils/semaphore.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/thread_utils/thread_pool.cpp -o build/obj/lib/utils_thread_utils_thread_pool.o",
+      "file": src/lib/utils/thread_utils/thread_pool.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/timer.cpp -o build/obj/lib/utils_timer.o",
+      "file": src/lib/utils/timer.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/uuid/uuid.cpp -o build/obj/lib/utils_uuid.o",
+      "file": src/lib/utils/uuid/uuid.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/utils/version.cpp -o build/obj/lib/utils_version.o",
+      "file": src/lib/utils/version.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/asn1_alt_name.cpp -o build/obj/lib/x509_asn1_alt_name.o",
+      "file": src/lib/x509/asn1_alt_name.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/cert_status.cpp -o build/obj/lib/x509_cert_status.o",
+      "file": src/lib/x509/cert_status.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/certstor.cpp -o build/obj/lib/x509_certstor.o",
+      "file": src/lib/x509/certstor.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/certstor_flatfile/certstor_flatfile.cpp -o build/obj/lib/x509_certstor_flatfile.o",
+      "file": src/lib/x509/certstor_flatfile/certstor_flatfile.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/certstor_sql/certstor_sql.cpp -o build/obj/lib/x509_certstor_sql.o",
+      "file": src/lib/x509/certstor_sql/certstor_sql.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/certstor_system/certstor_system.cpp -o build/obj/lib/x509_certstor_system.o",
+      "file": src/lib/x509/certstor_system/certstor_system.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/certstor_system_macos/certstor_macos.cpp -o build/obj/lib/x509_certstor_system_macos_certstor_macos.o",
+      "file": src/lib/x509/certstor_system_macos/certstor_macos.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/crl_ent.cpp -o build/obj/lib/x509_crl_ent.o",
+      "file": src/lib/x509/crl_ent.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/key_constraint.cpp -o build/obj/lib/x509_key_constraint.o",
+      "file": src/lib/x509/key_constraint.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/name_constraint.cpp -o build/obj/lib/x509_name_constraint.o",
+      "file": src/lib/x509/name_constraint.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/ocsp.cpp -o build/obj/lib/x509_ocsp.o",
+      "file": src/lib/x509/ocsp.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/ocsp_types.cpp -o build/obj/lib/x509_ocsp_types.o",
+      "file": src/lib/x509/ocsp_types.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/pkcs10.cpp -o build/obj/lib/x509_pkcs10.o",
+      "file": src/lib/x509/pkcs10.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509_attribute.cpp -o build/obj/lib/x509_attribute.o",
+      "file": src/lib/x509/x509_attribute.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509_ca.cpp -o build/obj/lib/x509_ca.o",
+      "file": src/lib/x509/x509_ca.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509_crl.cpp -o build/obj/lib/x509_crl.o",
+      "file": src/lib/x509/x509_crl.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509_dn.cpp -o build/obj/lib/x509_dn.o",
+      "file": src/lib/x509/x509_dn.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509_dn_ub.cpp -o build/obj/lib/x509_dn_ub.o",
+      "file": src/lib/x509/x509_dn_ub.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509_ext.cpp -o build/obj/lib/x509_ext.o",
+      "file": src/lib/x509/x509_ext.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509_obj.cpp -o build/obj/lib/x509_obj.o",
+      "file": src/lib/x509/x509_obj.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509cert.cpp -o build/obj/lib/x509_x509cert.o",
+      "file": src/lib/x509/x509cert.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509opt.cpp -o build/obj/lib/x509_x509opt.o",
+      "file": src/lib/x509/x509opt.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509path.cpp -o build/obj/lib/x509_x509path.o",
+      "file": src/lib/x509/x509path.cpp
+    },
+
+    { "directory": "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/botan",
+      "command": "clang++ -fPIC -fvisibility=hidden -fstack-protector -m64 -pthread -stdlib=libc++ -std=c++17 -D_REENTRANT   -Ibuild/include -Ibuild/include/external -c src/lib/x509/x509self.cpp -o build/obj/lib/x509_x509self.o",
+      "file": src/lib/x509/x509self.cpp
+    },
+
+
+]
+
