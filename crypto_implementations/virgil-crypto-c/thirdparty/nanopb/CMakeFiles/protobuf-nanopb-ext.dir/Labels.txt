@@ -1,0 +1,16 @@
+# Target labels
+ protobuf-nanopb-ext
+# Source files and their labels
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/CMakeFiles/protobuf-nanopb-ext
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/CMakeFiles/protobuf-nanopb-ext.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/CMakeFiles/protobuf-nanopb-ext-complete.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-install.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-mkdir.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-download.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-update.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-patch.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-configure.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-build.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-install-protobuf-generator.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-build-protobuf-generator-model-nanopb.rule
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-stamp/protobuf-nanopb-ext-build-protobuf-generator-model-plugin.rule

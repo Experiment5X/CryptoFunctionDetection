@@ -1,0 +1,3 @@
+repository='external project URL'
+module='https://falcon-sign.info/falcon-20190918.tar.gz'
+tag='SHA256=229fca9b3116ca3ff1f0952227419fc8b2ce11ce0be74a6e92a3837bacda19a2'

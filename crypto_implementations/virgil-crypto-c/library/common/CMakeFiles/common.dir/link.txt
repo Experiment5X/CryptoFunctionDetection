@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libvsc_common.a  CMakeFiles/common.dir/src/vsc_assert.c.o CMakeFiles/common.dir/src/vsc_library.c.o CMakeFiles/common.dir/src/vsc_memory.c.o CMakeFiles/common.dir/src/vsc_buffer.c.o CMakeFiles/common.dir/src/vsc_buffer_defs.c.o CMakeFiles/common.dir/src/vsc_data.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libvsc_common.a

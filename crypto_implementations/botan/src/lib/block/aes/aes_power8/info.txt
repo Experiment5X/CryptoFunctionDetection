@@ -1,0 +1,12 @@
+<defines>
+AES_POWER8 -> 20180223
+</defines>
+
+<arch>
+ppc64
+</arch>
+
+<isa>
+vsx
+powercrypto
+</isa>

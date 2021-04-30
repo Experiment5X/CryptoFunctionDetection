@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/round5-optimized.dir/__/reference/src/common/fips202/1x/keccakf1600.c.o"
+  "CMakeFiles/round5-optimized.dir/__/reference/src/common/fips202/f202sp800185.c.o"
+  "CMakeFiles/round5-optimized.dir/__/reference/src/common/hash/r5_hash.c.o"
+  "CMakeFiles/round5-optimized.dir/__/reference/src/misc.c.o"
+  "CMakeFiles/round5-optimized.dir/__/reference/src/little_endian.c.o"
+  "CMakeFiles/round5-optimized.dir/__/reference/src/r5_memory.c.o"
+  "CMakeFiles/round5-optimized.dir/__/reference/src/xef_ref.c.o"
+  "CMakeFiles/round5-optimized.dir/__/configurable/src/xe2_c16.c.o"
+  "CMakeFiles/round5-optimized.dir/__/configurable/src/xe4_c64.c.o"
+  "CMakeFiles/round5-optimized.dir/__/configurable/src/xe5_c64.c.o"
+  "CMakeFiles/round5-optimized.dir/src/a_fixed.c.o"
+  "CMakeFiles/round5-optimized.dir/src/a_random.c.o"
+  "CMakeFiles/round5-optimized.dir/src/checkPublicParameter.c.o"
+  "CMakeFiles/round5-optimized.dir/src/kem.c.o"
+  "CMakeFiles/round5-optimized.dir/src/matmul_avx2.c.o"
+  "CMakeFiles/round5-optimized.dir/src/matmul_cacheless.c.o"
+  "CMakeFiles/round5-optimized.dir/src/matmul_ct.c.o"
+  "CMakeFiles/round5-optimized.dir/src/pack.c.o"
+  "CMakeFiles/round5-optimized.dir/src/pke.c.o"
+  "CMakeFiles/round5-optimized.dir/src/r5_cca_kem.c.o"
+  "CMakeFiles/round5-optimized.dir/src/r5_cca_pke.c.o"
+  "CMakeFiles/round5-optimized.dir/src/r5_cpa_kem.c.o"
+  "CMakeFiles/round5-optimized.dir/src/r5_cpa_pke_n1.c.o"
+  "CMakeFiles/round5-optimized.dir/src/r5_cpa_pke_nd.c.o"
+  "CMakeFiles/round5-optimized.dir/src/r5_secretkeygen.c.o"
+  "CMakeFiles/round5-optimized.dir/src/ringmul_avx2.c.o"
+  "CMakeFiles/round5-optimized.dir/src/ringmul_cacheless.c.o"
+  "CMakeFiles/round5-optimized.dir/src/ringmul_cm.c.o"
+  "CMakeFiles/round5-optimized.dir/src/ringmul_ct.c.o"
+  "CMakeFiles/round5-optimized.dir/src/r5_dem_mbedtls.c.o"
+  "CMakeFiles/round5-optimized.dir/__/reference/src/common/rng/nist_rng_mbedtls.c.o"
+  "libround5.pdb"
+  "libround5.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/round5-optimized.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

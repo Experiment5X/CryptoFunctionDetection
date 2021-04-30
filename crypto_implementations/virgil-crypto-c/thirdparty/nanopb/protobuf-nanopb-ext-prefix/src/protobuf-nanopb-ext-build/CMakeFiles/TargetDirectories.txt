@@ -1,0 +1,7 @@
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-build/CMakeFiles/install/local.dir
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-build/CMakeFiles/install/strip.dir
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-build/CMakeFiles/protobuf-nanopb-static.dir
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-build/CMakeFiles/install.dir
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-build/CMakeFiles/list_install_components.dir
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-build/CMakeFiles/rebuild_cache.dir
+/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/nanopb/protobuf-nanopb-ext-prefix/src/protobuf-nanopb-ext-build/CMakeFiles/edit_cache.dir

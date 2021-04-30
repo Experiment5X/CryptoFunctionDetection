@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/CMakeFiles/round5-ext"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/CMakeFiles/round5-ext.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/CMakeFiles/round5-ext-complete.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/round5-ext-prefix/src/round5-ext-stamp/round5-ext-install.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/round5-ext-prefix/src/round5-ext-stamp/round5-ext-mkdir.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/round5-ext-prefix/src/round5-ext-stamp/round5-ext-download.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/round5-ext-prefix/src/round5-ext-stamp/round5-ext-update.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/round5-ext-prefix/src/round5-ext-stamp/round5-ext-patch.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/round5-ext-prefix/src/round5-ext-stamp/round5-ext-configure.rule"
+		},
+		{
+			"file" : "/Users/adamspindler/Developer/DeepLearningSecurity/Project/crypto_implementations/virgil-crypto-c/thirdparty/round5/round5-ext-prefix/src/round5-ext-stamp/round5-ext-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"round5-ext"
+		],
+		"name" : "round5-ext"
+	}
+}
